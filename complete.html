@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="katsucodeは、Webサイト制作を中心に活動する個人事業主です。"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-TitleImage" content="#" />
+    <meta name="msapplication-TitleColor" content="#" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- OPG Start -->
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="katsucode" />
+    <meta
+      property="og:description"
+      content="Webサイト制作と受託開発を行なっている、かつコード。"
+    />
+    <meta property="og:url" content="https://katsucode.jp/" />
+    <meta property="og:site_name" content="katsucode" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:secure_url" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="facebook:card" content="#" />
+    <meta name="twitter:card" content="#" />
+    <!-- OGP End -->
+    <title>Katsucode Website | Home</title>
+    <!-- URLの正規化 -->
+    <link rel="canonical" href="https://katsucode.jp/" />
+    <!-- favicon設定 -->
+    <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/favicon/android-chrome-192x192.png"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Adobe Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/lpg7pom.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+  </head>
+  <body>
+    
+    <!-- Loading -->
+    <div id="splash">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="splashbg"></div>
+
+    <div class="l-wrapper">
+      <!-- Header Start -->
+      <header class="l-header">
+        <div class="l-header__wrapper">
+          <h1 class="l-header__logo">
+            <a href="index.html">
+              <img src="assets/img/logo.png" alt="ロゴ" />
+              <span class="pl-8">Katsucode</span>
+            </a>
+          </h1>
+          <!-- Header Navigation Start -->
+          <nav class="l-header-nav">
+            <ul class="l-header-nav__list">
+              <li class="l-header-nav__item">
+                <a
+                  href="https://www.facebook.com/katsuhiro.kakoi/"
+                  class="l-header-nav__link"
+                >
+                  <i class="fab fa-facebook icon icon-facebook"></i>
+                </a>
+              </li>
+              <li class="l-header-nav__item">
+                <a
+                  href="https://twitter.com/KatsuhiroKakoi"
+                  class="l-header-nav__link"
+                >
+                  <i class="fab fa-twitter icon icon-twitter"></i>
+                </a>
+              </li>
+              <li class="l-header-nav__item">
+                <a
+                  href="https://www.instagram.com/katsucode/"
+                  class="l-header-nav__link"
+                >
+                  <i class="fab fa-instagram icon icon-instagram"></i>
+                </a>
+              </li>
+              <li class="l-header-nav__item">
+                <a href="#" class="l-header-nav__link">
+                  <i class="fab fa-line icon icon-line"></i>
+                </a>
+              </li>
+              <li class="l-header-nav__item">
+                <a href="recruit.html" class="l-header-nav__link">
+                  メンバー募集
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Header Navigation End -->
+          <button id="menu-toggle" class="menu-toggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <!-- Drawer Navigation Start -->
+          <nav class="l-drawer-nav">
+            <div class="l-drawer-nav__container">
+              <div class="container">
+                <div class="l-drawer-nav__wrapper">
+                  <div class="l-drawer-nav__row row">
+                    <div class="l-drawer-nav__col col-md-12">
+                      <div class="l-drawer-nav__logo">
+                        <a href="index.html">
+                          <img src="assets/img/logo.png" alt="ロゴ" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
+                      <ul class="l-drawer-nav__list">
+                        <li class="l-drawer-nav__item">
+                          <a href="index.html" class="l-drawer-nav__link">
+                            <div class="en">Home</div>
+                            <div class="ja">ホーム</div>
+                          </a>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="about.html" class="l-drawer-nav__link">
+                            <div class="en">About</div>
+                            <div class="ja">かつコードについて</div>
+                          </a>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="service.html" class="l-drawer-nav__link">
+                            <div class="en">Service</div>
+                            <div class="ja">事業内容</div>
+                          </a>
+                          <ul class="l-drawer-nav__list--child">
+                            <li>
+                              <a href="service#webdesgin">Web制作</a>
+                            </li>
+                            <li>
+                              <a href="service#graphic">グラフィックデザイン</a>
+                            </li>
+                            <li>
+                              <a href="service#cms">CMS開発</a>
+                            </li>
+                            <li>
+                              <a href="service#webdesgin">Web制作</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Project</div>
+                            <div class="ja">制作実績</div>
+                          </a>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Flow</div>
+                            <div class="ja">制作の流れ</div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
+                      <ul class="l-drawer-nav__list">
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">News</div>
+                            <div class="ja">お知らせ</div>
+                          </a>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Blog</div>
+                            <div class="ja">ブログ</div>
+                          </a>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">FAQ</div>
+                            <div class="ja">よくあるご質問</div>
+                          </a>
+                        </li>
+                        <li class="l-drawer-nav__item swim">
+                          <a href="swim.html" class="l-drawer-nav__link swim">
+                            <div class="en">Swim</div>
+                            <div class="ja">水泳関係者の方</div>
+                          </a>
+                          <figure>
+                            <img src="assets/img/image1.jpg" alt="" />
+                          </figure>
+                        </li>
+                        <li class="l-drawer-nav__item nara">
+                          <a href="nara.html" class="l-drawer-nav__link nara">
+                            <div class="en">Nara</div>
+                            <div class="ja">奈良県民の方</div>
+                          </a>
+                          <figure>
+                            <img src="assets/img/image1.jpg" alt="" />
+                          </figure>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
+                      <ul class="l-drawer-nav__list">
+                        <li class="l-drawer-nav__item">
+                          <a href="recruit.html" class="l-drawer-nav__link">
+                            <div class="en">Member</div>
+                            <div class="ja">メンバー募集</div>
+                          </a>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Contact</div>
+                            <div class="ja">お問い合わせ</div>
+                          </a>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Privacy Policy</div>
+                            <div class="ja">プライバシーポリシー</div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- Drawer Navigation End -->
+        </div>
+      </header>
+      <!-- Header End -->
+      <!-- Main Start -->
+      <main class="l-main">
+        <div id="p-faq">
+          <!-- Visual Start -->
+          <div class="p-page__visual">
+            <h2 class="c-title__page-primary p-page__title">
+              <div class="c-title__page-primary--wrapper">
+                <div class="ja">お問い合わせ</div>
+                <div class="en">Contact</div>
+              </div>
+            </h2>
+            <div class="p-page__visual--img-wrapper">
+              <img src="assets/img/image4.jpg" alt="" />
+            </div>
+          </div>
+          <!-- Visual End -->
+          <!-- Global Navigation Start -->
+          <nav class="l-global-nav">
+            <ul class="l-global-nav__list">
+              <li class="l-global-nav__item">
+                <a href="index.html" class="l-global-nav__link">Home</a>
+              </li>
+              <li class="l-global-nav__item">
+                <a href="about.html" class="l-global-nav__link">About</a>
+              </li>
+              <li class="l-global-nav__item">
+                <a href="service.html" class="l-global-nav__link">Service</a>
+              </li>
+              <li class="l-global-nav__item">
+                <a href="project.html" class="l-global-nav__link">Project</a>
+              </li>
+              <li class="l-global-nav__item">
+                <a href="flow.html" class="l-global-nav__link">Flow</a>
+              </li>
+              <li class="l-global-nav__item">
+                <a href="news.html" class="l-global-nav__link">News</a>
+              </li>
+              <li class="l-global-nav__item">
+                <a href="blog.html" class="l-global-nav__link">Blog</a>
+              </li>
+              <li class="l-global-nav__item">
+                <a href="faq.html" class="l-global-nav__link">FAQ</a>
+              </li>
+              <li class="l-global-nav__item">
+                <a href="contact.html" class="l-global-nav__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Global Navigation End -->
+          <!-- Contact Section Start -->
+          <section class="p-contact__main">
+            <div class="p-contact__main--wrapper pt-60 pb-80">
+              <div class="container">
+                <div class="p-contact__main--header">
+                  <h3 class="c-title__page-secondary p-about__concept--title">
+                    <div class="c-title__page-secondary--logo">
+                      <img src="assets/img/logo.png" alt="" />
+                    </div>
+                    <div class="en">Complete</div>
+                    <div class="ja">お問い合わせ完了</div>
+                  </h3>
+                </div>
+                <div class="p-contact__main--body">
+                  <div class="contact-form">
+                    <form method="post" action enctype="multipart/form-data">
+                      <table>
+                        <tr>
+                          <td>
+                            <div class="form-wrapper">
+                              <p>
+                                お問い合わせいただき、ありがとうございました。
+                              </p>
+                              <p>
+                                ご入力いただいた内容を確認後、1〜2営業日以内に返信いたします。
+                              </p>
+                              <p>
+                                それまでの間、弊社サービスコンテンツをお楽しみください。
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </form>
+                  </div>
+                </div>
+                <div class="p-contact__main--footer">
+                  <aside class="p-aside__etc-service row">
+                    <div class="c-card__contact--item">
+                      <a href="demo.html" class="c-card__contact--wrapper"></a>
+                      <figure class="c-card__contact--img-wrapper">
+                        <img src="assets/img/image1.jpg" alt="" />
+                      </figure>
+                      <div class="c-card__contact--contents">
+                        <h4 class="title">Webサイト制作</h4>
+                        <p>
+                          デモサイト専用のページです。様々なデモサイトをご覧になれます。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="c-card__contact--item">
+                      <a href="blog.html" class="c-card__contact--wrapper"></a>
+                      <figure class="c-card__contact--img-wrapper">
+                        <img src="assets/img/image1.jpg" alt="" />
+                      </figure>
+                      <div class="c-card__contact--contents">
+                        <h4 class="title">ブログ</h4>
+                        <p>
+                          日々、技術革新のため、気づいたこと便利なことを発信しています。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="c-card__contact--item">
+                      <a href="swim.html" class="c-card__contact--wrapper"></a>
+                      <figure class="c-card__contact--img-wrapper">
+                        <img src="assets/img/image1.jpg" alt="" />
+                      </figure>
+                      <div class="c-card__contact--contents">
+                        <h4 class="title">水泳プロジェクト</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Dolor placeat nobis at repellendus voluptates
+                          laudantium ratione doloremque? Molestiae, modi unde.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="c-card__contact--item">
+                      <a href="nara.html" class="c-card__contact--wrapper"></a>
+                      <figure class="c-card__contact--img-wrapper">
+                        <img src="assets/img/image1.jpg" alt="" />
+                      </figure>
+                      <div class="c-card__contact--contents">
+                        <h4 class="title">ならプロジェクト</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Dolor placeat nobis at repellendus voluptates
+                          laudantium ratione doloremque? Molestiae, modi unde.
+                        </p>
+                      </div>
+                    </div>
+                  </aside>
+                  <div
+                    class="c-btn__primary p-contact__main--btn mt-80 mr-auto ml-auto"
+                  >
+                    <a href="index.html" class="c-btn__primary--wrapper">
+                      <span class="c-btn__primary--text">トップへ戻る</span>
+                      <div class="c-btn__primary--arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Contact Section End -->
+        </div>
+      </main>
+      <!-- Main End -->
+      <!-- Footer Start -->
+      <footer class="l-footer">
+        <div class="l-footer__wrapper pt-80">
+          <div class="l-footer__main pb-40">
+            <div class="container">
+              <h2 class="l-footer__logo">
+                <a href="">
+                  <img src="assets/img/logo.png" alt="ロゴ" />
+                  <span class="pl-8">Katsu code</span>
+                </a>
+              </h2>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="l-footer__address">
+                    <dl>
+                      <dt>所在地</dt>
+                      <dd>
+                        奈良県奈良市
+                        <br />
+                        (自宅兼事務所のため、ご契約の際にお伝えします)
+                      </dd>
+                      <dt>連絡先</dt>
+                      <dd>
+                        Tel. <span>090-9580-9257</span><br />
+                        Email <span>info@katsucode.jp</span>
+                      </dd>
+                      <dt>営業時間</dt>
+                      <dd>9:00 - 17: 00</dd>
+                      <dt>定休日</dt>
+                      <dd>土日・祝日</dd>
+                    </dl>
+                  </div>
+                  <ul class="l-footer__sns-list">
+                    <li class="l-footer__sns-item">
+                      <a href="#" class="l-footer__sns-link">
+                        <i class="fab fa-facebook icon icon-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="l-footer__sns-item">
+                      <a href="#" class="l-footer__sns-link">
+                        <i class="fab fa-twitter icon icon-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="l-footer__sns-item">
+                      <a href="#" class="l-footer__sns-link">
+                        <i class="fab fa-instagram icon icon-instagram"></i>
+                      </a>
+                    </li>
+                    <li class="l-footer__sns-item">
+                      <a href="#" class="l-footer__sns-link">
+                        <i class="fab fa-line icon icon-line"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <nav class="l-footer-nav">
+                    <ul class="l-footer-nav__list">
+                      <li class="l-footer-nav__item">
+                        <a href="index.html" class="l-footer-nav__link">Home</a>
+                      </li>
+                      <li class="l-footer-nav__item">
+                        <a href="about.html" class="l-footer-nav__link"
+                          >About</a
+                        >
+                      </li>
+                      <li class="l-footer-nav__item">
+                        <a href="service.html" class="l-footer-nav__link"
+                          >Service</a
+                        >
+                      </li>
+                      <li class="l-footer-nav__item">
+                        <a href="project.html" class="l-footer-nav__link"
+                          >Project</a
+                        >
+                      </li>
+                      <li class="l-footer-nav__item">
+                        <a href="flow.html" class="l-footer-nav__link">Flow</a>
+                      </li>
+                      <li class="l-footer-nav__item">
+                        <a href="news.html" class="l-footer-nav__link">News</a>
+                      </li>
+                      <li class="l-footer-nav__item">
+                        <a href="blog.html" class="l-footer-nav__link">Blog</a>
+                      </li>
+                      <li class="l-footer-nav__item">
+                        <a href="faq.html" class="l-footer-nav__link">FAQ</a>
+                      </li>
+                      <li class="l-footer-nav__item">
+                        <a href="contact.html" class="l-footer-nav__link"
+                          >Contact</a
+                        >
+                      </li>
+                      <li class="l-footer-nav__item">
+                        <a href="recruit.html" class="l-footer-nav__link"
+                          >Recruit</a
+                        >
+                      </li>
+                      <li class="l-footer-nav__item">
+                        <a href="privacy-policy.html" class="l-footer-nav__link"
+                          >Privacy Policy</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-footer__copyright">
+            <p class="copyright">&copy; 2022 Katsucode</p>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </div>
+
+    <div class="cursor"></div>
+    <div class="follower"></div>
+
+    <!-- TweenMax JS -->
+    <script src="assets/js/TweenMax.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

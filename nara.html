@@ -59,131 +59,198 @@
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
   </head>
   <body>
-    <div class="transition transition-2 is-active"></div>
+
+    <!-- Loading -->
+    <div id="splash">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="splashbg"></div>
 
     <div class="l-wrapper">
       <!-- Header Start -->
-      <div class="l-header">
-        <div class="l-header-wrapper">
+      <header class="l-header">
+        <div class="l-header__wrapper">
           <h1 class="l-header__logo">
             <a href="index.html">
               <img src="assets/img/logo.png" alt="ロゴ" />
-              <span>Katsu code</span>
+              <span class="pl-8">Katsucode</span>
             </a>
           </h1>
-
+          <!-- Header Navigation Start -->
+          <nav class="l-header-nav">
+            <ul class="l-header-nav__list">
+              <li class="l-header-nav__item">
+                <a
+                  href="https://www.facebook.com/katsuhiro.kakoi/"
+                  class="l-header-nav__link"
+                >
+                  <i class="fab fa-facebook icon icon-facebook"></i>
+                </a>
+              </li>
+              <li class="l-header-nav__item">
+                <a
+                  href="https://twitter.com/KatsuhiroKakoi"
+                  class="l-header-nav__link"
+                >
+                  <i class="fab fa-twitter icon icon-twitter"></i>
+                </a>
+              </li>
+              <li class="l-header-nav__item">
+                <a
+                  href="https://www.instagram.com/katsucode/"
+                  class="l-header-nav__link"
+                >
+                  <i class="fab fa-instagram icon icon-instagram"></i>
+                </a>
+              </li>
+              <li class="l-header-nav__item">
+                <a href="#" class="l-header-nav__link">
+                  <i class="fab fa-line icon icon-line"></i>
+                </a>
+              </li>
+              <li class="l-header-nav__item">
+                <a href="recruit.html" class="l-header-nav__link">
+                  メンバー募集
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Header Navigation End -->
           <button id="menu-toggle" class="menu-toggle">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
           </button>
-
           <!-- Drawer Navigation Start -->
           <nav class="l-drawer-nav">
             <div class="l-drawer-nav__container">
               <div class="container">
                 <div class="l-drawer-nav__wrapper">
                   <div class="l-drawer-nav__row row">
-                    <div class="l-drawer-nav__col col-md-6">
+                    <div class="l-drawer-nav__col col-md-12">
+                      <div class="l-drawer-nav__logo">
+                        <a href="index.html">
+                          <img src="assets/img/logo.png" alt="ロゴ" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
                       <ul class="l-drawer-nav__list">
                         <li class="l-drawer-nav__item">
                           <a href="index.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Home</div>
-                            <div class="l-drawer-nav__link-ja">ホーム</div>
+                            <div class="en">Home</div>
+                            <div class="ja">ホーム</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
                           <a href="about.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">About</div>
-                            <div class="l-drawer-nav__link-ja">
-                              かつコードについて
-                            </div>
+                            <div class="en">About</div>
+                            <div class="ja">かつコードについて</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
                           <a href="service.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Service</div>
-                            <div class="l-drawer-nav__link-ja">事業内容</div>
+                            <div class="en">Service</div>
+                            <div class="ja">事業内容</div>
+                          </a>
+                          <ul class="l-drawer-nav__list--child">
+                            <li>
+                              <a href="service#webdesgin">Web制作</a>
+                            </li>
+                            <li>
+                              <a href="service#graphic">グラフィックデザイン</a>
+                            </li>
+                            <li>
+                              <a href="service#cms">CMS開発</a>
+                            </li>
+                            <li>
+                              <a href="service#webdesgin">Web制作</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Project</div>
+                            <div class="ja">制作実績</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a href="project.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Project</div>
-                            <div class="l-drawer-nav__link-ja">制作実績</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Flow</div>
+                            <div class="ja">制作の流れ</div>
                           </a>
                         </li>
                       </ul>
                     </div>
-                    <div class="l-drawer-nav__col col-md-6">
+
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
                       <ul class="l-drawer-nav__list">
                         <li class="l-drawer-nav__item">
-                          <a href="flow.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Flow</div>
-                            <div class="l-drawer-nav__link-ja">制作の流れ</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">News</div>
+                            <div class="ja">お知らせ</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a href="news.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">News</div>
-                            <div class="l-drawer-nav__link-ja">お知らせ</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Blog</div>
+                            <div class="ja">ブログ</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a href="blog.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Blog</div>
-                            <div class="l-drawer-nav__link-ja">ブログ</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">FAQ</div>
+                            <div class="ja">よくあるご質問</div>
                           </a>
                         </li>
-                        <li class="l-drawer-nav__item">
-                          <a href="recruit.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Recruit</div>
-                            <div class="l-drawer-nav__link-ja">
-                              メンバー募集
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="l-drawer-nav__col col-md-6">
-                      <ul class="l-drawer-nav__list">
                         <li class="l-drawer-nav__item swim">
-                          <a href="swim.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Swim</div>
-                            <div class="l-drawer-nav__link-ja">
-                              水泳関係者の方
-                            </div>
+                          <a href="swim.html" class="l-drawer-nav__link swim">
+                            <div class="en">Swim</div>
+                            <div class="ja">水泳関係者の方</div>
                           </a>
+                          <figure>
+                            <img src="assets/img/image1.jpg" alt="" />
+                          </figure>
                         </li>
                         <li class="l-drawer-nav__item nara">
-                          <a href="nara.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">For Nara</div>
-                            <div class="l-drawer-nav__link-ja">
-                              奈良県民の方
-                            </div>
+                          <a href="nara.html" class="l-drawer-nav__link nara">
+                            <div class="en">Nara</div>
+                            <div class="ja">奈良県民の方</div>
+                          </a>
+                          <figure>
+                            <img src="assets/img/image1.jpg" alt="" />
+                          </figure>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
+                      <ul class="l-drawer-nav__list">
+                        <li class="l-drawer-nav__item">
+                          <a href="recruit.html" class="l-drawer-nav__link">
+                            <div class="en">Member</div>
+                            <div class="ja">メンバー募集</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a href="contact.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Contact</div>
-                            <div class="l-drawer-nav__link-ja">
-                              お問い合わせ
-                            </div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Contact</div>
+                            <div class="ja">お問い合わせ</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a
-                            href="privacy-policy.html"
-                            class="l-drawer-nav__link"
-                          >
-                            <div class="l-drawer-nav__link-en">
-                              Privacy Policy
-                            </div>
-                            <div class="l-drawer-nav__link-ja">
-                              プライバシーポリシー
-                            </div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Privacy Policy</div>
+                            <div class="ja">プライバシーポリシー</div>
                           </a>
                         </li>
                       </ul>
@@ -195,23 +262,89 @@
           </nav>
           <!-- Drawer Navigation End -->
         </div>
-      </div>
+      </header>
       <!-- Header End -->
       <!-- Main Start -->
       <main class="l-main">
-        <div class="p-nara">
+        <div id="p-nara">
           <!-- Visual Start -->
           <div class="p-nara__visual">
-            <h2 class="c-title__nara p-nara__title">
-              <div class="c-title__nara--wrapper">
-                <div class="c-title__nara--wrapper-ja">ならプロジェクト</div>
-                <div class="c-title__nara--wrapper-en">
-                  <span>Nara Project</span>
+            <div class="p-nara__visual--slide">
+              <div class="swiper-container swiper03">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <article class="slide">
+                      <div class="slide-media">
+                        <img src="assets/img/nara/nara01.jpg" alt="" />
+                      </div>
+                      <h2 class="slide-title"><span >Nara Project</span></h2>
+                      <p class="slide-text">ならプロジェクトは、奈良県に特化したプロジェクトです。</p>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="slide">
+                      <div class="slide-media">
+                        <img src="assets/img/nara/nara02.jpg" alt="" />
+                      </div>
+                      <h2 class="slide-title">First Project</h2>
+                      <p class="slide-text">10組限定ホームページ制作<span>5万円</span>キャンペーン<br>2022年5月31日〜8月31日まで</p>
+                      <p class="slide-link">
+                        <a href="nara.html#project01" class="slide-btn">詳しくみる</a>
+                      </p>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="slide">
+                      <div class="slide-media">
+                        <img src="assets/img/nara/nara02.jpg" alt="" />
+                      </div>
+                      <h2 class="slide-title"><span >Nara Project</span></h2>
+                      <p class="slide-text">ならプロジェクトは、奈良県に特化したプロジェクトです。</p>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="slide">
+                      <div class="slide-media">
+                        <img src="assets/img/nara/nara01.jpg" alt="" />
+                      </div>
+                      <h2 class="slide-title">First Project</h2>
+                      <p class="slide-text">10組限定LP制作3万円キャンペーン<br>2022年5月31日〜8月31日まで</p>
+                      <p class="slide-link">
+                        <a href="nara.html#project01" class="slide-btn">詳しくみる</a>
+                      </p>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="slide">
+                      <div class="slide-media">
+                        <img src="assets/img/nara/nara03.jpg" alt="" />
+                      </div>
+                      <h2 class="slide-title"><span >Nara Project</span></h2>
+                      <p class="slide-text">ならプロジェクトは、奈良県に特化したプロジェクトです。</p>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="slide">
+                      <div class="slide-media">
+                        <img src="assets/img/nara/nara02.jpg" alt="" />
+                      </div>
+                      <h2 class="slide-title">First Project</h2>
+                      <p class="slide-text">10組限定LP制作3万円キャンペーン<br>2022年5月31日〜8月31日まで</p>
+                      <p class="slide-link">
+                        <a href="nara.html#project01" class="slide-btn">詳しくみる</a>
+                      </p>
+                    </article>
+                  </div>
+                </div>
+                <div class="swiper-pagination">
+                  <span class="swiper-pagination-bullet"></span>
+                  <span class="swiper-pagination-bullet"></span>
+                  <span class="swiper-pagination-bullet"></span>
+                  <span class="swiper-pagination-bullet"></span>
+                  <span class="swiper-pagination-bullet"></span>
+                  <span class="swiper-pagination-bullet"></span>
                 </div>
               </div>
-            </h2>
-            <div class="p-nara__visual-image">
-              <img src="assets/img/nara/nara.jpg" alt="" />
             </div>
           </div>
           <!-- Visual End -->
@@ -237,7 +370,10 @@
                 <a href="news.html" class="l-global-nav__link">News</a>
               </li>
               <li class="l-global-nav__item">
-                <a href="index.html" class="l-global-nav__link">Blog</a>
+                <a href="blog.html" class="l-global-nav__link">Blog</a>
+              </li>
+              <li class="l-global-nav__item">
+                <a href="faq.html" class="l-global-nav__link">FAQ</a>
               </li>
               <li class="l-global-nav__item">
                 <a href="contact.html" class="l-global-nav__link">Contact</a>
@@ -245,29 +381,476 @@
             </ul>
           </nav>
           <!-- Global Navigation End -->
-
-          <!-- Page Section Start -->
-          <section class="p-page__main">
-            <div class="p-page__main--wrapper">
-              <div class="container"></div>
+          <!-- Nara Intro Section Start -->
+          <section class="p-nara__intro">
+            <div class="p-page__intro--wrapper">
+              <div class="container-xl">
+                <div class="p-page__intro--body">
+                  <p>ならプロジェクトは、奈良県に特化したプロジェクトです。</p>
+                  <p>
+                    かつコードは、2022年5月に起業し、奈良県を拠点にしています。
+                  </p>
+                  <p>
+                    通常、Webサイト制作を主体に活動していますが、<br />デジタルの可能性を奈良県の方により多く知ってもらうために、<br />様々なプロジェクトにお応えします。
+                  </p>
+                  <p>少しでも奈良県の方々のお役に立てればと考えております。</p>
+                </div>
+              </div>
             </div>
           </section>
-          <!-- About Section End -->
+          <!-- Nara Intro Section End -->
+          <!-- Nara Block-1 Start -->
+          <section class="p-nara__block-1">
+            <div class="p-page__intro--wrapper">
+              <div class="p-nara__block--container">
+                <div class="p-page__intro--body">
+                  <p>こんな悩みはありませんか？</p>
+                  <div class="p-nara__block-1--img-list row">
+                    <div class="p-nara__block-1--img-item col-4">
+                      <div class="p-nara__block-1--balloon">
+                        <p>ホームページが欲しいけど予算がかけられない。。。</p>
+                      </div>
+                      <figure class="p-nara__block-1--img-wrapper">
+                        <img src="assets/img/nara/businessman.svg" alt="" />
+                      </figure>
+                    </div>
+                    <div class="p-nara__block-1--img-item col-4">
+                      <div class="p-nara__block-1--balloon">
+                        <p>
+                          デジタルのシステムを導入したいがどうすればいいのかわからない。
+                        </p>
+                      </div>
+                      <figure class="p-nara__block-1--img-wrapper">
+                        <img src="assets/img/nara/businesswoman.svg" alt="" />
+                      </figure>
+                    </div>
+                    <div class="p-nara__block-1--img-item col-4">
+                      <div class="p-nara__block-1--balloon">
+                        <p>パソコンの使い方がわからない。。。</p>
+                      </div>
+                      <figure class="p-nara__block-1--img-wrapper">
+                        <img src="assets/img/nara/woman.svg" alt="" />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Nara Block-1 End -->
+          <!-- Nara Block-2 Start -->
+          <section class="p-nara__block-2 p-nara__section">
+            <div class="p-nara__block--wrapper">
+              <div class="p-nara__block--container">
+                <div class="p-nara__block--body">
+                  <div class="p-nara__block-2--message">
+                    <strong>その悩み！かつコードが解決いたします！</strong>
+                  </div>
+                  <ul class="p-nara__block-2--list row">
+                    <li class="p-nara__block-2--item col-md-4">
+                      <figure class="p-nara__block-2--img-wrapper blob blob-1">
+                        <img src="assets/img/nara/businessman.svg" alt="" />
+                      </figure>
+                      <div class="p-nara__block-2--contents">
+                        <h4 class="title" data-lead="Look">見える！</h4>
+                        <p>
+                          ご利用中求人メディアの応募者を一括管理！自社が、店舗が、今どんな採用状況なのか？どんな人といつ会うのか？などを「見える化」します！
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-nara__block-2--item col-md-4">
+                      <figure class="p-nara__block-2--img-wrapper blob blob-2">
+                        <img src="assets/img/nara/businessman.svg" alt="" />
+                      </figure>
+                      <div class="p-nara__block-2--contents">
+                        <h4 class="title" data-lead="Look">見える！</h4>
+                        <p>
+                          ご利用中求人メディアの応募者を一括管理！自社が、店舗が、今どんな採用状況なのか？どんな人といつ会うのか？などを「見える化」します！
+                        </p>
+                      </div>
+                    </li>
+                    <li class="p-nara__block-2--item col-md-4">
+                      <figure class="p-nara__block-2--img-wrapper blob blob-3">
+                        <img src="assets/img/nara/businessman.svg" alt="" />
+                      </figure>
+                      <div class="p-nara__block-2--contents">
+                        <h4 class="title" data-lead="Look">見える！</h4>
+                        <p>
+                          ご利用中求人メディアの応募者を一括管理！自社が、店舗が、今どんな採用状況なのか？どんな人といつ会うのか？などを「見える化」します！
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Nara Block-2 End -->
+          <!-- Nara Banner Start -->
+          <section class="p-nara__contact--banner">
+            <div class="p-nara__block--wrapper pt-80 pb-80">
+              <div class="container">
+                <div class="c-btn__primary p-about__btn mr-auto ml-auto">
+                  <a href="nara.html#contact" class="c-btn__primary--wrapper">
+                    <span class="c-btn__primary--text">お問い合わせする</span>
+                    <div class="c-btn__primary--arrow">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Nara Banner End -->
+          <!-- Nara Block-3 Start -->
+          <section class="p-nara__block-3">
+            <div class="p-nara__block--wrapper pt-60 pb-60">
+              <div class="p-nara__block--container">
+                <div class="p-nara__block--header">
+                  <h3
+                    class="c-title__page-secondary p-nara__contact--title"
+                    data-en="Can"
+                  >
+                    <span>できること</span>
+                  </h3>
+                </div>
+                <div class="p-nara__block--body mt-80">
+                  <div class="p-nara__block-3--item">
+                    <div class="p-nara__block-3--item-wrapper row">
+                      <div class="p-nara__block-3--item-request col-4 row">
+                        <h4 class="title">お客様の要望</h4>
+                        <div class="description"></div>
+                      </div>
+                      <div class="p-nara__block-3--item-think col-4 row">
+                        <h4 class="title">一緒になって考える</h4>
+                        <div class="description"></div>
+                      </div>
+                      <div class="p-nara__block-3--item-solution col-4 row">
+                        <h4 class="title">解決</h4>
+                        <div class="description">Webサイトリニューアル / Webサイトの新規制作 /
+                          Web広告運用 / その他Web戦略のご提案 /
+                          Webサイトの保守・運用</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Nara Block-3 End -->
+          <!-- Nara Banner Start -->
+          <section class="p-nara__contact--banner">
+            <div class="p-nara__block--wrapper pt-40 pb-40">
+              <div class="container">
+                <div class="c-btn__primary p-about__btn mr-auto ml-auto">
+                  <a href="nara.html#contact" class="c-btn__primary--wrapper">
+                    <span class="c-btn__primary--text">お問い合わせする</span>
+                    <div class="c-btn__primary--arrow">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Nara Banner End -->
+          <!-- Nara Block-4 Start -->
+          <section class="p-nara__block-4">
+            <div class="p-nara__block--wrapper pt-60 pb-60">
+              <div class="p-nara__block--container">
+                <div class="p-contact__main--header">
+                  <h3
+                    class="c-title__page-secondary p-nara__contact--title"
+                    data-en="Current"
+                  >
+                    <span>現在のサービス</span>
+                  </h3>
+                </div>
+                <div class="p-nara__block--body mt-80">
+                  <div class="p-nara__block-4--item">
+                    <h4 class="title">ホームページ制作</h4>
+                    <div class="price-wrap">
+                      <div class="price">
+                        <span>5万円〜</span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <figure class="p-nara__block-4--img-wrapper">
+                          <img src="assets/img/image4.jpg" alt="" />
+                        </figure>
+                      </div>
+                      <div class="col-6"></div>
+                    </div>
+                  </div>
+                  <div class="p-nara__block-4--item">
+                    <h4 class="title">LP制作</h4>
+                  </div>
+                  <div class="p-nara__block-4--item">
+                    <h4 class="title">ホームページ制作</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Nara Block-4 End -->
+          <!-- Nara Banner Start -->
+          <section class="p-nara__contact--banner">
+            <div class="p-nara__block--wrapper pt-40 pb-40">
+              <div class="container">
+                <div class="c-btn__primary p-about__btn mr-auto ml-auto">
+                  <a href="about.html" class="c-btn__primary--wrapper">
+                    <span class="c-btn__primary--text">お問い合わせする</span>
+                    <div class="c-btn__primary--arrow">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Nara Banner End -->
+          <!-- Nara Block-4 Start -->
+          <section class="p-nara__block-4">
+            <div class="p-nara__block--wrapper pt-60 pb-60">
+              <div class="container">
+                <div class="p-nara__block--body">
+                  <h2 class="c-title__nara--primary">かつコードとは</h2>
+
+                  <p>
+                    かつコードは、2022年5月に開設した小さなWeb制作会社です。
+                  </p>
+                  <p>
+                    かつコードは、2022年5月に開設した小さなWeb制作会社です。
+                  </p>
+                  <p>
+                    かつコードは、2022年5月に開設した小さなWeb制作会社です。
+                  </p>
+                  <p>
+                    かつコードは、2022年5月に開設した小さなWeb制作会社です。
+                  </p>
+                  <p>
+                    もっと詳しく知りたい方は、下記のボタンよりご覧ください。
+                  </p>
+                </div>
+                <div class="c-btn__primary p-about__btn mt-80 mr-auto ml-auto">
+                  <a href="about.html" class="c-btn__primary--wrapper">
+                    <span class="c-btn__primary--text">かつコードについて</span>
+                    <div class="c-btn__primary--arrow">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Nara Block-4 End -->
+          <!-- Nara Banner Start -->
+          <section id="contact" class="p-nara__contact">
+            <div class="p-nara__block--wrapper pt-40 pb-80">
+              <div class="container">
+                <div class="p-contact__main--header">
+                  <h3
+                    class="c-title__page-secondary p-nara__contact--title"
+                    data-en="Contact"
+                  >
+                    <span>お問い合わせ</span>
+                  </h3>
+                </div>
+                <div class="p-contact__main--body">
+                  <div class="contact-form">
+                    <form method="post" action enctype="multipart/form-data">
+                      <table>
+                        <tr>
+                          <td>
+                            <div class="form-wrapper">
+                              <div class="form-item__wrapper row">
+                                <div class="form-label__wrapper col-lg-4">
+                                  <label
+                                    for="company"
+                                    class="form-label c-form__require"
+                                  >
+                                    会社名
+                                  </label>
+                                </div>
+                                <div class="form-item col-lg-6">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="company"
+                                    id="company"
+                                    placeholder="会社名"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="form-item__wrapper row">
+                                <div class="form-label__wrapper col-lg-4">
+                                  <label
+                                    for="name"
+                                    class="form-label c-form__require"
+                                  >
+                                    お名前
+                                    <span class="required">※必須</span>
+                                  </label>
+                                </div>
+                                <div class="form-item col-lg-6">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="name"
+                                    id="name"
+                                    placeholder="お名前"
+                                  />
+                                </div>
+                                <p></p>
+                              </div>
+
+                              <div class="form-item__wrapper row">
+                                <div class="form-label__wrapper col-lg-4">
+                                  <label
+                                    for="name_kana"
+                                    class="form-label c-form__require"
+                                  >
+                                    フリガナ
+                                    <span class="required">※必須</span>
+                                  </label>
+                                </div>
+                                <div class="form-item col-lg-6">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="name_kana"
+                                    id="name_kana"
+                                    placeholder="フリガナ"
+                                  />
+                                </div>
+                                <p></p>
+                              </div>
+
+                              <div class="form-item__wrapper row">
+                                <div class="form-label__wrapper col-lg-4">
+                                  <label
+                                    for="tel"
+                                    class="form-label c-form__require"
+                                  >
+                                    電話番号
+                                  </label>
+                                </div>
+                                <div class="form-item col-lg-6">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="tel"
+                                    id="tel"
+                                    placeholder="電話番号"
+                                  />
+                                </div>
+                                <p></p>
+                              </div>
+
+                              <div class="form-item__wrapper row">
+                                <div class="form-label__wrapper col-lg-4">
+                                  <label
+                                    for="email"
+                                    class="form-label c-form__require"
+                                  >
+                                    メールアドレス
+                                    <span class="required">※必須</span>
+                                  </label>
+                                </div>
+                                <div class="form-item col-lg-6">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="email"
+                                    id="email"
+                                    placeholder="メールアドレス"
+                                  />
+                                </div>
+                                <p></p>
+                              </div>
+
+                              <div class="form-item__wrapper row">
+                                <div class="form-label__wrapper col-lg-4">
+                                  <label
+                                    for="message"
+                                    class="form-label c-form__require"
+                                  >
+                                    お問い合わせ内容
+                                    <span class="required">※必須</span>
+                                  </label>
+                                </div>
+                                <div class="form-item col-lg-6">
+                                  <textarea
+                                    name="message"
+                                    class="form-control"
+                                    id="message"
+                                    cols="30"
+                                    rows="8"
+                                  >
+お問い合わせ内容</textarea
+                                  >
+                                </div>
+                              </div>
+                              <div class="contact__privacy-policy">
+                                <p class="contact__privacy-policy--text">
+                                  <a href="privacy-policy.html"
+                                    >プライバシーポリシーを確認する</a
+                                  >
+                                </p>
+                                <p class="contact__privacy-policy--check">
+                                  <span>
+                                    <label>
+                                      <input
+                                        type="checkbox"
+                                        value="プライバシーポリシーに同意する"
+                                      />
+                                      <span
+                                        >プライバシーポリシーに同意する</span
+                                      >
+                                    </label>
+                                  </span>
+                                </p>
+                              </div>
+
+                              <div
+                                class="c-btn__contact p-contact__main--btn mt-80 mr-auto ml-auto"
+                              >
+                                <button
+                                  type="submit"
+                                  class="c-btn__contact--confirm"
+                                  value="send"
+                                >
+                                  内容を確認する
+                                </button>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Nara Banner End -->
         </div>
       </main>
       <!-- Main End -->
       <!-- Footer Start -->
       <footer class="l-footer">
-        <div class="l-footer__wrapper">
-          <div class="l-footer__main">
+        <div class="l-footer__wrapper pt-80">
+          <div class="l-footer__main pb-40">
             <div class="container">
-              <div class="l-footer__logo">
+              <h2 class="l-footer__logo">
                 <a href="">
                   <img src="assets/img/logo.png" alt="ロゴ" />
-                  <span>Katsu code</span>
+                  <span class="pl-8">Katsu code</span>
                 </a>
-              </div>
-              <div class="row justify-content-center">
+              </h2>
+              <div class="row">
                 <div class="col-lg-6">
                   <div class="l-footer__address">
                     <dl>
@@ -291,22 +874,22 @@
                   <ul class="l-footer__sns-list">
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-facebook icon facebook"></i>
+                        <i class="fab fa-facebook icon icon-facebook"></i>
                       </a>
                     </li>
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-twitter icon twitter"></i>
+                        <i class="fab fa-twitter icon icon-twitter"></i>
                       </a>
                     </li>
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-instagram icon instagram"></i>
+                        <i class="fab fa-instagram icon icon-instagram"></i>
                       </a>
                     </li>
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-line icon line"></i>
+                        <i class="fab fa-line icon icon-line"></i>
                       </a>
                     </li>
                   </ul>
@@ -342,13 +925,16 @@
                         <a href="blog.html" class="l-footer-nav__link">Blog</a>
                       </li>
                       <li class="l-footer-nav__item">
-                        <a href="recruit.html" class="l-footer-nav__link"
-                          >Recruit</a
-                        >
+                        <a href="faq.html" class="l-footer-nav__link">FAQ</a>
                       </li>
                       <li class="l-footer-nav__item">
                         <a href="contact.html" class="l-footer-nav__link"
                           >Contact</a
+                        >
+                      </li>
+                      <li class="l-footer-nav__item">
+                        <a href="recruit.html" class="l-footer-nav__link"
+                          >Recruit</a
                         >
                       </li>
                       <li class="l-footer-nav__item">
@@ -367,9 +953,14 @@
           </div>
         </div>
       </footer>
-      <!-- Footer End -->Ï
+      <!-- Footer End -->
     </div>
 
+    <div class="cursor"></div>
+    <div class="follower"></div>
+
+    <!-- TweenMax JS -->
+    <script src="assets/js/TweenMax.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- Custom JS -->

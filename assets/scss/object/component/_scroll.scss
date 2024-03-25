@@ -1,0 +1,49 @@
+.c-scrolldown {
+  position: absolute;
+  bottom: 50px;
+  left: 170px;
+  z-index: 100;
+  @media screen and (max-width: 991px) {
+    left: 8rem;
+  }
+  @media screen and (max-width: 575px) {
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.c-scrolldown__wrapper {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  svg {
+    fill: #383838;
+  }
+
+  .c-scroll-text {
+    width: 100px;
+    height: auto;
+    animation: rotation 10s infinite linear;
+  }
+
+  .c-scroll-icon {
+    width: 25px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in;
+  }
+
+  &:hover .c-scroll-icon {
+    animation: move 1s infinite linear;
+  }
+
+  @media screen and (max-width: 991px) {
+    svg {
+      fill: #fff;
+    }
+  }
+}

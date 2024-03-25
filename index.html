@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="katsucodeは、Webサイト制作を中心に活動する個人事業主です。"
-    />
+    <meta name="description" content="katsucodeは、Webサイト制作を中心に活動する個人事業主です。" />
     <meta name="robots" content="index, follow" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-TitleImage" content="#" />
@@ -17,10 +14,7 @@
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="katsucode" />
-    <meta
-      property="og:description"
-      content="Webサイト制作と受託開発を行なっている、かつコード。"
-    />
+    <meta property="og:description" content="Webサイト制作と受託開発を行なっている、かつコード。" />
     <meta property="og:url" content="https://katsucode.jp/" />
     <meta property="og:site_name" content="katsucode" />
     <meta property="og:image" content="" />
@@ -35,15 +29,8 @@
     <link rel="canonical" href="https://katsucode.jp/" />
     <!-- favicon設定 -->
     <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      href="assets/img/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/img/favicon/android-chrome-192x192.png"
-    />
+    <link rel="apple-touch-icon" href="assets/img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon/android-chrome-192x192.png" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/all.min.css" />
     <!-- Google Fonts -->
@@ -52,17 +39,24 @@
       rel="stylesheet"
     />
     <!-- Adobe Font -->
-    <link rel="stylesheet" href="https://use.typekit.net/lpg7pom.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lpg7pom.css" />
     <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
   </head>
   <body>
-    <div class="transition transition-2 is-active"></div>
+    <!-- Loading -->
+    <div id="splash">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="splashbg"></div>
 
     <div class="l-wrapper">
       <!-- Header Start -->
@@ -71,160 +65,164 @@
           <h1 class="l-header__logo">
             <a href="index.html">
               <img src="assets/img/logo.png" alt="ロゴ" />
-              <span>Katsu code</span>
+              <span class="pl-8">Katsucode</span>
             </a>
           </h1>
           <!-- Header Navigation Start -->
           <nav class="l-header-nav">
             <ul class="l-header-nav__list">
               <li class="l-header-nav__item">
-                <a
-                  href="https://www.facebook.com/katsuhiro.kakoi/"
-                  class="l-header-nav__link"
-                >
-                  <i class="fab fa-facebook icon facebook"></i>
+                <a href="https://www.facebook.com/katsuhiro.kakoi/" class="l-header-nav__link">
+                  <i class="fab fa-facebook icon icon-facebook"></i>
                 </a>
               </li>
               <li class="l-header-nav__item">
-                <a
-                  href="https://twitter.com/KatsuhiroKakoi"
-                  class="l-header-nav__link"
-                >
-                  <i class="fab fa-twitter icon twitter"></i>
+                <a href="https://twitter.com/KatsuhiroKakoi" class="l-header-nav__link">
+                  <i class="fab fa-twitter icon icon-twitter"></i>
                 </a>
               </li>
               <li class="l-header-nav__item">
-                <a href="#" class="l-header-nav__link">
-                  <i class="fab fa-instagram icon instagram"></i>
+                <a href="https://www.instagram.com/katsucode/" class="l-header-nav__link">
+                  <i class="fab fa-instagram icon icon-instagram"></i>
                 </a>
               </li>
               <li class="l-header-nav__item">
                 <a href="#" class="l-header-nav__link">
-                  <i class="fab fa-line icon line"></i>
+                  <i class="fab fa-line icon icon-line"></i>
                 </a>
               </li>
               <li class="l-header-nav__item">
-                <a href="recruit.html" class="l-header-nav__link"
-                  >メンバー募集</a
-                >
+                <a href="recruit.html" class="l-header-nav__link"> メンバー募集 </a>
               </li>
             </ul>
           </nav>
           <!-- Header Navigation End -->
-
           <button id="menu-toggle" class="menu-toggle">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
           </button>
-
           <!-- Drawer Navigation Start -->
           <nav class="l-drawer-nav">
             <div class="l-drawer-nav__container">
               <div class="container">
                 <div class="l-drawer-nav__wrapper">
                   <div class="l-drawer-nav__row row">
-                    <div class="l-drawer-nav__col col-md-6">
+                    <div class="l-drawer-nav__col col-md-12">
+                      <div class="l-drawer-nav__logo">
+                        <a href="index.html">
+                          <img src="assets/img/logo.png" alt="ロゴ" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
                       <ul class="l-drawer-nav__list">
                         <li class="l-drawer-nav__item">
                           <a href="index.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Home</div>
-                            <div class="l-drawer-nav__link-ja">ホーム</div>
+                            <div class="en">Home</div>
+                            <div class="ja">ホーム</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
                           <a href="about.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">About</div>
-                            <div class="l-drawer-nav__link-ja">
-                              かつコードについて
-                            </div>
+                            <div class="en">About</div>
+                            <div class="ja">かつコードについて</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
                           <a href="service.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Service</div>
-                            <div class="l-drawer-nav__link-ja">事業内容</div>
+                            <div class="en">Service</div>
+                            <div class="ja">事業内容</div>
+                          </a>
+                          <ul class="l-drawer-nav__list--child">
+                            <li>
+                              <a href="service#webdesgin">Web制作</a>
+                            </li>
+                            <li>
+                              <a href="service#graphic">グラフィックデザイン</a>
+                            </li>
+                            <li>
+                              <a href="service#cms">CMS開発</a>
+                            </li>
+                            <li>
+                              <a href="service#webdesgin">Web制作</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Project</div>
+                            <div class="ja">制作実績</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a href="project.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Project</div>
-                            <div class="l-drawer-nav__link-ja">制作実績</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Flow</div>
+                            <div class="ja">制作の流れ</div>
                           </a>
                         </li>
                       </ul>
                     </div>
-                    <div class="l-drawer-nav__col col-md-6">
+
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
                       <ul class="l-drawer-nav__list">
                         <li class="l-drawer-nav__item">
-                          <a href="flow.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Flow</div>
-                            <div class="l-drawer-nav__link-ja">制作の流れ</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">News</div>
+                            <div class="ja">お知らせ</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a href="news.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">News</div>
-                            <div class="l-drawer-nav__link-ja">お知らせ</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Blog</div>
+                            <div class="ja">ブログ</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a href="blog.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Blog</div>
-                            <div class="l-drawer-nav__link-ja">ブログ</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">FAQ</div>
+                            <div class="ja">よくあるご質問</div>
                           </a>
                         </li>
-                      </ul>
-                    </div>
-                    <div class="l-drawer-nav__col col-md-6">
-                      <ul class="l-drawer-nav__list">
                         <li class="l-drawer-nav__item swim">
-                          <a href="swim.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Swim</div>
-                            <div class="l-drawer-nav__link-ja">
-                              水泳関係者の方
-                            </div>
+                          <a href="swim.html" class="l-drawer-nav__link swim">
+                            <div class="en">Swim</div>
+                            <div class="ja">水泳関係者の方</div>
                           </a>
+                          <figure>
+                            <img src="assets/img/image1.jpg" alt="" />
+                          </figure>
                         </li>
                         <li class="l-drawer-nav__item nara">
-                          <a href="nara.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Nara Project</div>
-                            <div class="l-drawer-nav__link-ja">
-                              奈良県民の方
-                            </div>
+                          <a href="nara.html" class="l-drawer-nav__link nara">
+                            <div class="en">Nara</div>
+                            <div class="ja">奈良県民の方</div>
                           </a>
+                          <figure>
+                            <img src="assets/img/image1.jpg" alt="" />
+                          </figure>
                         </li>
                       </ul>
                     </div>
-                    <div class="l-drawer-nav__col col-md-6">
+
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
                       <ul class="l-drawer-nav__list">
                         <li class="l-drawer-nav__item">
-                          <a href="contact.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Contact</div>
-                            <div class="l-drawer-nav__link-ja">
-                              お問い合わせ
-                            </div>
-                          </a>
-                        </li>
-                        <li class="l-drawer-nav__item">
                           <a href="recruit.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Recruit</div>
-                            <div class="l-drawer-nav__link-ja">
-                              メンバー募集
-                            </div>
+                            <div class="en">Member</div>
+                            <div class="ja">メンバー募集</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a
-                            href="privacy-policy.html"
-                            class="l-drawer-nav__link"
-                          >
-                            <div class="l-drawer-nav__link-en">
-                              Privacy Policy
-                            </div>
-                            <div class="l-drawer-nav__link-ja">
-                              プライバシーポリシー
-                            </div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Contact</div>
+                            <div class="ja">お問い合わせ</div>
+                          </a>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Privacy Policy</div>
+                            <div class="ja">プライバシーポリシー</div>
                           </a>
                         </li>
                       </ul>
@@ -237,64 +235,55 @@
           <!-- Drawer Navigation End -->
         </div>
       </header>
+      <!-- Header End -->
       <!-- Main Start -->
       <main class="l-main">
-        <div class="p-index">
+        <div id="p-index">
           <!-- Visual Start -->
           <div class="p-index__visual">
-            <h2 class="p-index__visual-catch">
-              Welcome to <span>Katsu code.</span>
-            </h2>
-            <div class="p-index__visual-image swiper-container swiper01">
+            <h2 class="p-index__visual--catch">Welcome to <span>Katsu code.</span></h2>
+            <div class="p-index__visual--slide swiper-container swiper01">
               <div class="swiper-wrapper">
-                <a href="web.html" class="swiper-slide">
+                <a href="service.html#webdesign" class="swiper-slide">
                   <article class="slide">
-                    <div class="slide-media">
-                      <img
-                        src="https://source.unsplash.com/random
-                      "
-                        alt=""
-                      />
-                    </div>
-                    <h2 class="slide-title">Web Design</h2>
-                  </article>
-                </a>
-                <a href="nara.html" class="swiper-slide">
-                  <article class="slide">
-                    <div class="slide-media">
-                      <img
-                        src="https://source.unsplash.com/random
-                      "
-                        alt=""
-                      />
-                    </div>
-                    <h2 class="slide-title">Nara Project</h2>
-                  </article>
-                </a>
-                <a href="#" class="swiper-slide">
-                  <article class="slide">
-                    <div class="slide-media">
+                    <figure class="slide-img__wrapper">
                       <img src="https://source.unsplash.com/random" alt="" />
-                    </div>
-                    <h2 class="slide-title">Web System</h2>
+                    </figure>
+                    <h3 class="slide-title">Web Design</h3>
                   </article>
                 </a>
-                <a href="swim.html" class="swiper-slide">
+                <a href="service.html#webdesign" class="swiper-slide">
                   <article class="slide">
-                    <div class="slide-media">
+                    <figure class="slide-img__wrapper">
                       <img src="https://source.unsplash.com/random" alt="" />
-                    </div>
-                    <h2 class="slide-title">Application</h2>
+                    </figure>
+                    <h3 class="slide-title">Graphic Design</h3>
+                  </article>
+                </a>
+                <a href="service.html#webdesign" class="swiper-slide">
+                  <article class="slide">
+                    <figure class="slide-img__wrapper">
+                      <img src="https://source.unsplash.com/random" alt="" />
+                    </figure>
+                    <h3 class="slide-title">Web Design</h3>
+                  </article>
+                </a>
+                <a href="service.html#webdesign" class="swiper-slide">
+                  <article class="slide">
+                    <figure class="slide-img__wrapper">
+                      <img src="https://source.unsplash.com/random" alt="" />
+                    </figure>
+                    <h3 class="slide-title">Web Design</h3>
                   </article>
                 </a>
               </div>
             </div>
-            <div class="scrolldown">
-              <div class="scrolldown-box">
+            <div class="c-scrolldown">
+              <div class="c-scrolldown__wrapper">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 483.39 479.3"
-                  class="scroll-text"
+                  class="c-scroll-text"
                 >
                   <g id="Layer_2" data-name="Layer 2">
                     <g id="Layer_1-2" data-name="Layer 1">
@@ -370,7 +359,7 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 144 206.98"
-                  class="scroll-icon"
+                  class="c-scroll-icon"
                 >
                   <g id="Layer_2" data-name="Layer 2">
                     <g id="Layer_1-2" data-name="Layer 1">
@@ -422,22 +411,20 @@
             <div class="p-index__about--wrapper">
               <div class="container">
                 <h2 class="c-title__primary p-index__about--title">
-                  <div class="c-title__primary-en">About</div>
+                  <div class="en">About</div>
                 </h2>
-                <div class="p-index__about--catch">
+                <div class="p-index__about--catch mt-40">
                   <p>人と人をつなげたい。。。</p>
                 </div>
-                <div class="p-index__about--lead">
-                  <p>
-                    かつコードはWeb制作を中心に活動する、奈良県にある小さなWeb制作会社です。
-                  </p>
+                <div class="p-index__about--lead mt-80">
+                  <p>かつコードはWeb制作を中心に活動する、奈良県にある小さなWeb制作会社です。</p>
                   <p>
                     人と人とをつなげるのに、様々な手段がある昨今ですが、<br />
                     その1つとして、私たちができることは何かを考えたとき、<br />
                     デジタルを通して、伝えることができないかと考えました。
                   </p>
                   <p>
-                    誰かが誰かに何かをしてあげられることは、<br>
+                    誰かが誰かに何かをしてあげられることは、<br />
                     そんなに大きなことはできません
                   </p>
                   <p>
@@ -445,7 +432,7 @@
                     それが結果として、より良い人と人とのつながりのきっかけになると信じています。
                   </p>
                 </div>
-                <div class="c-btn__primary p-index__about--btn">
+                <div class="c-btn__primary p-index__about--btn mt-80">
                   <a href="about.html" class="c-btn__primary--wrapper">
                     <span class="c-btn__primary--text">かつコードについて</span>
                     <div class="c-btn__primary--arrow">
@@ -467,56 +454,72 @@
             <div class="p-index__service--wrapper">
               <div class="container">
                 <h2 class="c-title__primary p-index__service--title">
-                  <div class="c-title__primary-en">Service</div>
-                  <div class="c-title__primary-ja">事業内容</div>
+                  <div class="en">Service</div>
+                  <div class="ja">事業内容</div>
                 </h2>
-                <div class="p-index__service--lead">
+                <div class="p-index__service--lead mt-80">
                   <p>かつコードではWebサイト制作を中心に活動しています。</p>
                   <p>緻密な連絡をとり、スピードより質を優先した丁寧な開発。</p>
-                  <p>
-                    お客様と一緒になって考え、デジタルの可能性を追求していきます。
-                  </p>
+                  <p>お客様と一緒になって考え、デジタルの可能性を追求していきます。</p>
                   <p>また、受託開発も行なっており、幅広く対応しています。</p>
                 </div>
-                <div class="p-index__service--group">
-                  <a href="" class="p-index__service--item">
-                    <figure class="p-index__service--item-thumbnail">
-                      <img src="https://source.unsplash.com/random" alt="" />
-                    </figure>
-                    <div class="p-index__service--item-contents">
-                      <h3 class="p-index__service--item-title">
-                        <span class="p-index__service--item-title-en"
-                          >Web Design</span
-                        >
-                        <span class="p-index__service--item-title-ja"
-                          >Webサイト制作</span
-                        >
-                      </h3>
-                      <p class="p-index__service--item-description">
-                        Webサイトの新規作成、Webサイトのリニューアル、Webサイトの修正、LP作成、Webサイトの保守・運用まで幅広く対応いたします。
-                      </p>
-                    </div>
-                  </a>
-                  <a href="" class="p-index__service--item">
-                    <figure class="p-index__service--item-thumbnail">
-                      <img src="https://source.unsplash.com/random" alt="" />
-                    </figure>
-                    <div class="p-index__service--item-contents">
-                      <h3 class="p-index__service--item-title">
-                        <span class="p-index__service--item-title-en"
-                          >Contract Development</span
-                        >
-                        <span class="p-index__service--item-title-ja"
-                          >受託開発</span
-                        >
-                      </h3>
-                      <p class="p-index__service--item-description">
-                        Webサービス、Webシステム、アプリケーション開発など、幅広い分野で受託開発を行なっています。
-                      </p>
-                    </div>
-                  </a>
+                <div class="p-index__service--group mt-80">
+                  <div class="c-card__index-service">
+                    <a href="#">
+                      <div class="c-card__index-service--wrapper">
+                        <figure class="c-card__index-service--thumbnail">
+                          <img src="https://source.unsplash.com/random" alt="" />
+                        </figure>
+                        <div class="c-card__index-service--contents">
+                          <h3 class="c-card__index-service--title">
+                            <div class="en">Web Design</div>
+                            <div class="ja">Webサイト制作</div>
+                          </h3>
+                          <p class="c-card__index-service--description">
+                            Webサイトの新規作成、Webサイトのリニューアル、Webサイトの修正、LP作成、Webサイトの保守・運用まで幅広く対応いたします。
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="c-card__index-service">
+                    <a href="#">
+                      <div class="c-card__index-service--wrapper">
+                        <figure class="c-card__index-service--thumbnail">
+                          <img src="https://source.unsplash.com/random" alt="" />
+                        </figure>
+                        <div class="c-card__index-service--contents">
+                          <h3 class="c-card__index-service--title">
+                            <div class="en">Web Design</div>
+                            <div class="ja">Webサイト制作</div>
+                          </h3>
+                          <p class="c-card__index-service--description">
+                            Webサイトの新規作成、Webサイトのリニューアル、Webサイトの修正、LP作成、Webサイトの保守・運用まで幅広く対応いたします。
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="c-card__index-service">
+                    <a href="#">
+                      <div class="c-card__index-service--wrapper">
+                        <figure class="c-card__index-service--thumbnail">
+                          <img src="https://source.unsplash.com/random" alt="" />
+                        </figure>
+                        <div class="c-card__index-service--contents">
+                          <h3 class="c-card__index-service--title">
+                            <div class="en">Web Design</div>
+                            <div class="ja">Webサイト制作</div>
+                          </h3>
+                          <p class="c-card__index-service--description">
+                            Webサイトの新規作成、Webサイトのリニューアル、Webサイトの修正、LP作成、Webサイトの保守・運用まで幅広く対応いたします。
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <div class="c-btn__primary p-index__service--btn">
+                <div class="c-btn__primary p-index__service--btn mt-80 mr-auto ml-auto">
                   <a href="about.html" class="c-btn__primary--wrapper">
                     <span class="c-btn__primary--text">事業内容について</span>
                     <div class="c-btn__primary--arrow">
@@ -529,26 +532,23 @@
           </section>
           <!-- Service Section End -->
           <!-- Project Section Start -->
-          <!-- <section class="p-index__project">
+          <section class="p-index__project">
             <div class="p-index__project--wrapper">
               <div class="container">
                 <h2 class="c-title__primary p-index__project--title">
-                  <span class="c-title__primary-en">Project</span>
-                  <span class="c-title__primary-ja">実績</span>
+                  <div class="en">Project</div>
+                  <div class="ja">実績</div>
                 </h2>
-                <div class="p-index__project--lead">
+                <div class="p-index__project--lead mt-80">
                   <p>これまでの実績を紹介しています。</p>
                   <p>実績は現在非公開です。</p>
                   <p>(ご覧になりたい方は、お問い合わせください)</p>
                 </div>
-                <div class="p-index__project--group">
+                <div class="p-index__project--group"></div>
 
-                </div>
-                <div class="c-btn__primary p-index__project--btn">
+                <div class="c-btn__primary p-index__project--btn mt-80 mr-auto ml-auto">
                   <a href="about.html" class="c-btn__primary--wrapper">
-                    <span class="c-btn__primary--text"
-                      >実績一覧へ</span
-                    >
+                    <span class="c-btn__primary--text">実績一覧へ</span>
                     <div class="c-btn__primary--arrow">
                       <i class="fa-solid fa-arrow-right"></i>
                     </div>
@@ -556,7 +556,7 @@
                 </div>
               </div>
             </div>
-          </section> -->
+          </section>
           <!-- Banner Start -->
           <div class="p-index__banner">
             <div class="p-index__banner--elem p-index__banner--elem-2"></div>
@@ -567,26 +567,20 @@
             <div class="p-index__news--wrapper">
               <div class="container">
                 <h2 class="c-title__primary p-index__news--title">
-                  <div class="c-title__primary-en">News</div>
-                  <div class="c-title__primary-ja">お知らせ</div>
+                  <div class="en">News</div>
+                  <div class="ja">お知らせ</div>
                 </h2>
-                <div class="p-index__news--lead">
-                  <p>
-                    現在の受付状況やキャンペーン企画など、お知らせ情報を発信しています。
-                  </p>
+                <div class="p-index__news--lead mt-80">
+                  <p>現在の受付状況やキャンペーン企画など、お知らせ情報を発信しています。</p>
                 </div>
-                <div class="p-index__news--contents">
+                <div class="p-index__news--contents mt-80">
                   <ul class="c-list__news">
                     <li class="c-list__news--col">
                       <article class="c-list__news--item">
                         <a href="#" class="c-list__news--item-wrapper">
                           <div class="c-list__news--item-container">
-                            <time class="c-list__news--item-date"
-                              >2022年5月13日</time
-                            >
-                            <h3 class="c-list__news--item-heading">
-                              2022年5月の受付状況
-                            </h3>
+                            <time class="c-list__news--item-date">2022年5月13日</time>
+                            <h3 class="c-list__news--item-heading">2022年5月の受付状況</h3>
                           </div>
                           <div class="c-list__news--item-arrow"></div>
                         </a>
@@ -596,12 +590,8 @@
                       <article class="c-list__news--item">
                         <a href="#" class="c-list__news--item-wrapper">
                           <div class="c-list__news--item-container">
-                            <time class="c-list__news--item-date"
-                              >2022年5月13日</time
-                            >
-                            <h3 class="c-list__news--item-heading">
-                              2022年5月の受付状況
-                            </h3>
+                            <time class="c-list__news--item-date">2022年5月13日</time>
+                            <h3 class="c-list__news--item-heading">2022年5月の受付状況</h3>
                           </div>
                           <div class="c-list__news--item-arrow"></div>
                         </a>
@@ -611,12 +601,8 @@
                       <article class="c-list__news--item">
                         <a href="#" class="c-list__news--item-wrapper">
                           <div class="c-list__news--item-container">
-                            <time class="c-list__news--item-date"
-                              >2022年5月13日</time
-                            >
-                            <h3 class="c-list__news--item-heading">
-                              2022年5月の受付状況
-                            </h3>
+                            <time class="c-list__news--item-date">2022年5月13日</time>
+                            <h3 class="c-list__news--item-heading">2022年5月の受付状況</h3>
                           </div>
                           <div class="c-list__news--item-arrow"></div>
                         </a>
@@ -626,12 +612,8 @@
                       <article class="c-list__news--item">
                         <a href="#" class="c-list__news--item-wrapper">
                           <div class="c-list__news--item-container">
-                            <time class="c-list__news--item-date"
-                              >2022年5月13日</time
-                            >
-                            <h3 class="c-list__news--item-heading">
-                              2022年5月の受付状況
-                            </h3>
+                            <time class="c-list__news--item-date">2022年5月13日</time>
+                            <h3 class="c-list__news--item-heading">2022年5月の受付状況</h3>
                           </div>
                           <div class="c-list__news--item-arrow"></div>
                         </a>
@@ -641,12 +623,8 @@
                       <article class="c-list__news--item">
                         <a href="#" class="c-list__news--item-wrapper">
                           <div class="c-list__news--item-container">
-                            <time class="c-list__news--item-date"
-                              >2022年5月13日</time
-                            >
-                            <h3 class="c-list__news--item-heading">
-                              2022年5月の受付状況
-                            </h3>
+                            <time class="c-list__news--item-date">2022年5月13日</time>
+                            <h3 class="c-list__news--item-heading">2022年5月の受付状況</h3>
                           </div>
                           <div class="c-list__news--item-arrow"></div>
                         </a>
@@ -654,7 +632,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="c-btn__primary p-index__news--btn">
+                <div class="c-btn__primary p-index__news--btn mt-80 mr-auto ml-auto">
                   <a href="about.html" class="c-btn__primary--wrapper">
                     <span class="c-btn__primary--text">お知らせ一覧へ</span>
                     <div class="c-btn__primary--arrow">
@@ -674,31 +652,26 @@
                   <div class="c-title__primary-en">Blog</div>
                   <div class="c-title__primary-ja">ブログ</div>
                 </h2>
-                <div class="p-index__blog--lead">
+                <div class="p-index__blog--lead mt-80">
                   <p>
                     かつコードでは日々学んだことを共有するため、記事にまとめてわかりやすく発信しています。
                   </p>
                 </div>
               </div>
 
-              <div class="p-index__blog--contents">
-                <div class="swiper02">
+              <div class="p-index__blog--contents mt-80 mr-auto ml-auto">
+                <div class="swiper-container swiper02">
                   <div class="swiper-wrapper">
                     <a href="#" class="swiper-slide">
                       <article class="slide">
                         <figure class="slide-media">
-                          <img
-                            src="https://source.unsplash.com/random"
-                            alt=""
-                          />
+                          <img src="https://source.unsplash.com/random" alt="" />
                         </figure>
                         <div class="slide-content">
-                          <time class="slide-date" datetime="2021-12-01"
-                            >2021.12.01</time
-                          >
+                          <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
                           <h2 class="slide-title">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Necessitatibus, reprehenderit!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+                            reprehenderit!
                           </h2>
                         </div>
                       </article>
@@ -706,18 +679,13 @@
                     <a href="#" class="swiper-slide">
                       <article class="slide">
                         <figure class="slide-media">
-                          <img
-                            src="https://source.unsplash.com/random"
-                            alt=""
-                          />
+                          <img src="https://source.unsplash.com/random" alt="" />
                         </figure>
                         <div class="slide-content">
-                          <time class="slide-date" datetime="2021-12-01"
-                            >2021.12.01</time
-                          >
+                          <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
                           <h2 class="slide-title">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Necessitatibus, reprehenderit!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+                            reprehenderit!
                           </h2>
                         </div>
                       </article>
@@ -725,18 +693,13 @@
                     <a href="#" class="swiper-slide">
                       <article class="slide">
                         <figure class="slide-media">
-                          <img
-                            src="https://source.unsplash.com/random"
-                            alt=""
-                          />
+                          <img src="https://source.unsplash.com/random" alt="" />
                         </figure>
                         <div class="slide-content">
-                          <time class="slide-date" datetime="2021-12-01"
-                            >2021.12.01</time
-                          >
+                          <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
                           <h2 class="slide-title">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Necessitatibus, reprehenderit!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+                            reprehenderit!
                           </h2>
                         </div>
                       </article>
@@ -744,18 +707,13 @@
                     <a href="#" class="swiper-slide">
                       <article class="slide">
                         <figure class="slide-media">
-                          <img
-                            src="https://source.unsplash.com/random"
-                            alt=""
-                          />
+                          <img src="https://source.unsplash.com/random" alt="" />
                         </figure>
                         <div class="slide-content">
-                          <time class="slide-date" datetime="2021-12-01"
-                            >2021.12.01</time
-                          >
+                          <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
                           <h2 class="slide-title">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Necessitatibus, reprehenderit!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+                            reprehenderit!
                           </h2>
                         </div>
                       </article>
@@ -763,18 +721,13 @@
                     <a href="#" class="swiper-slide">
                       <article class="slide">
                         <figure class="slide-media">
-                          <img
-                            src="https://source.unsplash.com/random"
-                            alt=""
-                          />
+                          <img src="https://source.unsplash.com/random" alt="" />
                         </figure>
                         <div class="slide-content">
-                          <time class="slide-date" datetime="2021-12-01"
-                            >2021.12.01</time
-                          >
+                          <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
                           <h2 class="slide-title">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Necessitatibus, reprehenderit!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+                            reprehenderit!
                           </h2>
                         </div>
                       </article>
@@ -782,18 +735,13 @@
                     <a href="#" class="swiper-slide">
                       <article class="slide">
                         <figure class="slide-media">
-                          <img
-                            src="https://source.unsplash.com/random"
-                            alt=""
-                          />
+                          <img src="https://source.unsplash.com/random" alt="" />
                         </figure>
                         <div class="slide-content">
-                          <time class="slide-date" datetime="2021-12-01"
-                            >2021.12.01</time
-                          >
+                          <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
                           <h2 class="slide-title">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Necessitatibus, reprehenderit!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+                            reprehenderit!
                           </h2>
                         </div>
                       </article>
@@ -801,18 +749,13 @@
                     <a href="#" class="swiper-slide">
                       <article class="slide">
                         <figure class="slide-media">
-                          <img
-                            src="https://source.unsplash.com/random"
-                            alt=""
-                          />
+                          <img src="https://source.unsplash.com/random" alt="" />
                         </figure>
                         <div class="slide-content">
-                          <time class="slide-date" datetime="2021-12-01"
-                            >2021.12.01</time
-                          >
+                          <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
                           <h2 class="slide-title">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Necessitatibus, reprehenderit!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+                            reprehenderit!
                           </h2>
                         </div>
                       </article>
@@ -820,7 +763,7 @@
                   </div>
                 </div>
               </div>
-              <div class="c-btn__primary p-index__blog--btn">
+              <div class="c-btn__primary p-index__blog--btn mt-80 mr-auto ml-auto">
                 <a href="about.html" class="c-btn__primary--wrapper">
                   <span class="c-btn__primary--text">お知らせ一覧へ</span>
                   <div class="c-btn__primary--arrow">
@@ -836,20 +779,18 @@
       <!-- Main End -->
       <!-- CTA Start -->
       <aside class="l-aside__contact">
-        <div class="l-aside__contact--wrapper">
+        <div class="l-aside__contact--wrapper mt-80 pb-80">
           <div class="container">
             <h2 class="c-title__contact-primary l-aside__contact--title">
               お気軽にお問い合わせください
             </h2>
             <div class="l-aside__contact--contents">
               <div class="l-aside__contact--item">
-                <h3 class="c-title__contact-secondary l-aside__contact--title">
+                <h3 class="c-title__contact-secondary">
                   <span>お電話でのお問い合わせ</span>
                 </h3>
                 <div class="l-aside__contact--detail">
-                  <div class="l-aside__contact--tel">
-                    TEL. <span>090-9580-9257</span>
-                  </div>
+                  <div class="l-aside__contact--tel">TEL. <span>090-9580-9257</span></div>
                   <div class="l-aside__contact--time">
                     営業時間 : 9:00 - 17: 00 <br />
                     定休日 : 土日・祝日
@@ -860,11 +801,11 @@
                 </div>
               </div>
               <div class="l-aside__contact--item">
-                <h3 class="c-title__contact-secondary l-aside__contact--title">
+                <h3 class="c-title__contact-secondary">
                   <span>メールフォームでのお問い合わせ</span>
                 </h3>
                 <div class="l-aside__contact--detail">
-                  <div class="c-btn__primary l-aside__contact--btn">
+                  <div class="c-btn__primary l-aside__contact--btn mt-40 mr-auto ml-auto">
                     <a href="about.html" class="c-btn__primary--wrapper">
                       <span class="c-btn__primary--text">お問い合わせへ</span>
                       <div class="c-btn__primary--arrow">
@@ -881,16 +822,16 @@
       <!-- CTA End -->
       <!-- Footer Start -->
       <footer class="l-footer">
-        <div class="l-footer__wrapper">
-          <div class="l-footer__main">
+        <div class="l-footer__wrapper pt-80">
+          <div class="l-footer__main pb-40">
             <div class="container">
-              <div class="l-footer__logo">
+              <h2 class="l-footer__logo">
                 <a href="">
                   <img src="assets/img/logo.png" alt="ロゴ" />
-                  <span>Katsu code</span>
+                  <span class="pl-8">Katsu code</span>
                 </a>
-              </div>
-              <div class="row justify-content-center">
+              </h2>
+              <div class="row">
                 <div class="col-lg-6">
                   <div class="l-footer__address">
                     <dl>
@@ -914,22 +855,22 @@
                   <ul class="l-footer__sns-list">
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-facebook icon facebook"></i>
+                        <i class="fab fa-facebook icon icon-facebook"></i>
                       </a>
                     </li>
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-twitter icon twitter"></i>
+                        <i class="fab fa-twitter icon icon-twitter"></i>
                       </a>
                     </li>
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-instagram icon instagram"></i>
+                        <i class="fab fa-instagram icon icon-instagram"></i>
                       </a>
                     </li>
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-line icon line"></i>
+                        <i class="fab fa-line icon icon-line"></i>
                       </a>
                     </li>
                   </ul>
@@ -941,19 +882,13 @@
                         <a href="index.html" class="l-footer-nav__link">Home</a>
                       </li>
                       <li class="l-footer-nav__item">
-                        <a href="about.html" class="l-footer-nav__link"
-                          >About</a
-                        >
+                        <a href="about.html" class="l-footer-nav__link">About</a>
                       </li>
                       <li class="l-footer-nav__item">
-                        <a href="service.html" class="l-footer-nav__link"
-                          >Service</a
-                        >
+                        <a href="service.html" class="l-footer-nav__link">Service</a>
                       </li>
                       <li class="l-footer-nav__item">
-                        <a href="project.html" class="l-footer-nav__link"
-                          >Project</a
-                        >
+                        <a href="project.html" class="l-footer-nav__link">Project</a>
                       </li>
                       <li class="l-footer-nav__item">
                         <a href="flow.html" class="l-footer-nav__link">Flow</a>
@@ -968,19 +903,13 @@
                         <a href="faq.html" class="l-footer-nav__link">FAQ</a>
                       </li>
                       <li class="l-footer-nav__item">
-                        <a href="contact.html" class="l-footer-nav__link"
-                        >Contact</a
-                        >
+                        <a href="contact.html" class="l-footer-nav__link">Contact</a>
                       </li>
                       <li class="l-footer-nav__item">
-                        <a href="recruit.html" class="l-footer-nav__link"
-                          >Recruit</a
-                        >
+                        <a href="recruit.html" class="l-footer-nav__link">Recruit</a>
                       </li>
                       <li class="l-footer-nav__item">
-                        <a href="privacy-policy.html" class="l-footer-nav__link"
-                          >Privacy Policy</a
-                        >
+                        <a href="privacy-policy.html" class="l-footer-nav__link">Privacy Policy</a>
                       </li>
                     </ul>
                   </nav>
@@ -996,6 +925,11 @@
       <!-- Footer End -->
     </div>
 
+    <div class="cursor"></div>
+    <div class="follower"></div>
+
+    <!-- TweenMax JS -->
+    <script src="assets/js/TweenMax.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- Custom JS -->
