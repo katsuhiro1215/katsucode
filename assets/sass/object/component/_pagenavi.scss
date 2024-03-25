@@ -1,0 +1,97 @@
+/* ---------- Pagennation 全体 ---------- */
+.pagination {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.6rem;
+  margin: 24px 0;
+  clear: both;
+  .page-numbers {
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 4px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: all 0.8s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--yellow);
+      opacity: 0.8;
+    }
+    &.current {
+      background-color: transparent;
+    }
+  }
+}
+
+
+/* ---------- Pagenavi 個別 ---------- */
+.single-pagenavi {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+
+  span {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    color: #333;
+    font-size: 1.4rem;
+    line-height: 120%;
+    text-decoration: none;
+
+    a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &.arrow-left {
+      position: relative;
+      padding: 30px 20px 30px 35px;
+      text-align: left;
+      a::before {
+        content: "\f104";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+      }
+    }
+    &.return {
+      position: relative;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    &.arrow-right {
+      position: relative;
+      padding: 30px 35px 30px 20px;
+      text-align: right;
+      a::after {
+        content: "\f054";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 100%;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
