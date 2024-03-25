@@ -1,0 +1,25 @@
+.l-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  opacity: 0;
+  transition: var(--transition-2);
+  transition-delay: 0.5s;
+}
+
+body.appear .l-wrapper {
+  animation-name: PageAnimeAppear;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

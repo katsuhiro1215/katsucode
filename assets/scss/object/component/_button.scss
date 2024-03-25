@@ -1,0 +1,77 @@
+// Primary Button
+.c-btn__primary {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  transition: var(--transition-2);
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.c-btn__primary--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 24px 12px;
+  background-color: #1f1f1f;
+  color: #fff;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.c-btn__primary--text {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  z-index: 3;
+}
+
+.c-btn__primary--arrow {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  width: 20px;
+  transform: translateY(-50%);
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  font-size: 1.8rem;
+  z-index: 3;
+}
+
+// Contact Button
+.c-btn__contact {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  cursor: pointer;
+  button {
+    width: 100%;
+    text-align: center;
+    font-size: 2.0rem;
+    font-weight: 400;
+    line-height: 2.0;
+    margin-bottom: 20px;
+    padding: 2rem 4rem;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    &.c-btn__contact--confirm,
+    &.c-btn__contact--complete {
+      background-color: var(--orange);
+      color:#fff;
+    }
+    &.c-btn__contact--back {
+      font-size: 1.6rem;
+      background-color: #eee;
+      color:#383838;      
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

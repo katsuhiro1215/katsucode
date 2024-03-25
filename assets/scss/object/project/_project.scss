@@ -1,0 +1,21 @@
+.p-project__main--wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.p-project__main--body {
+  margin: 40px 0;
+}
+
+.p-project__item {
+  margin-bottom: 32px;
+  &:hover {
+    color: var(--yellow);
+  }
+  @media screen and (max-width: 991px) {
+    margin-bottom: 32px;
+    &:hover {
+      color: var(--yellow);
+    }
+  }
+}

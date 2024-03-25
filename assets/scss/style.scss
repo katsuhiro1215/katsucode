@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/* -------------------- Foundation -------------------- */
+@use "foundation/variable";
+@use "foundation/reset";
+@use "foundation/base";
+
+// -------------------- Layout -------------------- */
+@use "layout/wrapper";
+@use "layout/container";
+@use "layout/header";
+@use "layout/nav";
+@use "layout/main";
+@use "layout/sidebar";
+@use "layout/footer";
+
+// -------------------- Object -------------------- */
+// Component -部品-
+@use "object/component/animation";
+@use "object/component/breadcrumb";
+@use "object/component/button";
+@use "object/component/card";
+@use "object/component/cursorpointer";
+@use "object/component/list";
+@use "object/component/loading";
+@use "object/component/media";
+@use "object/component/pagination";
+@use "object/component/scroll";
+@use "object/component/title";
+
+// Project Main -各ページ-
+@use "object/project/index";
+@use "object/project/about";
+@use "object/project/service";
+@use "object/project/project";
+@use "object/project/sample";
+@use "object/project/flow";
+@use "object/project/news";
+@use "object/project/blog";
+@use "object/project/faq";
+@use "object/project/recruit";
+@use "object/project/contact";
+
+// Project Single -シングルページ-
+@use "object/project/single"; // News & Blog
+@use "object/project/single-project"; // Project & Sample
+
+// Project Sub -LPページ-
+// @use "object/project/swim";
+// @use "object/project/nara";
+
+// Project -記事 & Widget -
+@use "object/project/article";
+@use "object/project/aside";
+@use "object/project/page";
+
+// Utility -補完-
+@use "object/utility/clearfix";
+@use "object/utility/margin";
+@use "object/utility/padding";
+
+

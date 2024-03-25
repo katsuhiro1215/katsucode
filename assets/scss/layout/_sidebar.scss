@@ -1,0 +1,18 @@
+/* ---------- Sidebar ---------- */
+.l-sidebar {
+  margin: 0 0 40px 0;
+  @media screen and (max-width: 991px) {
+    padding-top: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 72px;
+  }
+  @media screen and (max-width: 575px) {
+    padding-top: 64px;
+  }
+}
+
+.l-sidebar__item + .l-sidebar__item {
+  margin: 40px 0;
+}
+

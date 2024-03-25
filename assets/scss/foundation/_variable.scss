@@ -1,0 +1,63 @@
+:root {
+  // Color
+  --red: #dc3545;
+  --blue: #007bff;
+  --green: #28a745;
+  --pink: #e83e8c;
+  --cyan: #17a2b8;
+  --yellow: #ffc107;
+  --orange: #fd7e14;
+  --indigo: #6610f2;
+  --teal: #20c997;
+  --purple: #6f42c1;
+  --brown: #a52a2a;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #fbca5a;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f5f5f5;
+  --dark: #3e3b3f;
+
+  // SNS Color
+  --facebook-color: rgb(59, 89, 152);
+  --twitter-color: rgb(29, 161, 242);
+  --instagram-color: rgb(228, 39, 171);
+  --youtube-color: rgb(255, 0, 0);
+  --line-color: rgb(8, 198, 86);
+
+  // Font
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  // Transition
+  --transition-1: all 0.3s ease-in-out;
+  --transition-2: all 0.5s ease-in-out;
+
+  --easing: cubic-bezier(0.2, 1, 0.2, 1);
+  --transition-3: 0.8s var(--easing);
+
+  // Z-Index
+  --z-loader: 100;
+  --z-cursor: 90;
+  --z-menu-button: 80;
+  --z-drawer-nav: 70;
+  --z-header-logo: 60;
+  --z-header: 50;
+  --z-global-nav: 40;
+  --z-catch: 30;
+  --z-swiper: 20;
+  --z-base: 10;
+
+  // Break Point
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}

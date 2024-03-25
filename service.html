@@ -30,7 +30,7 @@
     <meta name="facebook:card" content="#" />
     <meta name="twitter:card" content="#" />
     <!-- OGP End -->
-    <title>Katsucode Website | Service</title>
+    <title>Katsucode Website | Home</title>
     <!-- URLの正規化 -->
     <link rel="canonical" href="https://katsucode.jp/" />
     <!-- favicon設定 -->
@@ -51,16 +51,28 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Adobe Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/lpg7pom.css" />
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
   </head>
   <body>
-    <div class="transition transition-2 is-active"></div>
+    
+    <div id="splash">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="splashbg"></div>
 
     <div class="l-wrapper">
       <!-- Header Start -->
@@ -69,7 +81,7 @@
           <h1 class="l-header__logo">
             <a href="index.html">
               <img src="assets/img/logo.png" alt="ロゴ" />
-              <span>Katsu code</span>
+              <span class="pl-8">Katsucode</span>
             </a>
           </h1>
           <!-- Header Navigation Start -->
@@ -80,7 +92,7 @@
                   href="https://www.facebook.com/katsuhiro.kakoi/"
                   class="l-header-nav__link"
                 >
-                  <i class="fab fa-facebook icon facebook"></i>
+                  <i class="fab fa-facebook icon icon-facebook"></i>
                 </a>
               </li>
               <li class="l-header-nav__item">
@@ -88,137 +100,156 @@
                   href="https://twitter.com/KatsuhiroKakoi"
                   class="l-header-nav__link"
                 >
-                  <i class="fab fa-twitter icon twitter"></i>
+                  <i class="fab fa-twitter icon icon-twitter"></i>
                 </a>
               </li>
               <li class="l-header-nav__item">
-                <a href="#" class="l-header-nav__link">
-                  <i class="fab fa-instagram icon instagram"></i>
-                </a>
-              </li>
-              <li class="l-header-nav__item">
-                <a href="#" class="l-header-nav__link">
-                  <i class="fab fa-line icon line"></i>
-                </a>
-              </li>
-              <li class="l-header-nav__item">
-                <a href="recruit.html" class="l-header-nav__link"
-                  >メンバー募集</a
+                <a
+                  href="https://www.instagram.com/katsucode/"
+                  class="l-header-nav__link"
                 >
+                  <i class="fab fa-instagram icon icon-instagram"></i>
+                </a>
+              </li>
+              <li class="l-header-nav__item">
+                <a href="#" class="l-header-nav__link">
+                  <i class="fab fa-line icon icon-line"></i>
+                </a>
+              </li>
+              <li class="l-header-nav__item">
+                <a href="recruit.html" class="l-header-nav__link">
+                  メンバー募集
+                </a>
               </li>
             </ul>
           </nav>
           <!-- Header Navigation End -->
-
           <button id="menu-toggle" class="menu-toggle">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
           </button>
-
           <!-- Drawer Navigation Start -->
           <nav class="l-drawer-nav">
             <div class="l-drawer-nav__container">
               <div class="container">
                 <div class="l-drawer-nav__wrapper">
                   <div class="l-drawer-nav__row row">
-                    <div class="l-drawer-nav__col col-md-6">
+                    <div class="l-drawer-nav__col col-md-12">
+                      <div class="l-drawer-nav__logo">
+                        <a href="index.html">
+                          <img src="assets/img/logo.png" alt="ロゴ" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
                       <ul class="l-drawer-nav__list">
                         <li class="l-drawer-nav__item">
                           <a href="index.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Home</div>
-                            <div class="l-drawer-nav__link-ja">ホーム</div>
+                            <div class="en">Home</div>
+                            <div class="ja">ホーム</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
                           <a href="about.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">About</div>
-                            <div class="l-drawer-nav__link-ja">
-                              かつコードについて
-                            </div>
+                            <div class="en">About</div>
+                            <div class="ja">かつコードについて</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
                           <a href="service.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Service</div>
-                            <div class="l-drawer-nav__link-ja">事業内容</div>
+                            <div class="en">Service</div>
+                            <div class="ja">事業内容</div>
+                          </a>
+                          <ul class="l-drawer-nav__list--child">
+                            <li>
+                              <a href="service#webdesgin">Web制作</a>
+                            </li>
+                            <li>
+                              <a href="service#graphic">グラフィックデザイン</a>
+                            </li>
+                            <li>
+                              <a href="service#cms">CMS開発</a>
+                            </li>
+                            <li>
+                              <a href="service#webdesgin">Web制作</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Project</div>
+                            <div class="ja">制作実績</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a href="project.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Project</div>
-                            <div class="l-drawer-nav__link-ja">制作実績</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Flow</div>
+                            <div class="ja">制作の流れ</div>
                           </a>
                         </li>
                       </ul>
                     </div>
-                    <div class="l-drawer-nav__col col-md-6">
+
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
                       <ul class="l-drawer-nav__list">
                         <li class="l-drawer-nav__item">
-                          <a href="flow.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Flow</div>
-                            <div class="l-drawer-nav__link-ja">制作の流れ</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">News</div>
+                            <div class="ja">お知らせ</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a href="news.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">News</div>
-                            <div class="l-drawer-nav__link-ja">お知らせ</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Blog</div>
+                            <div class="ja">ブログ</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a href="blog.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Blog</div>
-                            <div class="l-drawer-nav__link-ja">ブログ</div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">FAQ</div>
+                            <div class="ja">よくあるご質問</div>
                           </a>
                         </li>
-                      </ul>
-                    </div>
-                    <div class="l-drawer-nav__col col-md-6">
-                      <ul class="l-drawer-nav__list">
                         <li class="l-drawer-nav__item swim">
-                          <a href="swim.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Swim</div>
-                            <div class="l-drawer-nav__link-ja">
-                              水泳関係者の方
-                            </div>
+                          <a href="swim.html" class="l-drawer-nav__link swim">
+                            <div class="en">Swim</div>
+                            <div class="ja">水泳関係者の方</div>
                           </a>
+                          <figure>
+                            <img src="assets/img/image1.jpg" alt="" />
+                          </figure>
                         </li>
                         <li class="l-drawer-nav__item nara">
-                          <a href="nara.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">For Nara</div>
-                            <div class="l-drawer-nav__link-ja">
-                              奈良県民の方
-                            </div>
+                          <a href="nara.html" class="l-drawer-nav__link nara">
+                            <div class="en">Nara</div>
+                            <div class="ja">奈良県民の方</div>
                           </a>
+                          <figure>
+                            <img src="assets/img/image1.jpg" alt="" />
+                          </figure>
                         </li>
-                        <li class="l-drawer-nav__item">
-                          <a href="contact.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Contact</div>
-                            <div class="l-drawer-nav__link-ja">
-                              お問い合わせ
-                            </div>
-                          </a>
-                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="l-drawer-nav__col col-lg-4 col-md-6">
+                      <ul class="l-drawer-nav__list">
                         <li class="l-drawer-nav__item">
                           <a href="recruit.html" class="l-drawer-nav__link">
-                            <div class="l-drawer-nav__link-en">Recruit</div>
-                            <div class="l-drawer-nav__link-ja">
-                              メンバー募集
-                            </div>
+                            <div class="en">Member</div>
+                            <div class="ja">メンバー募集</div>
                           </a>
                         </li>
                         <li class="l-drawer-nav__item">
-                          <a
-                            href="privacy-policy.html"
-                            class="l-drawer-nav__link"
-                          >
-                            <div class="l-drawer-nav__link-en">
-                              Privacy Policy
-                            </div>
-                            <div class="l-drawer-nav__link-ja">
-                              プライバシーポリシー
-                            </div>
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Contact</div>
+                            <div class="ja">お問い合わせ</div>
+                          </a>
+                        </li>
+                        <li class="l-drawer-nav__item">
+                          <a href="" class="l-drawer-nav__link">
+                            <div class="en">Privacy Policy</div>
+                            <div class="ja">プライバシーポリシー</div>
                           </a>
                         </li>
                       </ul>
@@ -234,18 +265,16 @@
       <!-- Header End -->
       <!-- Main Start -->
       <main class="l-main">
-        <div class="p-service">
+        <div id="p-service">
           <!-- Visual Start -->
           <div class="p-page__visual">
             <h2 class="c-title__page-primary p-page__title">
               <div class="c-title__page-primary--wrapper">
-                <div class="c-title__page-primary--wrapper-ja">事業内容</div>
-                <div class="c-title__page-primary--wrapper-en">
-                  <span>Service</span>
-                </div>
+                <div class="ja">事業内容</div>
+                <div class="en">Service</div>
               </div>
             </h2>
-            <div class="p-page__visual-image">
+            <div class="p-page__visual--img-wrapper">
               <img src="assets/img/image4.jpg" alt="" />
             </div>
           </div>
@@ -272,7 +301,10 @@
                 <a href="news.html" class="l-global-nav__link">News</a>
               </li>
               <li class="l-global-nav__item">
-                <a href="index.html" class="l-global-nav__link">Blog</a>
+                <a href="blog.html" class="l-global-nav__link">Blog</a>
+              </li>
+              <li class="l-global-nav__item">
+                <a href="faq.html" class="l-global-nav__link">FAQ</a>
               </li>
               <li class="l-global-nav__item">
                 <a href="contact.html" class="l-global-nav__link">Contact</a>
@@ -280,7 +312,6 @@
             </ul>
           </nav>
           <!-- Global Navigation End -->
-
           <!-- Intro Section Start -->
           <section class="p-service__intro">
             <div class="p-page__intro--wrapper">
@@ -304,33 +335,26 @@
           </section>
           <!-- Intro Section End -->
           <!-- Category Section Start -->
-          <section class="p-service__category">
+          <section class="p-service__category category_webdesign">
             <div class="p-service__category--wrapper">
               <div class="container">
                 <div class="p-service__category--header">
-                  <h1
-                    class="c-title__page-secondary p-service__category--title"
-                  >
-                    <div class="c-title__page-secondary--logo">
-                      <img src="assets/img/logo.png" alt="" />
-                    </div>
-                    <div class="c-title__page-secondary-en">Web Desgin</div>
-                    <div class="c-title__page-secondary-ja"
-                      >Webサイト制作</
-                    >
-                  </h1>
+                  <h3 class="c-title__page-secondary p-service__category--title" data-en="Web Design"><span>Webサイト制作</span></h3>
                 </div>
                 <div class="p-service__category--body">
                   <div class="p-service__category--list">
                     <div class="p-service__category--item">
-                      <h2 class="c-title__category p-service__category--title">
-                        <span>01.</span>Webサイトの新規作成・リニューアル
+                      <h2
+                        class="c-title__category p-service__category--title"
+                        data-number="01"
+                      >
+                        Webサイトの新規作成・リニューアル
                       </h2>
-                      <div class="p-service__category--info">
-                        <figure class="p-service__category--image">
+                      <div class="c-media__category--info p-service__category--info">
+                        <figure class="c-media__category--img-wrapper">
                           <img src="assets/img/image1.jpg" alt="" />
                         </figure>
-                        <div class="p-service__category--text">
+                        <div class="c-media__category--text">
                           <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing
                             elit. Eveniet, animi!
@@ -351,7 +375,7 @@
                       </div>
                       <div class="p-service__category--price">
                         <ul class="c-list__price">
-                          <li class="c-list__price--item c-list__price--box">
+                          <li class="c-list__price--item">
                             <div class="c-list__price--header">
                               <p class="c-list__price--title">シンプルプラン</p>
                               <p class="c-list__price--price">
@@ -416,7 +440,7 @@
                               </p>
                             </div>
                           </li>
-                          <li class="c-list__price--item c-list__price--box">
+                          <li class="c-list__price--item">
                             <div class="c-list__price--header">
                               <p class="c-list__price--title">
                                 スタンダードプラン
@@ -487,7 +511,7 @@
                               </p>
                             </div>
                           </li>
-                          <li class="c-list__price--item c-list__price--box">
+                          <li class="c-list__price--item">
                             <div class="c-list__price--header">
                               <p class="c-list__price--title">
                                 プレミアムプラン
@@ -560,14 +584,17 @@
                       </div>
                     </div>
                     <div class="p-service__category--item">
-                      <h2 class="c-title__category p-service__category--title">
-                        <span>02.</span>Webサイトの保守・運用
+                      <h2
+                        class="c-title__category p-service__category--title"
+                        data-number="02"
+                      >
+                        Webサイトの保守・運用
                       </h2>
-                      <div class="p-service__category--info">
-                        <figure class="p-service__category--image">
+                      <div class="c-media__category--info p-service__category--info">
+                        <figure class="c-media__category--img-wrapper">
                           <img src="assets/img/image1.jpg" alt="" />
                         </figure>
-                        <div class="p-service__category--text">
+                        <div class="c-media__category--text">
                           <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing
                             elit. Eveniet, animi!
@@ -588,7 +615,7 @@
                       </div>
                       <div class="p-service__category--price">
                         <ul class="c-list__price">
-                          <li class="c-list__price--item c-list__price--box">
+                          <li class="c-list__price--item">
                             <div class="c-list__price--header">
                               <p class="c-list__price--title">
                                 梅プラン<br />(月4回の更新)
@@ -601,7 +628,7 @@
                               <p class="c-list__price--lead">簡単なサイト</p>
                             </div>
                           </li>
-                          <li class="c-list__price--item c-list__price--box">
+                          <li class="c-list__price--item">
                             <div class="c-list__price--header">
                               <p class="c-list__price--title">
                                 竹プラン<br />(週2回・月8回の更新)
@@ -616,7 +643,7 @@
                               </p>
                             </div>
                           </li>
-                          <li class="c-list__price--item c-list__price--box">
+                          <li class="c-list__price--item">
                             <div class="c-list__price--header">
                               <p class="c-list__price--title">
                                 松プラン<br />(週3回・月12回の更新)
@@ -633,14 +660,17 @@
                       </div>
                     </div>
                     <div class="p-service__category--item">
-                      <h2 class="c-title__category p-service__category--title">
-                        <span>03.</span>LPの制作
+                      <h2
+                        class="c-title__category p-service__category--title"
+                        data-number="03"
+                      >
+                        LPの制作
                       </h2>
-                      <div class="p-service__category--info">
-                        <figure class="p-service__category--image">
+                      <div class="c-media__category--info p-service__category--info">
+                        <figure class="c-media__category--img-wrapper">
                           <img src="assets/img/image1.jpg" alt="" />
                         </figure>
-                        <div class="p-service__category--text">
+                        <div class="c-media__category--text">
                           <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing
                             elit. Eveniet, animi!
@@ -661,7 +691,7 @@
                       </div>
                       <div class="p-service__category--price">
                         <ul class="c-list__price">
-                          <li class="c-list__price--item c-list__price--box">
+                          <li class="c-list__price--item">
                             <div class="c-list__price--header">
                               <p class="c-list__price--title">丙プラン</p>
                               <p class="c-list__price--price">
@@ -672,7 +702,7 @@
                               <p class="c-list__price--lead">簡単なサイト</p>
                             </div>
                           </li>
-                          <li class="c-list__price--item c-list__price--box">
+                          <li class="c-list__price--item">
                             <div class="c-list__price--header">
                               <p class="c-list__price--title">乙プラン</p>
                               <p class="c-list__price--price">
@@ -685,7 +715,7 @@
                               </p>
                             </div>
                           </li>
-                          <li class="c-list__price--item c-list__price--box">
+                          <li class="c-list__price--item">
                             <div class="c-list__price--header">
                               <p class="c-list__price--title">甲プラン</p>
                               <p class="c-list__price--price">
@@ -700,14 +730,17 @@
                       </div>
                     </div>
                     <div class="p-service__category--item">
-                      <h2 class="c-title__category p-service__category--title">
-                        <span>04.</span>Webサイトの引っ越し
+                      <h2
+                        class="c-title__category p-service__category--title"
+                        data-number="04"
+                      >
+                        Webサイトの引っ越し
                       </h2>
-                      <div class="p-service__category--info">
-                        <figure class="p-service__category--image">
+                      <div class="c-media__category--info p-service__category--info">
+                        <figure class="c-media__category--img-wrapper">
                           <img src="assets/img/image1.jpg" alt="" />
                         </figure>
-                        <div class="p-service__category--text">
+                        <div class="c-media__category--text">
                           <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing
                             elit. Eveniet, animi!
@@ -728,7 +761,7 @@
                       </div>
                       <div class="p-service__category--price">
                         <ul class="c-list__price">
-                          <li class="c-list__price--item c-list__price--box">
+                          <li class="c-list__price--item">
                             <div class="c-list__price--header">
                               <p class="c-list__price--price">
                                 <span>3</span>万円〜
@@ -742,14 +775,17 @@
                       </div>
                     </div>
                     <div class="p-service__category--item">
-                      <h2 class="c-title__category p-service__category--title">
-                        <span>05.</span>Webサイトの修正
+                      <h2
+                        class="c-title__category p-service__category--title"
+                        data-number="05"
+                      >
+                        Webサイトの修正
                       </h2>
-                      <div class="p-service__category--info">
-                        <figure class="p-service__category--image">
+                      <div class="c-media__category--info p-service__category--info">
+                        <figure class="c-media__category--img-wrapper">
                           <img src="assets/img/image1.jpg" alt="" />
                         </figure>
-                        <div class="p-service__category--text">
+                        <div class="c-media__category--text">
                           <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing
                             elit. Eveniet, animi!
@@ -770,7 +806,7 @@
                       </div>
                       <div class="p-service__category--price">
                         <ul class="c-list__price">
-                          <li class="c-list__price--item c-list__price--box">
+                          <li class="c-list__price--item">
                             <div class="c-list__price--header">
                               <p class="c-list__price--price">
                                 <span>1</span>万円〜
@@ -785,33 +821,234 @@
                     </div>
                   </div>
                 </div>
-
+              </div>
+            </div>
+          </section>
+          <section class="p-service__category category_graphicdesgin">
+            <div class="p-service__category--wrapper">
+              <div class="container">
                 <div class="p-service__category--header">
-                  <h1
-                    class="c-title__page-secondary p-service__category--title"
-                  >
-                    <div class="c-title__page-secondary--logo">
-                      <img src="assets/img/logo.png" alt="" />
-                    </div>
-                    <span class="c-title__page-secondary-en"
-                      >Contract Development</span
-                    >
-                    <span class="c-title__page-secondary-ja">受託開発</span>
-                  </h1>
+                  <h3 class="c-title__page-secondary p-service__category--title" data-en="Design"><span>デザイン</span></h3>
                 </div>
                 <div class="p-service__category--body">
                   <div class="p-service__category--list">
                     <div class="p-service__category--item">
-                      <div class="p-service__category--info">
-                        <figure class="p-service__category--image">
+                      <h2
+                        class="c-title__category p-service__category--title"
+                        data-number="01"
+                      >
+                        名刺制作
+                      </h2>
+                      <div class="c-media__category--info p-service__category--info">
+                        <figure class="c-media__category--img-wrapper">
                           <img src="assets/img/image1.jpg" alt="" />
                         </figure>
-                        <div class="p-service__category--text">
+                        <div class="c-media__category--text">
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="p-service__category--price">
+                        <ul class="c-list__price">
+                          <li class="c-list__price--item">
+                            <div class="c-list__price--header">
+                              <p class="c-list__price--title">シンプルプラン</p>
+                              <p class="c-list__price--price">
+                                初期費用<span>20</span>万円〜
+                              </p>
+                            </div>
+                            <div class="c-list__price--body">
+                              <p class="c-list__price--lead">簡単なサイト</p>
+                            </div>
+                          </li>
+                          <li class="c-list__price--item">
+                            <div class="c-list__price--header">
+                              <p class="c-list__price--title">
+                                スタンダードプラン
+                              </p>
+                              <p class="c-list__price--price">
+                                初期費用<span>35</span>万円〜
+                              </p>
+                            </div>
+                            <div class="c-list__price--body">
+                              <p class="c-list__price--lead">
+                                しっかりとしたサイト
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="p-service__category--item">
+                      <h2
+                        class="c-title__category p-service__category--title"
+                        data-number="02"
+                      >
+                        ポスター制作
+                      </h2>
+                      <div class="c-media__category--info p-service__category--info">
+                        <figure class="c-media__category--img-wrapper">
+                          <img src="assets/img/image1.jpg" alt="" />
+                        </figure>
+                        <div class="c-media__category--text">
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="p-service__category--price">
+                        <ul class="c-list__price">
+                          <li class="c-list__price--item">
+                            <div class="c-list__price--header">
+                              <p class="c-list__price--title">
+                                スタンダードプラン
+                              </p>
+                              <p class="c-list__price--price">
+                                初期費用<span>35</span>万円〜
+                              </p>
+                            </div>
+                            <div class="c-list__price--body">
+                              <p class="c-list__price--lead">
+                                しっかりとしたサイト
+                              </p>
+                            </div>
+                          </li>
+                          <li class="c-list__price--item">
+                            <div class="c-list__price--header">
+                              <p class="c-list__price--title">
+                                スタンダードプラン
+                              </p>
+                              <p class="c-list__price--price">
+                                初期費用<span>35</span>万円〜
+                              </p>
+                            </div>
+                            <div class="c-list__price--body">
+                              <p class="c-list__price--lead">
+                                しっかりとしたサイト
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="p-service__category--item">
+                      <h2
+                        class="c-title__category p-service__category--title"
+                        data-number="03"
+                      >
+                        ロゴの制作
+                      </h2>
+                      <div class="c-media__category--info p-service__category--info">
+                        <figure class="c-media__category--img-wrapper">
+                          <img src="assets/img/image1.jpg" alt="" />
+                        </figure>
+                        <div class="c-media__category--text">
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eveniet, animi!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="p-service__category--price">
+                        <ul class="c-list__price">
+                          <li class="c-list__price--item">
+                            <div class="c-list__price--header">
+                              <p class="c-list__price--title">
+                                スタンダードプラン
+                              </p>
+                              <p class="c-list__price--price">
+                                初期費用<span>35</span>万円〜
+                              </p>
+                            </div>
+                            <div class="c-list__price--body">
+                              <p class="c-list__price--lead">
+                                しっかりとしたサイト
+                              </p>
+                            </div>
+                          </li>
+                          <li class="c-list__price--item">
+                            <div class="c-list__price--header">
+                              <p class="c-list__price--title">
+                                スタンダードプラン
+                              </p>
+                              <p class="c-list__price--price">
+                                初期費用<span>35</span>万円〜
+                              </p>
+                            </div>
+                            <div class="c-list__price--body">
+                              <p class="c-list__price--lead">
+                                しっかりとしたサイト
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="p-service__category category_contractdevelopment">
+            <div class="p-service__category--wrapper">
+              <div class="container">
+                <div class="p-service__category--header">
+                  <h3 class="c-title__page-secondary p-service__category--title" data-en="Contract"><span>受託開発</span></h3>
+                </div>
+                <div class="p-service__category--body">
+                  <div class="p-service__category--list">
+                    <div class="p-service__category--item">
+                      <div class="c-media__category--info p-service__category--info">
+                        <figure class="c-media__category--img-wrapper">
+                          <img src="assets/img/image1.jpg" alt="" />
+                        </figure>
+                        <div class="c-media__category--text">
                           <p>かつコードでは受託開発を行なっています。</p>
                           <p>
                             主に、Webサービス開発、Webシステム開発、アプリケーション開発、スクレイピングを用いた情報収集、Excelを用いた業務効率化など、幅広く対処いたしております。
                           </p>
-                          <p>対応可能の言語やツールは以下の通りとなっておりますが、PHPを得意としています。</p>
+                          <p>
+                            対応可能の言語やツールは以下の通りとなっておりますが、PHPを得意としています。
+                          </p>
                           <p>
                             お力になれることがありましたら、遠慮なくお問い合わせにてご連絡ください。
                           </p>
@@ -826,29 +1063,30 @@
                                   対応可能な言語
                                 </dt>
                                 <dd class="c-list__lang--features-text">
+                                  HTML / CSS / Sass / Bootstrap / Tailwind CSS<br>
                                   JavaScript / Node.js / Vue.js / Nuxt.js /
                                   React.js / Next.js<br />
                                   TypeScript<br />
                                   PHP / Laravel / CakePHP / CodeIgniter<br />
-                                  Ruby / Ruby on Rails<br />
+                                  Ruby / Ruby on Rails / Sinatra<br />
                                   Python / Django / Flask <br />
                                   Java <br />
                                   Swift / Swift UI <br />
-                                  SQL
+                                  SQL(MySQL / SQLite)
                                 </dd>
                                 <dt class="c-list__lang--features-header">
                                   対応可能なツール
                                 </dt>
                                 <dd class="c-list__lang--features-text">
-                                  WordPress <br>
-                                  Docker <br />
-                                  AWS EC2 <br />
-                                  XAMPP / MAMP
-                                  Adobe Photoshop / Illustrator / XD / Lightroom / Lightroom Classic
+                                  WordPress / Local<br />
+                                  Docker / AWS EC2 <br />
+                                  XAMPP / MAMP<br>
+                                  Adobe Photoshop / Illustrator /
+                                  XD / Lightroom / Lightroom Classic
                                   <br />
-                                  Microsoft Office Word / Excel /
-                                  PowerPoint / Access <br />
-                                  ZOOM / Skype <br>
+                                  Microsoft Office Word / Excel / PowerPoint /
+                                  Access <br />
+                                  ZOOM / Skype <br />
                                   ・・・
                                 </dd>
                               </dl>
@@ -868,14 +1106,14 @@
       <!-- Main End -->
       <!-- CTA Start -->
       <aside class="l-aside__contact">
-        <div class="l-aside__contact--wrapper">
+        <div class="l-aside__contact--wrapper mt-80 pb-80">
           <div class="container">
             <h2 class="c-title__contact-primary l-aside__contact--title">
               お気軽にお問い合わせください
             </h2>
             <div class="l-aside__contact--contents">
               <div class="l-aside__contact--item">
-                <h3 class="c-title__contact-secondary l-aside__contact--title">
+                <h3 class="c-title__contact-secondary">
                   <span>お電話でのお問い合わせ</span>
                 </h3>
                 <div class="l-aside__contact--detail">
@@ -892,11 +1130,13 @@
                 </div>
               </div>
               <div class="l-aside__contact--item">
-                <h3 class="c-title__contact-secondary l-aside__contact--title">
+                <h3 class="c-title__contact-secondary">
                   <span>メールフォームでのお問い合わせ</span>
                 </h3>
                 <div class="l-aside__contact--detail">
-                  <div class="c-btn__primary l-aside__contact--btn">
+                  <div
+                    class="c-btn__primary l-aside__contact--btn mt-40 mr-auto ml-auto"
+                  >
                     <a href="about.html" class="c-btn__primary--wrapper">
                       <span class="c-btn__primary--text">お問い合わせへ</span>
                       <div class="c-btn__primary--arrow">
@@ -913,16 +1153,16 @@
       <!-- CTA End -->
       <!-- Footer Start -->
       <footer class="l-footer">
-        <div class="l-footer__wrapper">
-          <div class="l-footer__main">
+        <div class="l-footer__wrapper pt-80">
+          <div class="l-footer__main pb-40">
             <div class="container">
-              <div class="l-footer__logo">
+              <h2 class="l-footer__logo">
                 <a href="">
                   <img src="assets/img/logo.png" alt="ロゴ" />
-                  <span>Katsu code</span>
+                  <span class="pl-8">Katsu code</span>
                 </a>
-              </div>
-              <div class="row justify-content-center">
+              </h2>
+              <div class="row">
                 <div class="col-lg-6">
                   <div class="l-footer__address">
                     <dl>
@@ -946,22 +1186,22 @@
                   <ul class="l-footer__sns-list">
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-facebook icon facebook"></i>
+                        <i class="fab fa-facebook icon icon-facebook"></i>
                       </a>
                     </li>
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-twitter icon twitter"></i>
+                        <i class="fab fa-twitter icon icon-twitter"></i>
                       </a>
                     </li>
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-instagram icon instagram"></i>
+                        <i class="fab fa-instagram icon icon-instagram"></i>
                       </a>
                     </li>
                     <li class="l-footer__sns-item">
                       <a href="#" class="l-footer__sns-link">
-                        <i class="fab fa-line icon line"></i>
+                        <i class="fab fa-line icon icon-line"></i>
                       </a>
                     </li>
                   </ul>
@@ -997,6 +1237,9 @@
                         <a href="blog.html" class="l-footer-nav__link">Blog</a>
                       </li>
                       <li class="l-footer-nav__item">
+                        <a href="faq.html" class="l-footer-nav__link">FAQ</a>
+                      </li>
+                      <li class="l-footer-nav__item">
                         <a href="contact.html" class="l-footer-nav__link"
                           >Contact</a
                         >
@@ -1025,6 +1268,11 @@
       <!-- Footer End -->
     </div>
 
+    <div class="cursor"></div>
+    <div class="follower"></div>
+
+    <!-- TweenMax JS -->
+    <script src="assets/js/TweenMax.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- Custom JS -->
