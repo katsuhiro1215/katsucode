@@ -1,138 +1,95 @@
 .l-footer {
   width: 100%;
   position: relative;
-}
-
-.l-footer__wrapper {
-  background-color: #383838;  
-}
-
-.l-footer__logo {
-  margin: 0;
-  padding-bottom: 40px;
-  img {
-    width: 60px;
+  background-color: var(--black);
+  &__main {
+    border-bottom: 1px solid var(--white);
   }
-  span {
-    font-size: 2.8rem;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    line-height: 100%;
-    color: #fff;
-  }
-  @media screen and (max-width: 1199px) {
+  &__logo {
+    margin: 0;
+    padding-bottom: 40px;
     img {
-      width: 55px;
+      width: 60px;
     }
     span {
-      font-size: 2.6rem;
-    } 
-  }
-  @media screen and (max-width: 991px) {
-    img {
-      width: 50px;
+      font-size: clamp(20px, 4vw, 28px);
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      line-height: 100%;
+      color: var(--white);
     }
-    span {
-      font-size: 2.4rem;
-    } 
-  }
-  @media screen and (max-width: 767px) {
-    img {
-      width: 45px;
-    }
-    span {
-      font-size: 2.2rem;
-    } 
-  }
-  @media screen and (max-width: 575px) {
     img {
       width: 40px;
+      @media screen and (min-width: 576px) {
+        width: 48px;
+      }
+      @media screen and (min-width: 768px) {
+        width: 56px;
+      }
+      @media screen and (min-width: 992px) {
+        width: 64px;
+      }
     }
-    span {
-      font-size: 2.0rem;
-    } 
   }
-}
-
-.l-footer__address {
-  padding-right: 40px;
-  dt {
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 3;
-    color: #fff;
-    border-bottom: 6px double #fff;
-  }
-  dd {
-    padding: 16px 0;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #fff;
-  }
-  @media screen and (max-width: 991px) {
-    padding-right: 0;
+  &__address {
+    padding-right: 40px;
+    dt,
+    dd {
+      font-size: clamp(14px, 4vw, 16px);
+      color: var(--white);
+      font-weight: 400;
+      line-height: 1.5;
+    }
     dt {
-      font-size: 1.5rem;
+      line-height: 3;
+      border-bottom: 6px double #fff;
     }
     dd {
-      font-size: 1.5rem;
+      padding: 16px 0;
     }
   }
-  @media screen and (max-width: 575px) {
-    dt {
-      font-size: 1.4rem;
-    }
-    dd {
-      font-size: 1.4rem;
-    }
-  }
-}
-
-.l-footer__sns-list {
-  display: inline-block;
-  height: 60px;
-  padding: 15px 0;
-  letter-spacing: -0.4em;
-}
-
-.l-footer__sns-item {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 24px;
-  font-size: 2.4rem;
-  line-height: 30px;
-  letter-spacing: 0.05em;
-}
-
-.l-footer__sns-link {
-  .icon {
+  &__sns-list {
     display: inline-block;
-    animation: sns-float 5s ease-in-out infinite;
-    &.icon-facebook {
-      color: var(--facebook-color);
-    }
-    &.icon-twitter {
-      color: var(--twitter-color);
-      animation-delay: 1s;
-    }
-    &.icon-instagram {
-      color: var(--instagram-color);
-      animation-delay: 2s;
-    }
-    &.icon-line {
-      color: var(--line-color);
-      animation-delay: 3s;
+    height: 60px;
+    padding: 15px 0;
+    letter-spacing: -0.4em;
+  }
+  &__sns-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 24px;
+    font-size: clamp(20px, 4vw, 24px);
+    line-height: 30px;
+    letter-spacing: 0.05em;
+  }
+  &__sns-link {
+    .icon {
+      display: inline-block;
+      animation: sns-float 5s ease-in-out infinite;
+      &.icon-facebook {
+        color: var(--facebook-color);
+      }
+      &.icon-twitter {
+        color: var(--twitter-color);
+        animation-delay: 1s;
+      }
+      &.icon-instagram {
+        color: var(--instagram-color);
+        animation-delay: 2s;
+      }
+      &.icon-line {
+        color: var(--line-color);
+        animation-delay: 3s;
+      }
     }
   }
-}
-
-.l-footer__copyright {
-  padding: 16px 0;
-  p {
-    color: #fff;
-    font-size: 1.4rem;
-    font-weight: 400;
-    text-align: center;
+  &__copyright {
+    padding: 16px 0;
+    p {
+      color: var(--white);
+      font-size: clamp(12px, 4vw, 14px);
+      font-weight: 400;
+      text-align: center;
+    }
   }
 }

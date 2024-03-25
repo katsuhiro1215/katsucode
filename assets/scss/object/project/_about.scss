@@ -1,83 +1,53 @@
 /* ---------- About Page ---------- */
 // Concept Section
-.p-about__concept--wrapper {
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-
-.p-about__concept--message {
-  padding: 120px 0;
-  strong {
-    display: block;
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 2;
-    text-align: center;
-  }
-  @media screen and (max-width: 1199px) {
+.p-about__concept {
+  &--message {
+    padding: 60px 0;
+    @media screen and (min-width: 576px) {
+      padding: 80px;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 100px;
+    }
+    @media screen and (min-width: 992px) {
+      padding: 120px;
+    }
     strong {
-      font-size: 3.6rem;
+      display: block;
+      font-size: clamp(24px, 4vw, 40px);
+      font-weight: 600;
+      line-height: 2;
+      text-align: center;
     }
   }
-  @media screen and (max-width: 991px) {
-    strong {
-      font-size: 3.2rem;
-    }
+  &--list {
+    margin: 40px 0;
   }
-  @media screen and (max-width: 767px) {
-    strong {
-      font-size: 2.8rem;
-    }
-  }
-  @media screen and (max-width: 575px) {
-    strong {
-      font-size: 2.4rem;
-    }
-  }
-}
-
-.p-about__concept--list {
-  margin: 40px 0;
 }
 
 // Company Section
-.p-about__company--wrapper {
-  padding-top: 80px;
-  padding-bottom: 120px;
-}
-
-.p-about__company--table {
-  width: 100%;
-  max-width: 800px;
-  margin: 40px auto;
-  tr {
-    border-bottom: 1px solid var(--dark);
-  }
-  th {
-    width: 30%;
-    font-size: 1.6rem;
-    font-weight: 400;
-    text-align: left;
-    vertical-align: middle;
-    padding: 20px;
-  }
-  td {
-    width: 60%;
-    font-size: 1.6rem;
-    font-weight: 300;
-    line-height: 1.7;
-    text-align: left;
-    vertical-align: middle;
-    padding: 20px;
-  }
-  @media screen and (max-width: 991px) {
-    th, td {
-      font-size: 1.5rem;
+.p-about__company {
+  &--table {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    tr {
+      border-bottom: 1px solid var(--dark);
     }
-  }
-  @media screen and (max-width: 575px) {
-    th, td {
-      font-size: 1.4rem;
+    th {
+      width: 30%;
+      font-weight: 400;
+      text-align: left;
+      vertical-align: middle;
+      padding: 20px;
+    }
+    td {
+      width: 60%;
+      font-weight: 300;
+      line-height: 1.7;
+      text-align: left;
+      vertical-align: middle;
+      padding: 20px;
     }
   }
 }

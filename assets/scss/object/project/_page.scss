@@ -1,14 +1,13 @@
 /* ---------- Page - Key Visual ---------- */
 .p-page__visual {
   margin-top: -60px;
-  padding-left: 405px;
+  padding-left: 0;
   position: relative;
   z-index: var(--z-base);
-  @media screen and (max-width: 991px) {
-    padding-left: 0;
+  @media screen and (min-width: 992px) {
+    padding-left: 405px;
   }
 }
-
 .p-page__visual--img-wrapper {
   height: calc(100vh - 240px);
   position: relative;
@@ -20,76 +19,38 @@
     z-index: 10;
   }
 }
-
 .p-page__title {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
   height: calc(50vh - 120px);
   z-index: 20;
-  @media screen and (max-width: 1199px) {
-    width: 50%;
+  @media screen and (min-width: 576px) {
+    width: 72%;
   }
-  @media screen and (max-width: 991px) {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
+  @media screen and (min-width: 768px) {
+    width: 64%;
+    left: 0;
+    transform: translateX(0);
   }
-  @media screen and (max-width: 767px) {
-    width: 70%;
+  @media screen and (min-width: 992px) {
+    width: 56%;
   }
-  @media screen and (max-width: 575px) {
-    width: 80%;
-  }
-}
-
-.p-page__intro--wrapper {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  @media screen and (max-width: 991px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  @media screen and (max-width: 767px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  @media screen and (max-width: 575px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    width: 48%;
   }
 }
-
 .p-page__intro--body {
   p {
-    font-size: 2.4rem;
+    font-size: clamp(16px, 4vw, 20px);
     font-weight: 400;
     line-height: 2;
     margin-bottom: 0;
     overflow: hidden;
     &:not(:first-of-type) {
       margin-top: 40px;
-    }
-  }
-  @media screen and (max-width: 1199px) {
-    p {
-      font-size: 2.2rem;
-    }
-  }
-  @media screen and (max-width: 991px) {
-    p {
-      font-size: 2rem;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    p {
-      font-size: 1.8rem;
-    }
-  }
-  @media screen and (max-width: 575px) {
-    p {
-      font-size: 1.6rem;
     }
   }
 }

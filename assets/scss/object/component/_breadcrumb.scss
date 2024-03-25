@@ -1,0 +1,32 @@
+.c-breadcrumb {
+  position: relative;
+  padding: 20px 0;
+  &__inner {
+    width: calc(100% - 7vw);
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.breadcrumb-item {
+  display: inline-block;
+  list-style: none;
+  font-size: 1.4rem;
+  padding-right: 0.5rem;
+  &::after {
+    content: ">";
+    padding: 0 0.5em;
+    color: #555;
+  }
+  &:last-child::after {
+    content: "";
+  }
+  a {
+    text-decoration: none;
+    color: var(--orange);
+    &:hover {
+      text-decoration: underline;
+    }
+  }  
+}
