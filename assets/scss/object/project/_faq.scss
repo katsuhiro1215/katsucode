@@ -3,11 +3,9 @@
   padding-top: 80px;
   padding-bottom: 80px;
 }
-
 .p-faq__list {
   margin: 0 0 40px;
 }
-
 .p-faq__item {
   position: relative;
   display: flex;
@@ -16,7 +14,6 @@
   min-height: 45px;
   padding-left: 60px;
 }
-
 .p-faq__icon {
   position: absolute;
   top: 0;
@@ -28,20 +25,18 @@
   line-height: 45px;
   text-align: center;
 }
-
 .p-faq__question {
   margin-bottom: 15px;
   font-size: 1.6rem;
   font-weight: bold;
   &-icon {
     background-color: var(--orange);
-    color: #fff;
+    color: var(--white);
   }
   &-text {
     padding-top: 12px;
   }
 }
-
 .p-faq__answer {
   padding-bottom: 20px;
   margin-bottom: 20px;

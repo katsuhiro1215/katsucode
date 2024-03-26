@@ -1,63 +1,49 @@
 /* ---------- Blog Page ---------- */
-.p-blog__main--wrapper {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.p-blog__main--body {
-  margin: 40px 0;
-}
-
-.p-blog__main--row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-right: -15px;
-  margin-left: -15px;
-  @media screen and (max-width: 991px) {
-    display: block;
+.p-blog__main {
+  &--body {
+    margin: 40px 0;
   }
-}
-
-.p-blog__primary {
-  position: relative;
-  flex-basis: calc(100% - 400px);
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: 100%;
-  max-width: calc(100% - 400px);
-  padding-right: 15px;
-  padding-left: 15px;
-  @media screen and (max-width: 991px) {
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-.p-blog__list {
-  margin-bottom: 0;
-  padding: 0;
-  list-style-type: none;
-  @media screen and (max-width: 991px) {
-    margin-bottom: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-}
-
-.p-blog__item {
-  margin-bottom: 32px;
-  &:hover {
-    color: var(--yellow);
-  }
-  @media screen and (max-width: 991px) {
-    margin-bottom: 32px;
-    &:hover {
-      color: var(--yellow);
+  &--row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -15px;
+    margin-left: -15px;
+    @media screen and (max-width: 991px) {
+      display: block;
     }
   }
 }
-
+.p-blog__primary {
+  position: relative;
+  width: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  @media screen and (min-width: 992px) {
+    flex-basis: calc(100% - 400px);
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: calc(100% - 400px);
+  }
+}
+.p-blog__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  @media screen and (min-width: 576px) {
+  grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: 768px) {
+  grid-template-columns: 1fr;
+  }
+}
+.p-blog__item {
+  &:hover {
+    color: var(--yellow);
+  }
+}
 .p-blog__secondary {
   position: relative;
   flex: 0 0 330px;

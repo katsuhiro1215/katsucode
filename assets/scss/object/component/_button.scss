@@ -1,3 +1,36 @@
+/* ---------- Button Base ---------- */
+.btn,
+input[type='submit'] {
+  font-size: clamp(14px, 4vw, 18px);
+  position: relative;
+  display: inline-block;
+  padding: 2rem 4rem;
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition-2);
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  border-radius: 10px;
+  &.btn-sm {
+    font-size: clamp(12px, 4vw, 16px);
+    padding: 1rem 3rem;
+  }
+}
+input[type='submit'] {
+  background-color: #1f1f1f;
+  color: var(--white);
+  margin-left: 12px;
+  padding: 1rem 3rem;
+}
+input[type='password'] {
+  border: 1px solid #1f1f1f;
+  padding: 1rem 3rem;
+  margin-left: 12px;
+}
+
 // Primary Button
 .c-btn__primary {
   position: relative;
@@ -8,40 +41,37 @@
   &:hover {
     opacity: 0.8;
   }
-}
-
-.c-btn__primary--wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 24px 12px;
-  background-color: #1f1f1f;
-  color: #fff;
-  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.c-btn__primary--text {
-  position: relative;
-  font-size: 1.8rem;
-  font-weight: 400;
-  text-align: center;
-  z-index: 3;
-}
-
-.c-btn__primary--arrow {
-  position: absolute;
-  top: 50%;
-  right: 40px;
-  width: 20px;
-  transform: translateY(-50%);
-  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  font-size: 1.8rem;
-  z-index: 3;
+  &--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 24px 12px;
+    background-color: #1f1f1f;
+    color: #fff;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  &--text {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    z-index: 3;
+  }
+  &--arrow {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    width: 20px;
+    transform: translateY(-50%);
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    font-size: 1.8rem;
+    z-index: 3;
+  }
 }
 
 // Contact Button
@@ -53,9 +83,9 @@
   button {
     width: 100%;
     text-align: center;
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: 400;
-    line-height: 2.0;
+    line-height: 2;
     margin-bottom: 20px;
     padding: 2rem 4rem;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
@@ -63,12 +93,12 @@
     &.c-btn__contact--confirm,
     &.c-btn__contact--complete {
       background-color: var(--orange);
-      color:#fff;
+      color: #fff;
     }
     &.c-btn__contact--back {
       font-size: 1.6rem;
       background-color: #eee;
-      color:#383838;      
+      color: #383838;
     }
     &:hover {
       opacity: 0.8;

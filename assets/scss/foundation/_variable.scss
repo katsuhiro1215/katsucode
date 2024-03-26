@@ -22,6 +22,7 @@
   --danger: #dc3545;
   --light: #f5f5f5;
   --dark: #3e3b3f;
+  --black: #383838;
 
   // SNS Color
   --facebook-color: rgb(59, 89, 152);
@@ -38,7 +39,6 @@
   // Transition
   --transition-1: all 0.3s ease-in-out;
   --transition-2: all 0.5s ease-in-out;
-
   --easing: cubic-bezier(0.2, 1, 0.2, 1);
   --transition-3: 0.8s var(--easing);
 
@@ -53,11 +53,7 @@
   --z-catch: 30;
   --z-swiper: 20;
   --z-base: 10;
-
-  // Break Point
-  --breakpoint-xs: 320px;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
+  
+  // Box Shadow
+  --box-shadow: .8rem .8rem 1.2rem rgba(0, 0, 0, .05), -.8rem -.8rem 1.2rem #fff;
 }

@@ -1,88 +1,52 @@
 /* ---------- Contact ---------- */
-.l-aside__contact--wrapper {
+.l-aside__contact {
   background-color: rgba(221, 116, 44, 0.05);
   border-top: 1px solid var(--orange);
   border-bottom: 1px solid var(--orange);
-}
-
-.l-aside__contact--title {
-  margin-top: 80px;
-  margin-bottom: 80px;  
-}
-
-.l-aside__contact--contents {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.l-aside__contact--item  + .l-aside__contact--item {
-  @media screen and (max-width: 991px) {
-    padding-top: 40px;
+  &--title {
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
-}
-
-.l-aside__contact--detail {
-  margin-top: 16px;
-  @media screen and (max-width: 991px) {
+  &--contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &--item {
+    & + .l-aside__contact--item {
+      padding-top: 40px;
+      @media screen and (min-width: 992px) {
+        padding-top: 0;
+      }
+    }
+  }
+  &--detail {
+    margin-top: 16px;
     text-align: center;
   }
 }
-
+.l-aside__contact--tel,
+.l-aside__contact--time,
+.l-aside__contact--text {
+  font-size: clamp(14px, 4vw, 16px);
+}
 .l-aside__contact--tel {
   text-align: center;
-  font-size: 1.6rem;
   font-weight: 600;
-  line-height: 2;  
-  span {
-    font-size: 3.2rem;
-  }
-  @media screen and (max-width: 1199px) {
-    span {
-      font-size: 3.0rem;
-    }
-  }
-  @media screen and (max-width: 991px) {
-    font-size: 1.5rem;
-    span {
-      font-size: 2.8rem;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    span {
-      font-size: 2.6rem;
-    }
-  }
-  @media screen and (max-width: 575px) {
-    font-size: 1.4rem;
-    span {
-      font-size: 2.4rem;
-    }
-  }
-}
-
-.l-aside__contact--time {
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1.7;  
-  @media screen and (max-width: 991px) {
-    font-size: 1.5rem;
-  }
-  @media screen and (max-width: 575px) {
-    font-size: 1.4rem;
-  }
-}
-
-.l-aside__contact--text {
-  font-size: 1.6rem;
-  font-weight: 400;
   line-height: 2;
-  @media screen and (max-width: 991px) {
-    font-size: 1.5rem;
+  span {
+    font-size: clamp(24px, 4vw, 32px);
   }
-  @media screen and (max-width: 575px) {
-    font-size: 1.4rem;
-  }
+}
+.l-aside__contact--time,
+.l-aside__contact--text {
+  font-weight: 400;
+}
+.l-aside__contact--time {
+  line-height: 1.7;
+}
+.l-aside__contact--text {
+  line-height: 2;
 }
 
 /* ---------- Contact Complete Footer Aside ---------- */
@@ -94,33 +58,13 @@
 .p-aside__etc--contents {
   text-align: center;
   p {
-    font-size: 2.4rem;
+    font-size: clamp(16px, 4vw, 24px);
     font-weight: 300;
     line-height: 1.5;
     margin-bottom: 0;
     overflow: hidden;
     &:not(:first-of-type) {
       margin-top: 20px;
-    }
-  }
-  @media screen and (max-width: 1199px) {
-    p {
-      font-size: 2.2rem;
-    }
-  }
-  @media screen and (max-width: 991px) {
-    p {
-      font-size: 2rem;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    p {
-      font-size: 1.8rem;
-    }
-  }
-  @media screen and (max-width: 575px) {
-    p {
-      font-size: 1.6rem;
     }
   }
 }
@@ -132,14 +76,12 @@
   margin: 0 auto;
 }
 
-
 /* --------------------------------- */
 /* ---------- Widget Area ---------- */
 /* --------------------------------- */
 .p-aside__title {
   margin: 0;
 }
-
 .p-aside__contents {
   margin-top: 10px;
 }
@@ -147,7 +89,7 @@
 /* ---------- Serach Aside ---------- */
 .p-aside__search {
   form {
-    border: 1px solid #383838;
+    border: 1px solid var(--black);
     position: relative;
   }
   label {
@@ -160,7 +102,7 @@
     word-wrap: normal !important;
   }
   input {
-    background: #fff;
+    background: var(--white);
     width: 100%;
     padding: 10px;
   }
@@ -178,21 +120,8 @@
 }
 
 /* ---------- Archive Aside ---------- */
-.p-aside__archive {
-  ul {
-    list-style: none;
-    li {
-      display: block;
-      position: relative;
-      padding: 8px;
-      color: #383838;
-      font-size: 1.6rem;
-      font-weight: 400;
-    }
-  }
-}
-
 /* ---------- Category Aside ---------- */
+.p-aside__archive,
 .p-aside__category {
   ul {
     list-style: none;
@@ -200,7 +129,7 @@
       display: block;
       position: relative;
       padding: 8px;
-      color: #383838;
+      color: var(--black);
       font-size: 1.6rem;
       font-weight: 400;
     }
@@ -217,7 +146,7 @@
     display: block;
     position: relative;
     padding: 8px;
-    color: #383838;
+    color: var(--black);
     .title {
       font-size: 1.6rem;
       font-weight: 400;
@@ -266,29 +195,19 @@
 .p-aside__related-entries {
   padding: 20px 0;
 }
-
 .p-aside__related-entries--title {
-  font-size: 2.4rem;
+  font-size: clamp(20px, 4vw, 24px);
   font-weight: 400;
   line-height: 100%;
   position: relative;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--orange);
-
-  @media screen and (max-width: 991px) {
-    font-size: 2.2rem;
-  }
-  @media screen and (max-width: 575px) {
-    font-size: 2.0rem;
-  }
 }
-
 .p-aside__related-entries--list {
   display: flex;
   flex-wrap: wrap;
 }
-
 .p-aside__related-entries--item {
   box-shadow: rgba(0, 0, 0, 0.16);
   overflow: hidden;
@@ -296,7 +215,6 @@
     opacity: 0.8;
   }
 }
-
 .p-aside__related-entries--img-wrapper {
   position: relative;
   overflow: hidden;
@@ -311,29 +229,19 @@
     object-fit: cover;
   }
 }
-
 .p-aside__related-entries--content {
   padding: 3.2rem;
-  time {
-    font-size: 1.6rem;
+  time,
+  .title {
+    font-size: clamp(14px, 4vw, 16px);
     line-height: 1.5;
+  }
+  time {
     display: block;
   }
   .title {
-    font-size: 1.6rem;
-    line-height: 1.5;
     overflow: hidden;
     height: 3.2em;
     margin-top: 1.6rem;
-  }
-  @media screen and (max-width: 991px) {
-    time, .title {
-      font-size: 1.5rem;
-    }
-  }
-  @media screen and (max-width: 575px) {
-    time, .title {
-      font-size: 1.4rem;
-    }
   }
 }

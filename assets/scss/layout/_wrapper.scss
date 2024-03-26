@@ -14,12 +14,3 @@ body.appear .l-wrapper {
   animation-fill-mode: forwards;
   opacity: 0;
 }
-
-@keyframes PageAnimeAppear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}

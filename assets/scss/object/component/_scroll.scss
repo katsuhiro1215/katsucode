@@ -12,21 +12,18 @@
     transform: translateX(-50%);
   }
 }
-
 .c-scrolldown__wrapper {
   display: block;
   position: relative;
   text-decoration: none;
   svg {
-    fill: #383838;
+    fill: var(--black);
   }
-
   .c-scroll-text {
     width: 100px;
     height: auto;
     animation: rotation 10s infinite linear;
   }
-
   .c-scroll-icon {
     width: 25px;
     height: auto;
@@ -36,14 +33,12 @@
     transform: translate(-50%, -50%);
     transition: all 0.2s ease-in;
   }
-
   &:hover .c-scroll-icon {
     animation: move 1s infinite linear;
   }
-
   @media screen and (max-width: 991px) {
     svg {
-      fill: #fff;
+      fill: var(--white);
     }
   }
 }

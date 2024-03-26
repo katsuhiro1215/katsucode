@@ -6,13 +6,12 @@
   align-items: center;
   margin-top: 80px;
 }
-
 .page-numbers {
   display: block;
   margin-right: 10px;
   margin-bottom: 10px;
-  padding: 20px;
-  font-size: 1.6rem;
+  padding: 8px;
+  font-size: clamp(14px, 4vw, 16px);
   color: #383838;
   line-height: 100%;
   text-align: center;
@@ -26,13 +25,11 @@
   &.current {
     background-color: transparent;
   }
-  @media screen and (max-width: 991px) {
-    padding: 15px;
-    font-size: 1.5rem;
+  @media screen and (min-width: 576px) {
+    padding: 12px;
   }
-  @media screen and (max-width: 575px) {
-    padding: 10px;
-    font-size: 1.4rem;
+  @media screen and (min-width: 768px) {
+    padding: 16px;
   }
 }
 
@@ -43,7 +40,7 @@
   width: 100%;
   overflow: hidden;
   text-align: center;
-
+  border: 1px solid var(--black);
   span {
     flex: 0 0 33.3333%;
     max-width: 33.3333%;
@@ -51,7 +48,6 @@
     font-size: 1.4rem;
     line-height: 120%;
     text-decoration: none;
-
     a {
       display: block;
       color: #333;
@@ -62,7 +58,6 @@
       transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     }
-
     &.arrow-left {
       position: relative;
       padding: 30px 20px 30px 35px;
