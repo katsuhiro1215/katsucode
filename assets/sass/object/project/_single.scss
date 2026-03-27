@@ -1,0 +1,13 @@
+/* ---------- Flow Page ---------- */
+.p-single {
+  // Main
+  &__main {
+    &--wrapper {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    &--body {
+      margin: 40px 0;
+    }
+  }
+}

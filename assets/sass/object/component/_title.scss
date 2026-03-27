@@ -1,0 +1,202 @@
+/* ---------- Index Title ---------- */
+.c-title {
+  &__primary {
+    margin: 0;
+    font-weight: 600;
+    &-en {
+      font-size: 2.4rem;
+      color: var(--yellow);
+    }
+    &-ja {
+      z-index: 2;
+      position: relative;
+      margin-top: 6px;
+      font-size: 3.2rem;
+      line-height: 1.4;
+    }
+  }
+
+  &__secondary {
+    margin: 0;
+    font-weight: 600;
+    &-ja {
+      z-index: 2;
+      position: relative;
+      margin-top: 6px;
+      font-size: 2.4rem;
+      line-height: 1.4;
+    }
+  }
+
+  &__contact-primary {
+    color: var(--orange);
+    font-size: 3.2rem;
+    font-weight: 600;
+  }
+
+  &__contact-secondary {
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    border-top: 6px double #333;
+    border-bottom: 6px double #333;
+  }
+  
+  &__page-primary {
+    z-index: 20;
+    line-height: 2;
+    background-color: var(--yellow);
+    opacity: 0.8;
+    &--wrapper {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      &-ja {
+        font-size: 3.2em;
+        font-weight: bold;
+        color: #fff;
+      }
+      &-en {
+        span {
+          display: block;
+          font-size: 1.6rem;
+          background-color: #fff;
+          color: var(--yellow);
+          padding: 1rem 2rem;
+        }
+      }
+    }
+  }
+
+  &__page-secondary {
+    text-align: center;
+    border-top: 2px double var(--yellow);
+    border-bottom: 2px double var(--yellow);
+    padding: 20px 0;
+    &--logo {
+      img {
+        width: 50px;
+      }
+    }
+    &-en {
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 2;
+    }
+    &-ja {
+      font-size: 2.4rem;
+      font-weight: 400;
+    }
+  }
+
+  &__category {
+    span {
+      color: var(--orange);
+      margin-right: 16px;
+      font-size: 4.0rem;
+    }
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 2;
+  }
+
+  /* ---------- Nara Title ---------- */
+  &__nara {
+    z-index: 1000;
+    line-height: 2;
+    background-color: var(--yellow);
+    opacity: 0.8;
+    &--wrapper {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      &-ja {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #fff;
+      }
+      &-en {
+        span {
+          font-family: coquette, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 12rem;
+          background-color: #fff;
+          color: var(--yellow);
+          padding: 1rem 2rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    &__primary {
+      &-en {
+        font-size: 2.0rem;
+      }
+      &-ja {
+        font-size: 2.8rem;
+      }
+    }
+  
+    &__secondary {
+      &-ja {
+        font-size: 2.2rem;
+      }
+    }
+  
+    &__contact-primary {
+      font-size: 2.8rem;
+    }
+    
+    &__page-primary {
+      &--wrapper {
+        &-ja {
+          font-size: 2.8em;
+        }
+      }
+    }
+  
+    &__page-secondary {
+      &-ja {
+        font-size: 2.2rem;
+      }
+    }
+  
+    &__category {
+      span {
+        font-size: 3.6rem;
+      }
+      font-size: 2.8rem;
+    }
+  
+    &__nara {
+      &--wrapper {
+        &-ja {
+          font-size: 4rem;
+        }
+        &-en {
+          span {
+            font-size: 12rem;
+            padding: 1rem 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+  }
+
+  @media screen and (max-width: 575px) {
+
+  }
+}
+
+
