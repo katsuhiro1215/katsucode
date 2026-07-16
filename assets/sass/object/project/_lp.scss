@@ -1,0 +1,393 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+/* ---------- LP Common Styles ---------- */
+.p-lp {
+  // LP全体のコンテナ
+  &__container {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  // 戻るボタン（固定位置）
+  &__back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10000;
+    background: $white;
+    border: 2px solid $orange;
+    border-radius: 50px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $orange;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    @include mq(md) {
+      top: 30px;
+      left: 30px;
+      padding: 14px 28px;
+      font-size: 1.5rem;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background: $orange;
+      color: $white;
+      transform: translateX(-4px);
+      box-shadow: 0 6px 24px rgba($orange, 0.4);
+
+      svg {
+        transform: translateX(-4px);
+      }
+    }
+  }
+
+  // ヒーローセクション
+  &__hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+
+    @include mq(md) {
+      padding: 120px 40px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+  }
+
+  &__hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: $white;
+
+    @include mq(md) {
+      max-width: 1000px;
+    }
+  }
+
+  &__hero-label {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 8px 24px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+
+    @include mq(md) {
+      padding: 10px 32px;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__hero-title {
+    font-size: clamp(3.2rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: 0.02em;
+
+    @include mq(md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__hero-subtitle {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 500;
+
+    @include mq(md) {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 48px;
+    background: $orange;
+    color: $white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    @include mq(md) {
+      padding: 24px 64px;
+      font-size: 2rem;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+
+      svg {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  // セクション共通
+  &__section {
+    padding: 80px 20px;
+
+    @include mq(md) {
+      padding: 120px 40px;
+    }
+
+    &--gray {
+      background: #f8f9fa;
+    }
+
+    &--dark {
+      background: #2c3e50;
+      color: $white;
+    }
+  }
+
+  &__section-header {
+    margin: 0 auto 60px;
+    text-align: center;
+
+    @include mq(md) {
+      max-width: 800px;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__section-label {
+    display: inline-block;
+    background: $orange;
+    color: $white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 6px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+
+  &__section-title {
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  &__section-description {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    line-height: 1.8;
+    color: #6c757d;
+
+    .p-lp__section--dark & {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  // 特徴カード
+  &__features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin: 0 auto;
+
+    @include mq(md) {
+      max-width: 1200px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    @include mq(lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    }
+  }
+
+  &__feature-card {
+    background: $white;
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    .p-lp__section--dark & {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__feature-icon {
+    font-size: 4.8rem;
+    margin-bottom: 24px;
+  }
+
+  &__feature-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #2c3e50;
+
+    .p-lp__section--dark & {
+      color: $white;
+    }
+  }
+
+  &__feature-description {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #6c757d;
+
+    .p-lp__section--dark & {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  // CTAセクション
+  &__cta-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, $orange 0%, #e66a1f 100%);
+    text-align: center;
+
+    @include mq(md) {
+      padding: 140px 40px;
+    }
+  }
+
+  &__cta-title {
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 900;
+    color: $white;
+    margin-bottom: 24px;
+    line-height: 1.3;
+
+    @include mq(md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__cta-description {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    line-height: 1.8;
+
+    @include mq(md) {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(sm) {
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+
+  &__cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 48px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    white-space: nowrap;
+
+    @include mq(md) {
+      padding: 24px 56px;
+      font-size: 1.8rem;
+    }
+
+    &--primary {
+      background: $white;
+      color: $orange;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &--secondary {
+      background: transparent;
+      color: $white;
+      border: 3px solid $white;
+
+      &:hover {
+        background: $white;
+        color: $orange;
+        transform: translateY(-4px);
+      }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(4px);
+    }
+  }
+}

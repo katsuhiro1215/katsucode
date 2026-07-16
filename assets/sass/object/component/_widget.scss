@@ -1,0 +1,555 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+/* ---------- Widget Common ---------- */
+.widget {
+  margin-bottom: 40px;
+  padding: 24px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+
+  @include mq(md) {
+    margin-bottom: 48px;
+    padding: 32px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // Widget Title
+  .c-title__secondary {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid $orange;
+
+    @include mq(md) {
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+    }
+
+    &-ja {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $dark;
+
+      @include mq(md) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  // Widget List Common
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 12px;
+      padding-left: 16px;
+      position: relative;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: $orange;
+        font-size: 1.2rem;
+      }
+
+      a {
+        display: block;
+        color: $dark;
+        text-decoration: none;
+        font-size: 1.4rem;
+        line-height: 1.6;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: $orange;
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+/* ---------- Search Widget ---------- */
+.widget_search {
+  .search-form {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+
+    .search-field {
+      flex: 1;
+      padding: 12px 16px;
+      font-size: 1.4rem;
+      border: 2px solid #ddd;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: $orange;
+      }
+
+      &::placeholder {
+        color: #999;
+      }
+    }
+
+    .search-submit {
+      padding: 12px 24px;
+      background-color: $orange;
+      color: $white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      font-size: 1.4rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: darken($orange, 10%);
+      }
+    }
+  }
+}
+
+/* ---------- Calendar Widget ---------- */
+.widget_calendar {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.3rem;
+
+    caption {
+      padding: 12px 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: $dark;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    thead {
+      th {
+        padding: 8px;
+        background-color: $orange;
+        color: $white;
+        font-weight: 600;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #e0e0e0;
+        background-color: $white;
+
+        a {
+          display: block;
+          color: $orange;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.2s ease;
+
+          &:hover {
+            background-color: $orange;
+            color: $white;
+            border-radius: 4px;
+          }
+        }
+
+        &#today {
+          background-color: rgba($orange, 0.1);
+          font-weight: 700;
+        }
+      }
+    }
+
+    tfoot {
+      td {
+        padding: 8px;
+        text-align: center;
+        font-size: 1.2rem;
+
+        a {
+          color: $orange;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------- Categories Widget ---------- */
+.widget_categories {
+  ul {
+    li {
+      &.cat-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .count {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 24px;
+          height: 24px;
+          padding: 0 8px;
+          background-color: $orange;
+          color: $white;
+          font-size: 1.2rem;
+          font-weight: 600;
+          border-radius: 12px;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  // Dropdown style
+  select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1.4rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    background-color: $white;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: $orange;
+    }
+  }
+}
+
+/* ---------- Archives Widget ---------- */
+.widget_archive {
+  ul {
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .count {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 24px;
+        height: 24px;
+        padding: 0 8px;
+        background-color: $dark;
+        color: $white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 12px;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  // Dropdown style
+  select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1.4rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    background-color: $white;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: $orange;
+    }
+  }
+}
+
+/* ---------- Recent Posts Widget ---------- */
+.widget_recent_entries {
+  ul {
+    li {
+      padding-left: 0;
+      margin-bottom: 16px;
+
+      &::before {
+        display: none;
+      }
+
+      a {
+        display: block;
+        padding: 12px;
+        background-color: $white;
+        border-radius: 4px;
+        border-left: 3px solid $orange;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: rgba($orange, 0.05);
+          border-left-width: 5px;
+          padding-left: 14px;
+        }
+      }
+
+      .post-date {
+        display: block;
+        margin-top: 4px;
+        font-size: 1.2rem;
+        color: #999;
+      }
+    }
+  }
+}
+
+/* ---------- Recent Comments Widget ---------- */
+.widget_recent_comments {
+  ul {
+    li {
+      padding-left: 0;
+      margin-bottom: 16px;
+
+      &::before {
+        display: none;
+      }
+
+      a {
+        display: block;
+        padding: 12px;
+        background-color: $white;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: rgba($orange, 0.05);
+        }
+      }
+
+      .comment-author-link {
+        font-weight: 600;
+        color: $orange;
+      }
+    }
+  }
+}
+
+/* ---------- Tag Cloud Widget ---------- */
+.widget_tag_cloud {
+  .tagcloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+
+    a {
+      display: inline-block;
+      padding: 6px 16px;
+      background-color: $white;
+      color: $dark;
+      border: 2px solid #ddd;
+      border-radius: 20px;
+      font-size: 1.3rem !important;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $orange;
+        color: $white;
+        border-color: $orange;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+/* ---------- Meta Widget ---------- */
+.widget_meta {
+  ul {
+    li {
+      a {
+        svg {
+          margin-right: 4px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+/* ---------- RSS Widget ---------- */
+.widget_rss {
+  .rsswidget {
+    display: block;
+    font-weight: 600;
+    color: $orange;
+    margin-bottom: 8px;
+  }
+
+  .rss-date {
+    display: block;
+    font-size: 1.2rem;
+    color: #999;
+    margin-bottom: 8px;
+  }
+
+  .rssSummary {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: $dark;
+  }
+
+  cite {
+    display: block;
+    margin-top: 8px;
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #999;
+  }
+
+  ul {
+    li {
+      padding-left: 0;
+      margin-bottom: 20px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ---------- Text Widget ---------- */
+.widget_text {
+  .textwidget {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: $dark;
+
+    p {
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $orange;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* ---------- Custom Widget (if any) ---------- */
+.widget_custom_html {
+  .textwidget {
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+}
+
+/* ---------- Pages Widget ---------- */
+.widget_pages {
+  ul {
+    li {
+      &.page_item_has_children {
+        > a {
+          font-weight: 600;
+        }
+
+        ul.children {
+          margin-top: 8px;
+          margin-left: 16px;
+          padding-left: 16px;
+          border-left: 2px solid #ddd;
+
+          li {
+            margin-bottom: 8px;
+
+            &::before {
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------- Nav Menu Widget ---------- */
+.widget_nav_menu {
+  .menu {
+    li {
+      &.menu-item-has-children {
+        > a {
+          font-weight: 600;
+        }
+
+        ul.sub-menu {
+          margin-top: 8px;
+          margin-left: 16px;
+          padding-left: 16px;
+          border-left: 2px solid #ddd;
+
+          li {
+            margin-bottom: 8px;
+
+            &::before {
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------- Responsive ---------- */
+// モバイルファースト
+.widget {
+  margin-bottom: 24px;
+  padding: 16px;
+
+  @include mq(md) {
+    margin-bottom: 32px;
+    padding: 20px;
+  }
+
+  @include mq(lg) {
+    margin-bottom: 40px;
+    padding: 24px;
+  }
+
+  .c-title__secondary {
+    &-ja {
+      font-size: 1.6rem;
+
+      @include mq(md) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

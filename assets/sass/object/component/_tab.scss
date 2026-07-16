@@ -1,0 +1,92 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+/* ---------- Tab Component ---------- */
+.tab_panel {
+  margin: 20px 0;
+
+  @include mq(md) {
+    margin: 30px 0;
+  }
+
+  @include mq(lg) {
+    margin: 40px 0;
+  }
+}
+
+.tab_list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include mq(md) {
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    overflow-x: visible;
+  }
+
+  @include mq(lg) {
+    margin-bottom: 40px;
+  }
+}
+
+.tab__item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+
+  span {
+    display: block;
+    padding: 8px 16px;
+    background-color: $white;
+    color: $dark;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 90px;
+
+    @include mq(md) {
+      padding: 10px 20px;
+      font-size: 1.4rem;
+      min-width: 100px;
+    }
+
+    @include mq(lg) {
+      padding: 12px 30px;
+      font-size: 1.5rem;
+      min-width: 120px;
+    }
+  }
+
+  &:hover span {
+    background-color: #f8f8f8;
+    border-color: $orange;
+  }
+
+  &.active span {
+    background-color: $orange;
+    color: $white;
+    border-color: $orange;
+  }
+}
+
+.tab__content {
+  width: 100%;
+}

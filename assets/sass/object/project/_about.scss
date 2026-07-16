@@ -1,153 +1,487 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
 /* ---------- About Page ---------- */
-.p-about {
-  // Concept Section
-  &__concept {
-    &--wrapper {
-      padding-top: 80px;
-      padding-bottom: 80px;
+.p-index__about {
+  .section__lead p {
+    text-align: left;
+  }
+}
+
+/* ---------- About Page ---------- */
+// Scroll Wrapper - 400vhのスクロール範囲を作る
+.p-about__scroll-wrapper {
+  position: relative;
+  height: 400vh;
+}
+
+// Scroll Section - 固定表示エリア
+.p-about__scroll-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  &.is-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  &.is-end {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+  }
+}
+
+// コンテンツセクション - 絶対配置で重ねる
+.scroll_content_section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s ease 0.2s;
+
+  // アクティブ状態
+  &.active {
+    z-index: 10;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  // 背景にオーバーレイを追加
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  // WHY背景
+  &[data-bg='why'] {
+    background-image: url('../img/about/step1.jpg');
+  }
+
+  // WHAT背景
+  &[data-bg='what'] {
+    background-image: url('../img/about/step2.jpg');
+  }
+
+  // HOW背景
+  &[data-bg='how'] {
+    background-image: url('../img/about/step3.jpg');
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+  }
+
+  .section__title {
+    margin-bottom: 3rem;
+
+    &-en {
+      font-size: clamp(4rem, 10vw, 7rem);
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.9);
     }
-    &--message {
-      padding: 120px 0;
-      strong {
-        display: block;
-        font-size: 4rem;
-        font-weight: 600;
-        line-height: 2;
-        text-align: center;
+
+    &-ja {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      letter-spacing: 0.2em;
+      margin-bottom: 3rem;
+      color: rgba(255, 255, 255, 0.95);
+    }
+  }
+
+  .section__body {
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include mq(md) {
+      max-width: 900px;
+    }
+
+    h4 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      margin-bottom: 2.5rem;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    p {
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      line-height: 2;
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
-    &--list {
-      margin: 40px 0;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+
+      li {
+        font-size: clamp(1.4rem, 2.5vw, 1.7rem);
+        line-height: 2;
+        padding-left: 1.5em;
+        position: relative;
+
+        &::before {
+          content: '・';
+          position: absolute;
+          left: 0;
+        }
+      }
     }
-    &--item {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 6.4rem;
-      figure {
-        flex: 0 1 27.58333%;
-        margin-right: 3.33333%;
-        overflow: hidden;
+
+    .how__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+      @include mq(lg) {
+        gap: 3rem;
+      }
+    }
+
+    .how__item {
+      .img {
+        margin-bottom: 1.2rem;
+
         img {
           width: 100%;
+          height: auto;
+          border-radius: 8px;
         }
       }
-    }
-    &--info {
-      flex: 1;
-      h3 {
-        font-size: 2.4rem;
-        font-weight: 600;
-        line-height: 2;
-      }
-      p {
-        font-size: 1.6rem;
-        font-weight: 400;
-        line-height: 1.7;
-      }
-    }
-  }
 
-  // Company Section
-  &__company {
-    &--wrapper {
-      padding-top: 80px;
-      padding-bottom: 80px;
-    }
-    &--table {
-      width: 100%;
-      max-width: 800px;
-      margin: 40px auto;
-      tr {
-        border-bottom: 1px solid var(--dark);
-      }
-      th {
-        width: 30%;
-        font-size: 1.6rem;
-        font-weight: 600;
-        text-align: left;
-        vertical-align: middle;
-        padding: 20px;
-      }
-      td {
-        width: 60%;
-        font-size: 1.6rem;
-        font-weight: 400;
-        line-height: 1.7;
-        text-align: left;
-        vertical-align: middle;
-        padding: 20px;
-      }
-    }
-  }
-  // Button
-  &__btn {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin: 0 auto;
-  }
+      .content {
+        h4 {
+          font-size: clamp(1.5rem, 2.8vw, 1.9rem);
+          margin-bottom: 1rem;
+          font-weight: bold;
+        }
 
-  @media screen and (max-width: 991px) {
-    &__concept {
-      &--message {
-        strong {
-          font-size: 3.2rem;
-        }
-      }
-      &--info {
-        h3 {
-          font-size: 2.2rem;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    &__concept {
-      &--message {
-        strong {
-          font-size: 3.0rem;
-        }
-      }
-      &--item {
-        display: block;
-        figure {
-          margin-right: 0;
-          margin-bottom: 20px;
-        }
-      }
-      &--info {
-        h3 {
-          font-size: 2.0rem;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 575px) {
-    &__concept {
-      &--message {
-        strong {
-          font-size: 2.8rem;
-        }
-      }
-      &--info {
-        h3 {
-          font-size: 1.8rem;
+        p {
+          font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+          line-height: 1.8;
         }
       }
     }
   }
 }
 
-@keyframes arrow {
-  0% {
-    opacity: 0;
+// モバイルファーストのレスポンシブ対応
+.scroll_content_section {
+  background-attachment: scroll; // モバイルではfixedを解除
+  padding: 2rem 1rem;
+
+  @include mq(md) {
+    background-attachment: fixed;
+    padding: 3rem 2rem;
   }
-  50% {
-    opacity: 1;
+
+  .section__body {
+    ul li {
+      text-align: left;
+
+      @include mq(md) {
+        text-align: center;
+      }
+    }
+
+    .how__list {
+      grid-template-columns: 1fr;
+
+      @include mq(md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include mq(lg) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
   }
-  100% {
-    opacity: 0;
+}
+
+/* ---------- Logo Introduction Section ---------- */
+.p-page__logo {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  background: #f8f9fa;
+
+  @include mq(lg) {
+    padding: 6rem 4rem;
+  }
+
+  // 背景に薄いロゴ表示
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-image: url('../img/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.08;
+    z-index: 0;
+
+    @include mq(md) {
+      max-width: 800px;
+    }
+
+    @include mq(lg) {
+      width: 60%;
+      max-width: 900px;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+    @include mq(md) {
+      max-width: 900px;
+    }
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, $accent 0%, $accent-green 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @include mq(lg) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+
+    @include mq(md) {
+      max-width: 700px;
+    }
+
+    p {
+      font-size: clamp(1.5rem, 2.8vw, 1.9rem);
+      line-height: 2.2;
+      margin-bottom: 2.5rem;
+      color: #333;
+
+      @include mq(lg) {
+        line-height: 2.4;
+        margin-bottom: 3rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* ---------- TRUST Section ---------- */
+.p-page__trust {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba($accent, 0.05) 0%, rgba($accent-green, 0.05) 100%);
+  position: relative;
+  overflow: hidden;
+
+  @include mq(lg) {
+    padding: 6rem 4rem;
+  }
+
+  .container {
+    width: 100%;
+
+    @include mq(md) {
+      max-width: 1200px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+
+    @include mq(lg) {
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+    }
+  }
+
+  // 左側：タイトル + メッセージ
+  &__content {
+    order: 2;
+
+    @include mq(lg) {
+      order: 1;
+    }
+  }
+
+  &__title-area {
+    margin-bottom: 3rem;
+
+    @include mq(lg) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__catch {
+    font-size: clamp(4rem, 12vw, 8rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    background: linear-gradient(135deg, $accent 0%, $accent-green 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    color: #666;
+    letter-spacing: 0.1em;
+  }
+
+  // メッセージエリア
+  &__message {
+    h3 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      color: $black;
+      position: relative;
+      padding-left: 1.5rem;
+
+      // タイトル左のアクセントライン
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.5rem;
+        width: 4px;
+        height: calc(100% - 1rem);
+        background: linear-gradient(180deg, $accent 0%, $accent-green 100%);
+      }
+    }
+
+    p {
+      font-size: clamp(1.4rem, 2.5vw, 1.7rem);
+      line-height: 2;
+      margin-bottom: 1.8rem;
+      color: #555;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // 右側：画像 - シャープなクリップパス
+  &__image {
+    order: 1;
+    position: relative;
+
+    @include mq(lg) {
+      order: 2;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      clip-path: polygon(
+        0 0,
+        calc(100% - 60px) 0,
+        100% 60px,
+        100% 100%,
+        60px 100%,
+        0 calc(100% - 60px)
+      );
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        0 8px 24px rgba(0, 0, 0, 0.06),
+        0 16px 48px rgba(0, 0, 0, 0.08);
+
+      @include mq(lg) {
+        clip-path: polygon(
+          0 0,
+          calc(100% - 80px) 0,
+          100% 80px,
+          100% 100%,
+          80px 100%,
+          0 calc(100% - 80px)
+        );
+      }
+    }
+
+    // 画像の右上にアクセントグラデーション
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, $accent 0%, $accent-green 100%);
+      opacity: 0.15;
+      clip-path: polygon(100% 0, 100% 100%, 0 0);
+      z-index: 1;
+
+      @include mq(lg) {
+        width: 80px;
+        height: 80px;
+      }
+    }
   }
 }

@@ -1,55 +1,69 @@
+@use '../foundation/variable' as *;
+
+/* ----- Wrapper ----- */
+.l-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ----- Main ----- */
+.l-main {
+  position: relative;
+}
+
+/* ----- Container ----- */
+// コンテナの最大幅
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1280px
+);
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin container-max-width($breakpoint, $max-width) {
+  @media (min-width: $breakpoint) {
+    .container,
+    .container-sm#{if($max-width != map-get($container-max-widths, sm), ', .container-' + $breakpoint, '')} {
+      max-width: $max-width;
+    }
+  }
+}
+
 .container,
 .container-fluid,
 .container-sm,
 .container-md,
 .container-lg,
-.container-xl {
+.container-xl,
+.container-xxl {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
-@media (min-width: 576px) {
-  .container,
-  .container-sm {
-    max-width: 540px;
-  }
+// 各ブレークポイントでの最大幅を適用
+@each $breakpoint, $max-width in $container-max-widths {
+  @include container-max-width(map-get($breakpoints, $breakpoint), $max-width);
 }
 
-@media (min-width: 768px) {
-  .container,
-  .container-sm,
-  .container-md {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container,
-  .container-sm,
-  .container-md,
-  .container-lg {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container,
-  .container-sm,
-  .container-md,
-  .container-lg,
-  .container-xl {
-    max-width: 1140px;
-  }
-}
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -16px;
+  margin-left: -16px;
 }
 
 .no-gutters {
@@ -135,8 +149,8 @@
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 .col {
   flex-basis: 0;
@@ -298,7 +312,7 @@
 .offset-11 {
   margin-left: 91.66666667%;
 }
-@media (min-width: 576px) {
+@media (min-width: 520px) {
   .col-sm {
     flex-basis: 0;
     flex-grow: 1;
@@ -463,7 +477,7 @@
     margin-left: 91.66666667%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 740px) {
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
@@ -628,7 +642,7 @@
     margin-left: 91.66666667%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 960px) {
   .col-lg {
     flex-basis: 0;
     flex-grow: 1;
@@ -793,7 +807,7 @@
     margin-left: 91.66666667%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1360px) {
   .col-xl {
     flex-basis: 0;
     flex-grow: 1;

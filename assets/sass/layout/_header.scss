@@ -1,46 +1,82 @@
+@use '../foundation/variable' as *;
+@use '../foundation/mixin' as *;
+
 .l-header {
   width: 100%;
-  height: 120px;
+  height: 60px;
   position: relative;
-  z-index: 2;
+  z-index: 100;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  @include mq(lg) {
+    height: 120px;
+  }
+
+  // Sticky state
+  &.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    height: 60px;
+    z-index: 1000;
+    .l-header__logo {
+      img {
+        width: 32px;
+        height: 32px;
+
+        @include mq(lg) {
+          width: 36px;
+          height: 36px;
+        }
+      }
+
+      span {
+        font-size: clamp($fs20, 3vw, $fs24);
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 100%;
+  }
+
   &__logo {
     position: absolute;
-    top: 30px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 40px;
-    z-index: 50;
+    z-index: $z-header-logo;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: $gap2;
+    }
+
     img {
-      width: 70px;
+      width: 40px;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+      @include mq(sm) {
+        height: 48px;
+      }
+
+      @include mq(lg) {
+        height: 56px;
+      }
     }
+
     span {
-      padding-left: 15px;
-      font-size: 3.2rem;
-      font-family: var(--font-family-sans-serif);
-      font-weight: 400;
-    }
-  }
-  @media screen and (max-width: 991px) {
-    &__logo {
-      top: 5px;
-      img {
-        height: 50px;
-      }
-      span {
-        font-size: 2.8rem;
-      }
-    }
-  }
-  @media screen and (max-width: 767px) {
-    &__logo {
-      span {
-        font-size: 2.6rem;
-      }
-    }
-  }
-  @media screen and (max-width: 575px) {
-    &__logo {
-      span {
-        font-size: 2.4rem;
-      }
+      font-size: clamp($fs24, 4vw, $fs32);
+      font-family: $main-font;
+      font-weight: $fw500;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
   }
 }

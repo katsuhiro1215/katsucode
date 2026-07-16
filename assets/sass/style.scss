@@ -1,56 +1,65 @@
-/* 
- * Foundation
- */
-@use "foundation/variable";
-@use "foundation/reset";
-@use "foundation/base";
+/* ---------------------------- */
+/* -------- Foundation -------- */
+/* ---------------------------- */
+@use 'foundation/variable';
+@use 'foundation/reset';
+@use 'foundation/base';
+@use 'foundation/mixin';
 
 /* ---------------------------- */
 /* ---------- Layout ---------- */
 /* ---------------------------- */
-@use "layout/wrapper";
-@use "layout/container";
-@use "layout/header";
-@use "layout/nav";
-@use "layout/main";
-@use "layout/sidebar";
-@use "layout/aside";
-@use "layout/footer";
+@use 'layout/container';
+@use 'layout/header';
+@use 'layout/nav';
+@use 'layout/section';
+@use 'layout/sidebar';
+@use 'layout/aside';
+@use 'layout/footer';
 
 /* ---------------------------- */
 /* ---------- Object ---------- */
 /* ---------------------------- */
-/* ---------- Component ---------- */
-@use "object/component/button";
-@use "object/component/card";
-@use "object/component/flex";
-@use "object/component/grid";
-@use "object/component/list";
-@use "object/component/pagenavi";
-@use "object/component/scroll";
-@use "object/component/title";
-@use "object/component/transition";
+// Component
+@use 'object/component/animation';
+@use 'object/component/button';
+@use 'object/component/card';
+@use 'object/component/flex';
+@use 'object/component/grid';
+@use 'object/component/list';
+@use 'object/component/pagenavi';
+@use 'object/component/scroll';
+@use 'object/component/tab';
+@use 'object/component/title';
+@use 'object/component/transition';
+@use 'object/component/widget';
 
-/* ---------- Project ---------- */
-@use "object/project/index";
-@use "object/project/about";
-@use "object/project/article";
-@use "object/project/blog";
-@use "object/project/contact";
-@use "object/project/faq";
-@use "object/project/flow";
-@use "object/project/nara";
-@use "object/project/news";
-@use "object/project/page";
-@use "object/project/privacy-policy";
-@use "object/project/project";
-@use "object/project/service";
-@use "object/project/single";
-@use "object/project/swim";
+// Project
+@use 'object/project/index';
+@use 'object/project/banner';
+@use 'object/project/about';
+@use 'object/project/article';
+@use 'object/project/blog';
+@use 'object/project/faq';
+@use 'object/project/flow';
+@use 'object/project/company';
+@use 'object/project/news';
+@use 'object/project/contact';
+@use 'object/project/page';
+@use 'object/project/privacy-policy';
+@use 'object/project/project';
+@use 'object/project/service';
+@use 'object/project/service-detail';
+@use 'object/project/search';
+@use 'object/project/single';
+@use 'object/project/lp';
+@use 'object/project/swim'; //lpを参考
+@use 'object/project/nara'; //lpを参考
+@use 'object/project/sass'; //lpを参考
 
-/* ---------- Utility ---------- */
-@use "object/utility/align";
-@use "object/utility/clearfix";
-@use "object/utility/justify";
-@use "object/utility/margin";
-@use "object/utility/padding";
+// Utility
+@use 'object/utility/align';
+@use 'object/utility/clearfix';
+@use 'object/utility/justify';
+@use 'object/utility/margin';
+@use 'object/utility/padding';

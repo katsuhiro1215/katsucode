@@ -3,130 +3,197 @@
   <!-- Main End -->
 
   <!-- CTA Start -->
-  <aside class="l-aside__contact">
-    <div class="l-aside__contact--wrapper">
-      <div class="container">
-        <h2 class="c-title__contact-primary l-aside__contact--title">
-          お気軽にお問い合わせください
-        </h2>
-        <div class="l-aside__contact--contents">
-          <div class="l-aside__contact--item">
-            <h3 class="c-title__contact-secondary l-aside__contact--title">
-              <span>お電話でのお問い合わせ</span>
-            </h3>
-            <div class="l-aside__contact--detail">
-              <div class="l-aside__contact--tel">
-                TEL. <span>090-9580-9257</span>
+  <?php get_template_part('template-parts/aside/contact'); ?>
+  <!-- CTA End -->
+  <!-- Footer Start -->
+  <footer class="l-footer">
+    <div class="l-footer__wrapper">
+      <!-- メニューエリア -->
+      <div class="l-footer__menu">
+        <div class="container">
+          <div class="row">
+            <!-- 会社情報 -->
+            <div class="col-6 col-md-3">
+              <div class="l-footer__menu-column">
+                <h3 class="l-footer__menu-title">会社情報</h3>
+                <ul class="l-footer__menu-list">
+                  <li><a href="<?php echo esc_url(home_url('/')); ?>">ホーム</a></li>
+                  <li><a href="<?php echo esc_url(home_url('about')); ?>">かつコードについて</a></li>
+                  <li><a href="<?php echo esc_url(home_url('company')); ?>">会社概要</a></li>
+                  <li><a href="<?php echo esc_url(home_url('recruit')); ?>">採用情報</a></li>
+                </ul>
               </div>
-              <div class="l-aside__contact--time">
-                営業時間 : 9:00 - 17: 00 <br />
-                定休日 : 土日・祝日
+            </div>
+
+            <!-- サービス -->
+            <div class="col-6 col-md-3">
+              <div class="l-footer__menu-column">
+                <h3 class="l-footer__menu-title">サービス</h3>
+                <ul class="l-footer__menu-list">
+                  <li><a href="<?php echo esc_url(home_url('service')); ?>">事業内容</a></li>
+                  <li><a href="<?php echo esc_url(home_url('web-production')); ?>">Web制作</a></li>
+                  <li><a href="<?php echo esc_url(home_url('lp')); ?>">LP制作</a></li>
+                  <li><a href="<?php echo esc_url(home_url('ec-site')); ?>">ECサイト</a></li>
+                  <li><a href="<?php echo esc_url(home_url('app-development')); ?>">アプリ開発</a></li>
+                  <li><a href="<?php echo esc_url(home_url('saas')); ?>">SaaS開発</a></li>
+                  <li><a href="<?php echo esc_url(home_url('system-development')); ?>">システム開発</a></li>
+                  <li><a href="<?php echo esc_url(home_url('spra')); ?>">中央管理システム</a></li>
+                </ul>
               </div>
-              <p class="l-aside__contact--text">
-                上記以外の時間帯はメールにてお願いいたします。
-              </p>
+            </div>
+
+            <!-- 制作実績・情報 -->
+            <div class="col-6 col-md-3">
+              <div class="l-footer__menu-column">
+                <h3 class="l-footer__menu-title">制作実績・情報</h3>
+                <ul class="l-footer__menu-list">
+                  <li><a href="<?php echo esc_url(home_url('project')); ?>">制作実績</a></li>
+                  <li><a href="<?php echo esc_url(home_url('flow')); ?>">制作の流れ</a></li>
+                  <li><a href="<?php echo esc_url(home_url('blog')); ?>">ブログ</a></li>
+                  <li><a href="<?php echo esc_url(home_url('category/news')); ?>">お知らせ</a></li>
+                  <li><a href="<?php echo esc_url(home_url('faq')); ?>">よくある質問</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- お問い合わせ -->
+            <div class="col-6 col-md-3">
+              <div class="l-footer__menu-column">
+                <h3 class="l-footer__menu-title">お問い合わせ</h3>
+                <ul class="l-footer__menu-list">
+                  <li><a href="<?php echo esc_url(home_url('contact')); ?>">お問い合わせ</a></li>
+                  <li><a href="<?php echo esc_url(home_url('privacy-policy')); ?>">プライバシーポリシー</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="l-aside__contact--item">
-            <h3 class="c-title__contact-secondary l-aside__contact--title">
-              <span>メールフォームでのお問い合わせ</span>
-            </h3>
-            <div class="l-aside__contact--detail">
-              <div class="c-btn__primary l-aside__contact--btn">
-                <a href="about.html" class="c-btn__primary--wrapper">
-                  <span class="c-btn__primary--text">お問い合わせへ</span>
-                  <div class="c-btn__primary--arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </div>
+        </div>
+      </div>
+
+      <div class="l-footer__sub-menu">
+        <div class="container">
+          <div class="row">
+            <!-- Blog -->
+            <div class="col-6 col-md-3">
+              <div class="l-footer__sub-card">
+                <h4 class="l-footer__sub-title">Blog</h4>
+                <p class="l-footer__sub-description">長年利用している技術ブログ。プログラミングやWeb制作に関する記事を発信しています。</p>
+                <a href="#" class="l-footer__sub-button" target="_blank" rel="noopener noreferrer">
+                  ブログを見る
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Katsuool -->
+            <div class="col-6 col-md-3">
+              <div class="l-footer__sub-card">
+                <h4 class="l-footer__sub-title">Katsuool</h4>
+                <p class="l-footer__sub-description">便利なWebツールを集めたサイト。日々の業務を効率化するツールを提供しています。</p>
+                <a href="#" class="l-footer__sub-button" target="_blank" rel="noopener noreferrer">
+                  ツールを使う
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Smart Sprouts -->
+            <div class="col-6 col-md-3">
+              <div class="l-footer__sub-card">
+                <h4 class="l-footer__sub-title">Smart Sprouts</h4>
+                <p class="l-footer__sub-description">教育サービスのブランドサイト。子どもたちの成長をサポートする教育コンテンツを提供。</p>
+                <a href="#" class="l-footer__sub-button" target="_blank" rel="noopener noreferrer">
+                  サイトを見る
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Spra -->
+            <div class="col-6 col-md-3">
+              <div class="l-footer__sub-card">
+                <h4 class="l-footer__sub-title">Spra</h4>
+                <p class="l-footer__sub-description">中央管理システム「Spra」の専用サイト。業務効率化を実現するSaaSプラットフォーム。</p>
+                <a href="#" class="l-footer__sub-button" target="_blank" rel="noopener noreferrer">
+                  詳細を見る
+                  <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </aside>
-  <!-- CTA End -->
-  <!-- Footer Start -->
-  <footer class="l-footer">
-    <div class="l-footer__wrapper">
-      <div class="l-footer__main">
+
+      <!-- 会社情報エリア -->
+      <div class="l-footer__info">
         <div class="container">
-          <div class="l-footer__logo">
-            <a href="">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="ロゴ" />
-              <span>Katsu code</span>
-            </a>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-6">
-              <div class="l-footer__address">
-                <dl>
+          <div class="l-footer__info-wrapper">
+            <!-- ロゴ -->
+            <div class="l-footer__logo">
+              <a href="<?php echo esc_url(home_url('/')); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="ロゴ" />
+                <span>Katsucode</span>
+              </a>
+            </div>
+
+            <!-- 住所・連絡先 -->
+            <div class="l-footer__address">
+              <dl>
+                <div class="l-footer__address-item">
                   <dt>所在地</dt>
-                  <dd>
-                    奈良県奈良市
-                    <br />
-                    (自宅兼事務所のため、ご契約の際にお伝えします)
-                  </dd>
+                  <dd>奈良県奈良市（自宅兼事務所のため、ご契約の際にお伝えします）</dd>
+                </div>
+                <div class="l-footer__address-item">
                   <dt>連絡先</dt>
-                  <dd>
-                    Tel. <span>090-9580-9257</span><br />
-                    Email <span>info@katsucode.jp</span>
-                  </dd>
+                  <dd>Tel. 090-9580-9257 / Email info@katsucode.jp</dd>
+                </div>
+                <div class="l-footer__address-item">
                   <dt>営業時間</dt>
-                  <dd>9:00 - 17: 00</dd>
-                  <dt>定休日</dt>
-                  <dd>土日・祝日</dd>
-                </dl>
-              </div>
-              <ul class="l-footer__sns-list">
-                <li class="l-footer__sns-item">
-                  <a href="#" class="l-footer__sns-link">
-                    <i class="fab fa-facebook icon facebook"></i>
-                  </a>
-                </li>
-                <li class="l-footer__sns-item">
-                  <a href="#" class="l-footer__sns-link">
-                    <i class="fab fa-twitter icon twitter"></i>
-                  </a>
-                </li>
-                <li class="l-footer__sns-item">
-                  <a href="#" class="l-footer__sns-link">
-                    <i class="fab fa-instagram icon instagram"></i>
-                  </a>
-                </li>
-                <li class="l-footer__sns-item">
-                  <a href="#" class="l-footer__sns-link">
-                    <i class="fab fa-line icon line"></i>
-                  </a>
-                </li>
-              </ul>
+                  <dd>9:00 - 17:00（定休日: 土日・祝日）</dd>
+                </div>
+              </dl>
             </div>
-            <div class="col-lg-6">
-              <nav class="l-footer-nav">
-                <?php
-                wp_nav_menu(
-                  array(
-                    'theme_location' => 'footer-nav',
-                    'container' => false,
-                  )
-                );
-                ?>
-              </nav>
-            </div>
+
+            <!-- SNS -->
+            <ul class="l-footer__sns-list">
+              <li class="l-footer__sns-item">
+                <a href="#" class="l-footer__sns-link" aria-label="Facebook">
+                  <i class="fab fa-facebook icon facebook"></i>
+                </a>
+              </li>
+              <li class="l-footer__sns-item">
+                <a href="#" class="l-footer__sns-link" aria-label="Twitter">
+                  <i class="fab fa-twitter icon twitter"></i>
+                </a>
+              </li>
+              <li class="l-footer__sns-item">
+                <a href="#" class="l-footer__sns-link" aria-label="Instagram">
+                  <i class="fab fa-instagram icon instagram"></i>
+                </a>
+              </li>
+              <li class="l-footer__sns-item">
+                <a href="#" class="l-footer__sns-link" aria-label="LINE">
+                  <i class="fab fa-line icon line"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+
+      <!-- コピーライト -->
       <div class="l-footer__copyright">
-        <p class="copyright">&copy; 2022 Katsucode</p>
+        <div class="container">
+          <p class="copyright">&copy; 2022 - <?php echo date('Y'); ?> Katsucode. All Rights Reserved.</p>
+        </div>
       </div>
     </div>
   </footer>
   <!-- Footer End -->
   </div>
 
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <div class="cursor"></div>
+  <div class="follower"></div>
 
   <?php wp_footer(); ?>
   </body>
