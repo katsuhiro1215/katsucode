@@ -13,39 +13,53 @@ if (!defined('ABSPATH')) exit; ?>
 <html <?php language_attributes(); ?>>
 
 <head>
+  <?php
+  $seo_description = is_front_page()
+    ? get_bloginfo('description')
+    : (get_the_excerpt() ?: get_bloginfo('description'));
+  $seo_title = is_front_page() ? get_bloginfo('name') : wp_get_document_title();
+  $canonical_url = get_canonical_url();
+  $og_image = (is_singular() && has_post_thumbnail())
+    ? get_the_post_thumbnail_url(get_the_ID(), 'large')
+    : get_template_directory_uri() . '/assets/img/noimage.jpg';
+  ?>
   <meta charset="<?php bloginfo('charset'); ?>" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <?php if (is_front_page()): ?>
-    <meta name="description" content="<?php bloginfo('description'); ?>" />
-  <?php else : ?>
-    <meta name="description" content="<?php echo esc_attr(get_the_excerpt() ?: get_bloginfo('description')); ?>" />
-  <?php endif; ?>
+  <meta name="description" content="<?php echo esc_attr($seo_description); ?>" />
   <meta name="format-detection" content="telephone=no" />
-  <meta name="robots" content="index, follow" />
+  <?php if (is_search() || is_404()) : ?>
+    <meta name="robots" content="noindex, follow" />
+  <?php else : ?>
+    <meta name="robots" content="index, follow" />
+  <?php endif; ?>
   <meta name="theme-color" content="#ffffff" />
-  <meta name="msapplication-TitleImage" content="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/no-image.jpg" />
+  <meta name="msapplication-TitleImage" content="<?php echo esc_url($og_image); ?>" />
   <meta name="msapplication-TitleColor" content="#573312" />
-  <!-- OPG Start -->
+  <!-- OGP Start -->
   <meta property="og:locale" content="ja_JP" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="<?php bloginfo('name'); ?>" />
-  <meta property="og:description" content="<?php bloginfo('description'); ?>" />
-  <meta property="og:url" content="https://katsucode.jp/" />
+  <meta property="og:type" content="<?php echo is_front_page() ? 'website' : 'article'; ?>" />
+  <meta property="og:title" content="<?php echo esc_attr($seo_title); ?>" />
+  <meta property="og:description" content="<?php echo esc_attr($seo_description); ?>" />
+  <meta property="og:url" content="<?php echo esc_url($canonical_url); ?>" />
   <meta property="og:site_name" content="katsucode" />
-  <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/no-image.jpg" />
-  <meta property="og:image:secure_url" content="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/no-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="facebook:card" content="#" />
-  <meta name="twitter:card" content="#" />
+  <meta property="og:image" content="<?php echo esc_url($og_image); ?>" />
+  <meta property="og:image:secure_url" content="<?php echo esc_url($og_image); ?>" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<?php echo esc_attr($seo_title); ?>" />
+  <meta name="twitter:description" content="<?php echo esc_attr($seo_description); ?>" />
+  <meta name="twitter:image" content="<?php echo esc_url($og_image); ?>" />
   <!-- OGP End -->
   <!-- URLの正規化 -->
-  <link rel="canonical" href="https://katsucode.jp/" />
+  <link rel="canonical" href="<?php echo esc_url($canonical_url); ?>" />
   <!-- favicon設定 -->
-  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon/android-chrome-192x192.png" />
+  <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon/apple-touch-icon-180x180.png">
+  <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon/site.webmanifest">
+
   <!-- Adobe Font -->
   <link rel="stylesheet" href="https://use.typekit.net/lpg7pom.css">
 

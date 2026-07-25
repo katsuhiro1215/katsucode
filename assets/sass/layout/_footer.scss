@@ -35,7 +35,7 @@
     color: $white;
     margin-bottom: 20px;
     padding-bottom: 12px;
-    border-bottom: 2px solid $orange;
+    border-bottom: 2px solid $accent;
     letter-spacing: 0.05em;
 
     @include mq(lg) {
@@ -70,7 +70,7 @@
         content: '›';
         position: absolute;
         left: 0;
-        color: $orange;
+        color: $accent;
         opacity: 0;
         transition: all 0.3s ease;
       }
@@ -115,7 +115,7 @@
 
     &:hover {
       background: rgba($white, 0.08);
-      border-color: rgba($orange, 0.5);
+      border-color: rgba($accent, 0.5);
       transform: translateY(-4px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
@@ -153,7 +153,7 @@
     justify-content: center;
     gap: 8px;
     padding: 12px 24px;
-    background-color: $orange;
+    background-color: $accent;
     color: $white;
     font-size: 1.4rem;
     font-weight: 600;
@@ -173,8 +173,8 @@
     }
 
     &:hover {
-      background-color: darken($orange, 8%);
-      box-shadow: 0 4px 12px rgba($orange, 0.4);
+      background-color: darken($accent, 8%);
+      box-shadow: 0 4px 12px rgba($accent, 0.4);
 
       i {
         transform: translateX(4px);
@@ -258,7 +258,7 @@
     dt {
       font-size: 1.4rem;
       font-weight: 600;
-      color: $orange;
+      color: $accent;
       margin-bottom: 4px;
 
       @include mq(md) {
@@ -323,7 +323,7 @@
       }
 
       &.twitter {
-        color: $twitter-color;
+        color: $twitter-x-color;
       }
 
       &.instagram {

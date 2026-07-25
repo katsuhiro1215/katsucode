@@ -631,10 +631,12 @@ get_header();
         'order' => 'ASC'
       );
       $faq_query = new WP_Query($faq_args);
-
-      if ($faq_query->have_posts()) : ?>
-        <div class="p-faq__list">
-          <?php while ($faq_query->have_posts()) : $faq_query->the_post(); ?>
+      ?>
+      <div class="p-faq__list">
+        <?php
+        if ($faq_query->have_posts()) :
+          while ($faq_query->have_posts()) : $faq_query->the_post();
+        ?>
             <div class="p-faq__item">
               <div class="p-faq__question">
                 <span class="p-faq__question--label">Q</span>
@@ -647,20 +649,18 @@ get_header();
                 </div>
               </div>
             </div>
-          <?php endwhile; ?>
-        </div>
-      <?php else : ?>
-        <p class="p-faq__empty">現在、FAQはありません。</p>
-      <?php endif;
-      wp_reset_postdata();
-      ?>
-    </div>
-  </div>
-</section>
+        <?php
+          endwhile;
+        endif;
+        wp_reset_postdata();
+        ?>
 
-<?php get_footer(); ?>
-</div>
-<div class="p-faq__answer">
+          <div class="p-faq__item">
+            <div class="p-faq__question">
+              <span class="p-faq__question--label">Q</span>
+              <h3 class="p-faq__question--text">WooCommerceとShopifyはどちらがおすすめですか？</h3>
+            </div>
+          <div class="p-faq__answer">
   <span class="p-faq__answer--label">A</span>
   <div class="p-faq__answer--text">
     <p>

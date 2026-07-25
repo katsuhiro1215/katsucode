@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- Page Section Start -->
-<section class="p-page">
+<section class="p-page__content">
   <div class="container">
     <?php the_content(); ?>
   </div>

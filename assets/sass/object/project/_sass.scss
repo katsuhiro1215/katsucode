@@ -23,15 +23,15 @@
   }
 
   &__hero-title-highlight {
-    background: linear-gradient(90deg, $orange 0%, #ffd700 100%);
+    background: linear-gradient(90deg, $accent 0%, #ffd700 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   &__hero-cta--primary {
-    background: $orange;
-    background: linear-gradient(135deg, $orange 0%, #ff6b35 100%);
+    background: $accent;
+    background: linear-gradient(135deg, $accent 0%, #ff6b35 100%);
     animation: pulse 2s ease-in-out infinite;
   }
 
@@ -163,7 +163,7 @@
     &--center {
       width: 180px;
       height: 180px;
-      background: linear-gradient(135deg, $orange 0%, #ff6b35 100%);
+      background: linear-gradient(135deg, $accent 0%, #ff6b35 100%);
       color: $white;
       top: 50%;
       left: 50%;
@@ -265,11 +265,11 @@
     &:hover {
       transform: translateY(-8px);
       box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
-      border-color: $orange;
+      border-color: $accent;
     }
 
     &--featured {
-      border-color: $orange;
+      border-color: $accent;
       transform: scale(1.05);
 
       &:hover {
@@ -283,7 +283,7 @@
     top: -16px;
     left: 50%;
     transform: translateX(-50%);
-    background: $orange;
+    background: $accent;
     color: $white;
     font-size: 1.2rem;
     font-weight: 700;
@@ -310,7 +310,7 @@
   &__pricing-amount {
     font-size: 3.2rem;
     font-weight: 900;
-    color: $orange;
+    color: $accent;
     display: block;
 
     @include mq(md) {
@@ -413,7 +413,7 @@
   }
 
   50% {
-    box-shadow: 0 8px 48px rgba($orange, 0.6);
+    box-shadow: 0 8px 48px rgba($accent, 0.6);
   }
 }
 

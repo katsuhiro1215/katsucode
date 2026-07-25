@@ -50,8 +50,8 @@
     transition: $transition-1;
 
     &:focus-within {
-      border-color: $orange;
-      box-shadow: 0 0 0 2px rgba($orange, 0.1);
+      border-color: $accent;
+      box-shadow: 0 0 0 2px rgba($accent, 0.1);
     }
   }
 
@@ -77,12 +77,12 @@
     height: 100%;
     border: none;
     background: transparent;
-    color: $orange;
+    color: $accent;
     cursor: pointer;
     transition: $transition-1;
 
     &:hover {
-      background: rgba($orange, 0.1);
+      background: rgba($accent, 0.1);
     }
 
     i {
@@ -120,13 +120,13 @@
 
     // プライマリボタン（資料請求）
     &--primary {
-      background: $orange;
-      border-color: $orange;
+      background: $accent;
+      border-color: $accent;
       color: $white;
 
       &:hover {
-        background: darken($orange, 10%);
-        border-color: darken($orange, 10%);
+        background: darken($accent, 10%);
+        border-color: darken($accent, 10%);
       }
     }
   }
@@ -215,7 +215,7 @@
     position: relative;
 
     &:hover {
-      color: $orange;
+      color: $accent;
     }
   }
 
@@ -244,7 +244,7 @@
       font-size: 1.4rem;
 
       &:hover {
-        background: rgba($orange, 0.05);
+        background: rgba($accent, 0.05);
       }
     }
 
@@ -254,7 +254,7 @@
       white-space: nowrap;
 
       &:hover {
-        color: $orange;
+        color: $accent;
         padding-left: 24px;
       }
     }
@@ -276,18 +276,23 @@
   height: 60px;
   position: absolute;
   top: 0;
-  right: -10px;
+  right: 0;
   background-color: $white;
   border: none;
   outline: none;
   z-index: 100;
   cursor: pointer;
   transition: $transition-1;
+
+  @include mq(lg) {
+    display: none;
+  }
+
   .line {
     display: block;
     width: 40px;
     height: 3px;
-    background-color: $orange;
+    background-color: $accent;
     margin-block: 10px;
     border-radius: 4px;
     transition: transform 0.5s;

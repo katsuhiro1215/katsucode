@@ -77,13 +77,13 @@
 
   &:hover span {
     background-color: #f8f8f8;
-    border-color: $orange;
+    border-color: $accent;
   }
 
   &.active span {
-    background-color: $orange;
+    background-color: $accent;
     color: $white;
-    border-color: $orange;
+    border-color: $accent;
   }
 }
 

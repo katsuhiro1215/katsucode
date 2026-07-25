@@ -2,11 +2,14 @@
 @use '../../foundation/mixin' as *;
 
 /* ---------- Blog Card ---------- */
+// モバイル〜タブレット: 横レイアウト、lg以上: 縦レイアウト
 .c-card__blog {
   display: flex;
   position: relative;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
   width: 100%;
   height: 100%;
 
@@ -21,6 +24,8 @@
   &--thumbnail {
     width: 100%;
     margin-bottom: 0;
+    flex: 0 0 240px;
+    max-width: 240px;
     &-wrapper {
       position: relative;
       margin-bottom: 0;
@@ -42,7 +47,12 @@
     }
   }
   &--contents {
-    padding-top: 20px;
+    padding-top: 0;
+    padding-left: 20px;
+    flex-basis: calc(100% - 240px);
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: calc(100% - 240px);
   }
   &--category {
     font-size: 1.3rem;
@@ -91,38 +101,6 @@
     }
   }
   &--meta {
-    position: relative;
-    margin-top: auto;
-    padding: 16px 0 0;
-    overflow: hidden;
-  }
-  &--time {
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1;
-    color: $dark;
-  }
-
-  // モバイルファースト: デフォルトは横レイアウト（タブレット以下）
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
-
-  &--thumbnail {
-    flex: 0 0 240px;
-    max-width: 240px;
-  }
-
-  &--contents {
-    flex-basis: calc(100% - 240px);
-    flex-grow: 0;
-    flex-shrink: 0;
-    max-width: calc(100% - 240px);
-    padding-top: 0;
-    padding-left: 20px;
-  }
-
-  &--meta {
     position: absolute;
     top: 0;
     right: 0;
@@ -131,7 +109,14 @@
     flex-shrink: 0;
     max-width: calc(100% - 240px);
     margin-top: 0;
-    padding-top: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  &--time {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+    color: $dark;
   }
 
   // lg以上: 縦レイアウト

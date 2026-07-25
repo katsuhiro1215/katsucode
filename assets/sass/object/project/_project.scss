@@ -102,7 +102,7 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
-      background: linear-gradient(135deg, $accent 0%, $accent-green 100%);
+      background: linear-gradient(135deg, $accent 0%, $accent-yellow 100%);
       img {
         width: 100%;
         height: 100%;
@@ -238,7 +238,7 @@
     &-tag {
       display: inline-block;
       padding: 6px 10px;
-      background: linear-gradient(135deg, $accent 0%, $accent-green 100%);
+      background: linear-gradient(135deg, $accent 0%, $accent-yellow 100%);
       font-size: clamp($fs11, 1.1vw, $fs12);
       color: $white;
       font-weight: 600;
@@ -416,7 +416,7 @@
         transition: all 0.2s ease;
 
         &:hover {
-          background-color: $accent-green;
+          background-color: $accent-yellow;
           color: $white;
         }
       }
@@ -453,7 +453,7 @@
       .category-label {
         display: inline-block;
         padding: 8px 18px;
-        background-color: $orange;
+        background-color: $accent;
         color: $white;
         font-size: 1.4rem;
         font-weight: 600;
@@ -501,7 +501,7 @@
       line-height: 1.8;
       padding: 20px;
       background-color: #f8f8f8;
-      border-left: 4px solid $orange;
+      border-left: 4px solid $accent;
       border-radius: 4px;
 
       @include mq(md) {
@@ -563,7 +563,7 @@
         font-weight: 700;
         margin: 40px 0 20px;
         padding-bottom: 12px;
-        border-bottom: 3px solid $orange;
+        border-bottom: 3px solid $accent;
 
         @include mq(md) {
           font-size: 2rem;
@@ -629,7 +629,7 @@
         margin: 30px 0;
         padding: 20px 25px;
         background-color: #f8f8f8;
-        border-left: 4px solid $orange;
+        border-left: 4px solid $accent;
         font-style: italic;
       }
     }
@@ -691,7 +691,7 @@
         }
 
         &:hover {
-          background-color: $orange;
+          background-color: $accent;
           color: $white;
 
           .nav-label,
@@ -703,7 +703,7 @@
 
         .nav-arrow {
           font-size: 2rem;
-          color: $orange;
+          color: $accent;
         }
 
         .nav-label {
@@ -814,7 +814,7 @@
         .project-category {
           display: inline-block;
           padding: 4px 12px;
-          background-color: $orange;
+          background-color: $accent;
           color: $white;
           font-size: 1.2rem;
           border-radius: 3px;
@@ -1126,11 +1126,11 @@
   }
 
   &__solution {
-    border-left-color: $accent-green;
+    border-left-color: $accent-yellow;
   }
 
   &__result {
-    border-left-color: $orange;
+    border-left-color: $accent;
   }
 
   // Screens Section

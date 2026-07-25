@@ -40,12 +40,12 @@
     }
 
     &:hover {
-      color: $orange;
+      color: $accent;
     }
 
     &.active {
-      color: $orange;
-      border-bottom-color: $orange;
+      color: $accent;
+      border-bottom-color: $accent;
       font-weight: 600;
     }
   }
@@ -62,7 +62,7 @@
         font-weight: 600;
         margin-bottom: 32px;
         padding-bottom: 16px;
-        border-bottom: 2px solid $orange;
+        border-bottom: 2px solid $accent;
         color: $dark;
 
         @include mq(md) {
@@ -110,7 +110,7 @@
         font-size: 3.2rem;
         font-weight: 600;
         line-height: 2;
-        color: $orange;
+        color: $accent;
       }
       h3 {
         font-size: 2.4rem;
@@ -231,7 +231,7 @@
     margin-bottom: 40px;
     padding: 24px;
     background-color: $white;
-    border-left: 4px solid $orange;
+    border-left: 4px solid $accent;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
@@ -267,7 +267,7 @@
       font-weight: 600;
       margin-bottom: 32px;
       padding-bottom: 16px;
-      border-bottom: 2px solid $orange;
+      border-bottom: 2px solid $accent;
       color: $dark;
 
       @include mq(md) {
@@ -329,7 +329,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, $orange 0%, darken($orange, 10%) 100%);
+    background: linear-gradient(135deg, $accent 0%, darken($accent, 10%) 100%);
     border-radius: 50%;
     color: $white;
 
@@ -431,7 +431,7 @@
           font-weight: 900;
           position: absolute;
           left: 0;
-          color: $orange;
+          color: $accent;
           font-size: 1.6rem;
 
           @include mq(md) {
@@ -449,7 +449,7 @@
   &--note {
     padding: 20px;
     background: linear-gradient(90deg, rgba(253, 126, 20, 0.1) 0%, rgba(253, 126, 20, 0.05) 100%);
-    border-left: 4px solid $orange;
+    border-left: 4px solid $accent;
     border-radius: 4px;
 
     @include mq(md) {
@@ -474,7 +474,7 @@
       }
 
       i {
-        color: $orange;
+        color: $accent;
         font-size: 1.8rem;
         flex-shrink: 0;
         margin-top: 2px;

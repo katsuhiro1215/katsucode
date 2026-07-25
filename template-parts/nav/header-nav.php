@@ -14,11 +14,5 @@
                 <span>無料相談</span>
               </a>
             </li>
-            <li class="sub-header-nav__item">
-              <a href="<?php echo esc_url(home_url('contact')); ?>?type=document" class="sub-header-nav__link sub-header-nav__link--btn sub-header-nav__link--primary">
-                <i class="fas fa-file-download"></i>
-                <span>資料請求</span>
-              </a>
-            </li>
           </ul>
         </nav>

@@ -25,16 +25,28 @@ $dark: #3e3b3f;
 $black: #383838;
 
 // アクセントカラー
-$accent: #2B7DE9;           // メインアクセント（対比・強調用）- 鮮やかな青
-$accent-dark: #1E3A8A;      // アクセント（深い青）
-$accent-green: #10B981;     // サブアクセント（ロゴとの調和用）- モダンな緑
-$accent-green-dark: #059669; // サブアクセント（深い緑）
+$accent: #10B981;           // メインアクセント（対比・強調用）- 鮮やかな緑
+$accent-dark: #059669;      // アクセント（深い緑）
+$accent-yellow: #FACC15;     // サブアクセント（ロゴとの調和用）- モダンな黄色
+$accent-yellow-dark: #BFA00A; // サブアクセント（深い黄色）
 
 $facebook-color: #3B5998;
-$twitter-color: #1DA1F2;
+$twitter-x-color: #000000;
 $instagram-color: #E425AB;
 $youtube-color: #FF0000;
 $line-color: #08C656;
+
+// Nara LP カラー（親しみやすい薄緑・爽やかな印象）
+$nara-green: #7FB69B;        // メイン(優しい若草色)
+$nara-green-dark: #4F8C6E;   // ボタン・強調用の深緑
+$nara-green-light: #EAF6EE;  // 背景用の淡い緑
+$nara-tan: #C9A876;          // 鹿・自然のイメージに合わせた差し色(ベージュ)
+
+// Swim LP カラー（爽快感のあるブルー・波のイメージ）
+$swim-blue: #2E9BD6;         // メイン(プールの水色寄りブルー)
+$swim-blue-dark: #14507D;    // ボタン・強調用の深いブルー
+$swim-blue-light: #E6F5FB;   // 背景用の淡いブルー
+$swim-aqua: #6FD6E8;         // 波のハイライト用アクア
 
 // Font
 $main-font: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'MS Pゴシック', 'MS PGothic', sans-serif;

@@ -202,13 +202,13 @@
     position: absolute;
     top: -12px;
     right: 20px;
-    background: linear-gradient(135deg, $orange 0%, #ff8c42 100%);
+    background: linear-gradient(135deg, $accent 0%, #ff8c42 100%);
     color: $white;
     font-size: 1.2rem;
     font-weight: 700;
     padding: 6px 20px;
     z-index: 10;
-    box-shadow: 0 4px 12px rgba($orange, 0.4);
+    box-shadow: 0 4px 12px rgba($accent, 0.4);
 
     @include mq(md) {
       font-size: 1.3rem;
@@ -220,8 +220,8 @@
   // 人気プランの強調
   &--item-popular {
     position: relative;
-    border: 2px solid $orange;
-    box-shadow: 0 8px 24px rgba($orange, 0.2);
+    border: 2px solid $accent;
+    box-shadow: 0 8px 24px rgba($accent, 0.2);
 
     @include mq(md) {
       transform: scale(1.05);
@@ -229,7 +229,7 @@
 
     .c-list__price--header {
       background: linear-gradient(180deg, #fff5f0 0%, #ffffff 100%);
-      border-bottom: 2px solid $orange;
+      border-bottom: 2px solid $accent;
     }
   }
 
@@ -294,7 +294,7 @@
           content: '✓';
           position: absolute;
           left: 0;
-          color: $accent-green;
+          color: $accent-yellow;
           font-weight: 700;
         }
       }

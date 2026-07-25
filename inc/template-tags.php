@@ -147,18 +147,21 @@ function the_page_top_visual($post_type = '', $mapping = [])
 }
 
 /**
- * アイキャッチ画像取得関数（デフォルト画像付き）
+ * 現在ページの正規URL取得関数（canonical / og:url共通）
  */
-function get_eyecatch_with_default()
+function get_canonical_url()
 {
-  if (has_post_thumbnail()) :
-    $id = get_post_thumbnail_id();
-    $img = wp_get_attachment_image_src($id, 'large');
-  else :
-    $img = array(get_template_directory_uri() . '/assets/images/no-image.png');
-  endif;
+  if (is_front_page()) {
+    return home_url('/');
+  }
 
-  return $img;
+  if (is_singular()) {
+    $canonical = wp_get_canonical_url();
+    return $canonical ? $canonical : get_permalink();
+  }
+
+  global $wp;
+  return home_url(add_query_arg(array(), $wp->request));
 }
 
 /**

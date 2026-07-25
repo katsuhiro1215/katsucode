@@ -61,7 +61,7 @@
 /* ---------- Pagenavi 個別 ---------- */
 .single-pagenavi {
   display: grid;
-  grid-template-columns: 1fr 200px 1fr;
+  grid-template-columns: 1fr;
   gap: 15px;
   width: 100%;
   margin-top: 40px;
@@ -69,6 +69,7 @@
   border-top: 2px solid #e0e0e0;
 
   @include mq(md) {
+    grid-template-columns: 1fr 200px 1fr;
     gap: 20px;
     margin-top: 60px;
     padding-top: 40px;

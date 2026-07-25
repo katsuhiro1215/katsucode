@@ -85,7 +85,7 @@
     }
   }
 
-  @media screen and (max-width: 991px) {
+  @include mq-down(lg) {
     &__blog {
       &--lead {
         p {
@@ -106,7 +106,7 @@
     }
   }
 
-  @media screen and (max-width: 575px) {
+  @include mq-down(sm) {
     &__blog {
       &--lead {
         p {
@@ -244,7 +244,7 @@
           top: 16px;
           left: 16px;
           padding: 8px 20px;
-          background-color: $orange;
+          background-color: $accent;
           color: $white;
           font-size: 1.3rem;
           font-weight: 600;
@@ -294,7 +294,7 @@
       color: $dark;
       margin: 48px 0 24px;
       padding-left: 16px;
-      border-left: 4px solid $orange;
+      border-left: 4px solid $accent;
 
       @include mq(md) {
         font-size: 2.8rem;
@@ -345,7 +345,7 @@
     }
 
     a {
-      color: $orange;
+      color: $accent;
       text-decoration: underline;
 
       &:hover {
@@ -385,7 +385,7 @@
       margin: 32px 0;
       padding: 20px 24px;
       background-color: #f8f9fa;
-      border-left: 4px solid $orange;
+      border-left: 4px solid $accent;
       font-style: italic;
 
       @include mq(md) {
@@ -441,11 +441,11 @@
       thead {
         th {
           padding: 12px;
-          background-color: $orange;
+          background-color: $accent;
           color: $white;
           font-weight: 600;
           text-align: left;
-          border: 1px solid darken($orange, 10%);
+          border: 1px solid darken($accent, 10%);
         }
       }
 
@@ -461,7 +461,7 @@
           }
 
           &:hover {
-            background-color: rgba($orange, 0.05);
+            background-color: rgba($accent, 0.05);
           }
         }
       }
@@ -547,7 +547,7 @@
         }
 
         &:hover {
-          background-color: $orange;
+          background-color: $accent;
           color: $white;
         }
       }
@@ -566,7 +566,7 @@
         margin-right: 6px;
 
         &:hover {
-          background-color: $orange;
+          background-color: $accent;
           color: $white;
         }
       }
@@ -580,7 +580,7 @@
         color: $dark;
         margin-bottom: 20px;
         padding-bottom: 10px;
-        border-bottom: 3px solid $orange;
+        border-bottom: 3px solid $accent;
 
         @include mq(md) {
           font-size: 2.4rem;
@@ -676,76 +676,6 @@
   }
 }
 
-/* ---------- Single Navigation ---------- */
-.single-pagenavi {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  margin: 48px 0;
-  padding: 24px 0;
-  border-top: 2px solid #e0e0e0;
-  border-bottom: 2px solid #e0e0e0;
-
-  @include mq(md) {
-    margin: 60px 0;
-    padding: 32px 0;
-  }
-
-  .arrow-left,
-  .arrow-right,
-  .return {
-    flex: 1;
-
-    a {
-      display: block;
-      padding: 12px 16px;
-      background-color: #f8f9fa;
-      color: $dark;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 1.4rem;
-      transition: all 0.3s ease;
-      text-align: center;
-
-      @include mq(md) {
-        padding: 16px 20px;
-        font-size: 1.5rem;
-      }
-
-      &:hover {
-        background-color: $orange;
-        color: $white;
-      }
-    }
-  }
-
-  .arrow-left a {
-    &::before {
-      content: '← ';
-    }
-  }
-
-  .arrow-right a {
-    &::after {
-      content: ' →';
-    }
-  }
-
-  .return {
-    max-width: 200px;
-
-    a {
-      background-color: $orange;
-      color: $white;
-
-      &:hover {
-        background-color: darken($orange, 10%);
-      }
-    }
-  }
-}
-
 /* ---------- Pagination ---------- */
 .pagination {
   display: flex;
@@ -794,13 +724,13 @@
 
     a {
       &:hover {
-        background-color: $orange;
+        background-color: $accent;
         color: $white;
       }
     }
 
     .current {
-      background-color: $orange;
+      background-color: $accent;
       color: $white;
     }
 
@@ -890,26 +820,6 @@
         font-size: 2rem;
         margin: 32px 0 20px;
       }
-    }
-  }
-}
-
-.single-pagenavi {
-  flex-direction: column;
-
-  @include mq(lg) {
-    flex-direction: row;
-  }
-
-  .arrow-left,
-  .arrow-right,
-  .return {
-    width: 100%;
-    max-width: 100%;
-
-    @include mq(lg) {
-      width: auto;
-      max-width: 200px;
     }
   }
 }

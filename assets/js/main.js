@@ -192,6 +192,10 @@ if (header && globalNav) {
       if (headerNav) {
         headerNav.classList.remove('is-hidden');
       }
+      // デスクトップのmenu-toggle表示をリセット(CSSの初期状態に戻す)
+      if (menuToggle && isDesktop) {
+        menuToggle.style.display = '';
+      }
     }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;

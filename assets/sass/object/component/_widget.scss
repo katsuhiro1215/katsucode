@@ -21,7 +21,7 @@
   .c-title__secondary {
     margin-bottom: 20px;
     padding-bottom: 12px;
-    border-bottom: 2px solid $orange;
+    border-bottom: 2px solid $accent;
 
     @include mq(md) {
       margin-bottom: 24px;
@@ -58,7 +58,7 @@
         content: '▸';
         position: absolute;
         left: 0;
-        color: $orange;
+        color: $accent;
         font-size: 1.2rem;
       }
 
@@ -71,7 +71,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          color: $orange;
+          color: $accent;
           padding-left: 8px;
         }
       }
@@ -97,7 +97,7 @@
       transition: border-color 0.3s ease;
 
       &:focus {
-        border-color: $orange;
+        border-color: $accent;
       }
 
       &::placeholder {
@@ -107,7 +107,7 @@
 
     .search-submit {
       padding: 12px 24px;
-      background-color: $orange;
+      background-color: $accent;
       color: $white;
       border: none;
       border-radius: 0 4px 4px 0;
@@ -117,7 +117,7 @@
       transition: all 0.3s ease;
 
       &:hover {
-        background-color: darken($orange, 10%);
+        background-color: darken($accent, 10%);
       }
     }
   }
@@ -142,7 +142,7 @@
     thead {
       th {
         padding: 8px;
-        background-color: $orange;
+        background-color: $accent;
         color: $white;
         font-weight: 600;
         text-align: center;
@@ -159,20 +159,20 @@
 
         a {
           display: block;
-          color: $orange;
+          color: $accent;
           font-weight: 600;
           text-decoration: none;
           transition: all 0.2s ease;
 
           &:hover {
-            background-color: $orange;
+            background-color: $accent;
             color: $white;
             border-radius: 4px;
           }
         }
 
         &#today {
-          background-color: rgba($orange, 0.1);
+          background-color: rgba($accent, 0.1);
           font-weight: 700;
         }
       }
@@ -185,7 +185,7 @@
         font-size: 1.2rem;
 
         a {
-          color: $orange;
+          color: $accent;
           text-decoration: none;
 
           &:hover {
@@ -213,7 +213,7 @@
           min-width: 24px;
           height: 24px;
           padding: 0 8px;
-          background-color: $orange;
+          background-color: $accent;
           color: $white;
           font-size: 1.2rem;
           font-weight: 600;
@@ -237,7 +237,7 @@
     transition: border-color 0.3s ease;
 
     &:focus {
-      border-color: $orange;
+      border-color: $accent;
     }
   }
 }
@@ -280,7 +280,7 @@
     transition: border-color 0.3s ease;
 
     &:focus {
-      border-color: $orange;
+      border-color: $accent;
     }
   }
 }
@@ -301,11 +301,11 @@
         padding: 12px;
         background-color: $white;
         border-radius: 4px;
-        border-left: 3px solid $orange;
+        border-left: 3px solid $accent;
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: rgba($orange, 0.05);
+          background-color: rgba($accent, 0.05);
           border-left-width: 5px;
           padding-left: 14px;
         }
@@ -340,13 +340,13 @@
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: rgba($orange, 0.05);
+          background-color: rgba($accent, 0.05);
         }
       }
 
       .comment-author-link {
         font-weight: 600;
-        color: $orange;
+        color: $accent;
       }
     }
   }
@@ -372,9 +372,9 @@
       transition: all 0.3s ease;
 
       &:hover {
-        background-color: $orange;
+        background-color: $accent;
         color: $white;
-        border-color: $orange;
+        border-color: $accent;
         transform: translateY(-2px);
       }
     }
@@ -400,7 +400,7 @@
   .rsswidget {
     display: block;
     font-weight: 600;
-    color: $orange;
+    color: $accent;
     margin-bottom: 8px;
   }
 
@@ -453,7 +453,7 @@
     }
 
     a {
-      color: $orange;
+      color: $accent;
       text-decoration: underline;
 
       &:hover {

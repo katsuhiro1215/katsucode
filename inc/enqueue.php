@@ -28,5 +28,19 @@ function katsucode_styles_and_scripts()
   wp_enqueue_script('swiper_js', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), '8.2.4', true);
   // オリジナルJS読み込み
   wp_enqueue_script('main_js', get_template_directory_uri() . '/assets/js/main.js', array(), false, true);
+
+  // Nara LP専用: GSAP（CDN）とアニメーション制御スクリプト
+  if (is_page_template('page-templates/page-nara.php')) {
+    wp_enqueue_script('gsap_js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array(), '3.12.5', true);
+    wp_enqueue_script('gsap_scrolltrigger_js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', array('gsap_js'), '3.12.5', true);
+    wp_enqueue_script('nara_lp_js', get_template_directory_uri() . '/assets/js/nara.js', array('gsap_js', 'gsap_scrolltrigger_js'), '1.0.0', true);
+  }
+
+  // Swim LP専用: GSAP（CDN）とアニメーション制御スクリプト
+  if (is_page_template('page-templates/page-swim.php')) {
+    wp_enqueue_script('gsap_js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array(), '3.12.5', true);
+    wp_enqueue_script('gsap_scrolltrigger_js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', array('gsap_js'), '3.12.5', true);
+    wp_enqueue_script('swim_lp_js', get_template_directory_uri() . '/assets/js/swim.js', array('gsap_js', 'gsap_scrolltrigger_js'), '1.0.0', true);
+  }
 }
 add_action('wp_enqueue_scripts', 'katsucode_styles_and_scripts');

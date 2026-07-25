@@ -13,7 +13,7 @@
   position: relative;
   text-decoration: none;
   svg {
-    fill: $accent-green;
+    fill: $accent-yellow;
   }
 
   .scroll-text {
@@ -81,7 +81,7 @@
 .scrolldown-box {
   .scroll-text {
     @include mq(md) {
-      fill: $accent-green;
+      fill: $black;
     }
   }
   .scroll-icon {

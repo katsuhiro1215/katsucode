@@ -35,7 +35,7 @@
     }
   }
 
-  @media screen and (max-width: 991px) {
+  @include mq-down(lg) {
     &__news {
       &--lead {
         p {
@@ -45,7 +45,7 @@
     }
   }
 
-  @media screen and (max-width: 575px) {
+  @include mq-down(sm) {
     &__news {
       &--lead {
         p {
@@ -90,7 +90,7 @@
 
     &:hover {
       background-color: #f8f9fa;
-      border-left: 4px solid $orange;
+      border-left: 4px solid $accent;
     }
 
     &:first-child {
@@ -201,7 +201,7 @@
     &-category {
       display: inline-block;
       padding: 5px 14px;
-      background-color: $orange;
+      background-color: $accent;
       color: $white;
       font-size: 1.2rem;
       font-weight: 600;

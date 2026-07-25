@@ -150,7 +150,7 @@
         color: $dark;
         margin-bottom: 16px;
         padding-left: 16px;
-        border-left: 4px solid $orange;
+        border-left: 4px solid $accent;
 
         @include mq(md) {
           font-size: 2.4rem;
@@ -214,7 +214,7 @@
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
-    color: $orange;
+    color: $accent;
     line-height: 1.8;
     margin: 32px 0 48px;
 
@@ -229,7 +229,7 @@
     }
 
     br {
-      @media screen and (min-width: 768px) {
+      @include mq(md) {
         display: none;
       }
     }
@@ -301,7 +301,7 @@
             }
 
             a {
-              color: $orange;
+              color: $accent;
               text-decoration: none;
               transition: all 0.3s ease;
 
@@ -405,7 +405,7 @@
       color: $dark;
       margin-bottom: 16px;
       padding-bottom: 12px;
-      border-bottom: 2px solid $orange;
+      border-bottom: 2px solid $accent;
 
       @include mq(md) {
         font-size: 2.4rem;
@@ -469,10 +469,10 @@
   position: relative;
   width: 100%;
   padding: 20px 60px 20px 32px;
-  background: linear-gradient(135deg, $orange 0%, darken($orange, 10%) 100%);
+  background: linear-gradient(135deg, $accent 0%, darken($accent, 10%) 100%);
   color: $white;
   border-radius: 50px;
-  box-shadow: 0 4px 16px rgba($orange, 0.3);
+  box-shadow: 0 4px 16px rgba($accent, 0.3);
   transition: all 0.3s ease;
 
   @include mq(md) {
@@ -485,8 +485,8 @@
   }
 
   &:hover {
-    background: linear-gradient(135deg, darken($orange, 5%) 0%, darken($orange, 15%) 100%);
-    box-shadow: 0 6px 20px rgba($orange, 0.4);
+    background: linear-gradient(135deg, darken($accent, 5%) 0%, darken($accent, 15%) 100%);
+    box-shadow: 0 6px 20px rgba($accent, 0.4);
     transform: translateY(-4px);
 
     .btn__primary--arrow {
