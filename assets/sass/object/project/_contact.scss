@@ -5,7 +5,7 @@
 .p-contact {
   padding-top: 60px;
   padding-bottom: 80px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #f5f7fa 0%, $accent-light 100%);
   min-height: calc(100vh - 300px);
   @include mq(lg) {
     padding-top: 80px;
@@ -37,8 +37,7 @@
         transform: translateX(-50%);
         width: 80px;
         height: 4px;
-        background: linear-gradient(90deg, $primary 0%, #764ba2 100%);
-        border-radius: 2px;
+        background: linear-gradient(90deg, $accent 0%, $accent-dark 100%);
       }
     }
 
@@ -53,12 +52,12 @@
       }
 
       a {
-        color: $primary;
+        color: $accent;
         text-decoration: underline;
         transition: color 0.3s ease;
 
         &:hover {
-          color: #764ba2;
+          color: $accent-dark;
         }
       }
     }
@@ -68,7 +67,6 @@
     margin: 0 auto;
     background: $white;
     padding: 40px 24px;
-    border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 
     @include mq(md) {
@@ -124,7 +122,6 @@
         color: $white;
         font-size: 1.1rem;
         font-weight: 600;
-        border-radius: 4px;
       }
     }
 
@@ -144,7 +141,6 @@
         padding: 12px 16px;
         font-size: 1.5rem;
         border: 2px solid #e0e0e0;
-        border-radius: 8px;
         background: $white;
         color: #333;
         transition: all 0.3s ease;
@@ -152,8 +148,8 @@
 
         &:focus {
           outline: none;
-          border-color: $primary;
-          box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+          border-color: $accent;
+          box-shadow: 0 0 0 3px rgba($accent, 0.1);
         }
 
         &:hover {
@@ -176,7 +172,6 @@
         padding: 12px 16px;
         font-size: 1.5rem;
         border: 2px solid #e0e0e0;
-        border-radius: 8px;
         background: $white;
         color: #333;
         min-height: 150px;
@@ -186,8 +181,8 @@
 
         &:focus {
           outline: none;
-          border-color: $primary;
-          box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+          border-color: $accent;
+          box-shadow: 0 0 0 3px rgba($accent, 0.1);
         }
 
         &:hover {
@@ -207,7 +202,6 @@
           cursor: pointer;
           padding: 8px 16px;
           background: #f5f5f5;
-          border-radius: 8px;
           transition: all 0.3s ease;
           width: auto;
 
@@ -219,7 +213,7 @@
             width: auto;
             margin-right: 8px;
             cursor: pointer;
-            accent-color: $primary;
+            accent-color: $accent;
           }
 
           span {
@@ -239,12 +233,12 @@
     font-size: 1.5rem;
 
     a {
-      color: $primary;
+      color: $accent;
       text-decoration: underline;
       transition: color 0.3s ease;
 
       &:hover {
-        color: #764ba2;
+        color: $accent-dark;
       }
     }
   }
@@ -264,7 +258,6 @@
         cursor: pointer;
         padding: 8px 16px;
         background: #f9f9f9;
-        border-radius: 8px;
         transition: all 0.3s ease;
 
         &:hover {
@@ -274,7 +267,7 @@
         input[type='checkbox'] {
           margin-right: 8px;
           cursor: pointer;
-          accent-color: $primary;
+          accent-color: $accent;
         }
 
         span {
@@ -299,22 +292,21 @@
       font-size: 1.6rem;
       font-weight: 700;
       color: $white;
-      background: linear-gradient(135deg, $primary 0%, #764ba2 100%);
+      background: linear-gradient(135deg, $accent 0%, $accent-dark 100%);
       border: none;
-      border-radius: 50px;
       cursor: pointer;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+      box-shadow: 0 4px 16px rgba($accent, 0.3);
       font-family: inherit;
 
       &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 8px 24px rgba($accent, 0.4);
       }
 
       &:active {
         transform: translateY(0);
-        box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+        box-shadow: 0 4px 16px rgba($accent, 0.3);
       }
     }
   }
@@ -367,7 +359,6 @@
 
   .section__body {
     padding: 24px 16px;
-    border-radius: 12px;
 
     @include mq(sm) {
       padding: 28px 18px;

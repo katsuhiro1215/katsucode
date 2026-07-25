@@ -278,7 +278,7 @@ get_header();
         <li class="c-list__price--item">
           <div class="c-list__price--header">
             <p class="c-list__price--title">シンプルプラン</p>
-            <p class="c-list__price--price"><span>8,000</span>円/月</p>
+            <p class="c-list__price--price"><span>20,000</span>円/月</p>
           </div>
           <div class="c-list__price--body">
             <p class="c-list__price--lead">
@@ -295,7 +295,7 @@ get_header();
         <li class="c-list__price--item">
           <div class="c-list__price--header">
             <p class="c-list__price--title">スタンダードプラン</p>
-            <p class="c-list__price--price"><span>10,000</span>円/月</p>
+            <p class="c-list__price--price"><span>30,000</span>円/月</p>
           </div>
           <div class="c-list__price--body">
             <p class="c-list__price--lead">
@@ -308,13 +308,17 @@ get_header();
               <dd class="c-list__price--features-text">システムの定期的なバックアップを実施。</dd>
               <dt class="c-list__price--features-header">バグ修正対応</dt>
               <dd class="c-list__price--features-text">軽微なバグ修正に対応。</dd>
+
+              <dt class="c-list__price--features-header">月次レポート作成</dt>
+              <dd class="c-list__price--features-text">メンテナンス内容をまとめたレポートを作成します。</dd>
+
             </dl>
           </div>
         </li>
         <li class="c-list__price--item">
           <div class="c-list__price--header">
             <p class="c-list__price--title">プレミアムプラン</p>
-            <p class="c-list__price--price"><span>12,000</span>円/月</p>
+            <p class="c-list__price--price"><span>50,000</span>円/月</p>
           </div>
           <div class="c-list__price--body">
             <p class="c-list__price--lead">
@@ -325,6 +329,8 @@ get_header();
               <dd class="c-list__price--features-text">基本的なサーバー管理を行います。</dd>
               <dt class="c-list__price--features-header">定期バックアップ</dt>
               <dd class="c-list__price--features-text">システムの定期的なバックアップを実施。</dd>
+              <dt class="c-list__price--features-header">月次レポート作成</dt>
+              <dd class="c-list__price--features-text">メンテナンス内容をまとめたレポートを作成します。</dd>
               <dt class="c-list__price--features-header">バグ修正・改善提案</dt>
               <dd class="c-list__price--features-text">バグ修正と月次改善提案を実施。</dd>
               <dt class="c-list__price--features-header">小規模機能追加</dt>
@@ -474,7 +480,7 @@ get_header();
           <!-- Step 1 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step1.jpg" alt="ヒアリング・課題分析" />
+              <img src="<?php echo esc_url(katsucode_flow_image(1)); ?>" alt="ヒアリング・課題分析" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">01</span>
@@ -494,7 +500,7 @@ get_header();
           <!-- Step 2 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step2.jpg" alt="MVP設計" />
+              <img src="<?php echo esc_url(katsucode_flow_image(2)); ?>" alt="MVP設計" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">02</span>
@@ -514,7 +520,7 @@ get_header();
           <!-- Step 3 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step3.jpg" alt="小規模開発" />
+              <img src="<?php echo esc_url(katsucode_flow_image(3)); ?>" alt="小規模開発" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">03</span>
@@ -534,7 +540,7 @@ get_header();
           <!-- Step 4 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step4.jpg" alt="テスト・リリース" />
+              <img src="<?php echo esc_url(katsucode_flow_image(4)); ?>" alt="テスト・リリース" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">04</span>
@@ -554,7 +560,7 @@ get_header();
           <!-- Step 5 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step5.jpg" alt="運用・フィードバック収集" />
+              <img src="<?php echo esc_url(katsucode_flow_image(5)); ?>" alt="運用・フィードバック収集" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">05</span>
@@ -574,7 +580,7 @@ get_header();
           <!-- Step 6 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step6.jpg" alt="改善・機能追加" />
+              <img src="<?php echo esc_url(katsucode_flow_image(6)); ?>" alt="改善・機能追加" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">06</span>
@@ -594,7 +600,7 @@ get_header();
           <!-- Step 7 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step7.jpg" alt="継続的成長サイクル" />
+              <img src="<?php echo esc_url(katsucode_flow_image(7)); ?>" alt="継続的成長サイクル" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">07</span>

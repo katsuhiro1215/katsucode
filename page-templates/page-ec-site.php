@@ -453,7 +453,7 @@ get_header();
       <div class="p-flow__main">
         <div class="p-flow__main--item">
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step1.jpg" alt="ヒアリング・要件定義">
+            <img src="<?php echo esc_url(katsucode_flow_image(1)); ?>" alt="ヒアリング・要件定義">
           </figure>
           <div class="p-flow__main--info">
             <p class="number">01</p>
@@ -473,7 +473,7 @@ get_header();
 
         <div class="p-flow__main--item">
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step2.jpg" alt="サイト設計・デザイン">
+            <img src="<?php echo esc_url(katsucode_flow_image(2)); ?>" alt="サイト設計・デザイン">
           </figure>
           <div class="p-flow__main--info">
             <p class="number">02</p>
@@ -493,7 +493,7 @@ get_header();
 
         <div class="p-flow__main--item">
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step3.jpg" alt="EC構築・機能実装">
+            <img src="<?php echo esc_url(katsucode_flow_image(3)); ?>" alt="EC構築・機能実装">
           </figure>
           <div class="p-flow__main--info">
             <p class="number">03</p>
@@ -513,7 +513,7 @@ get_header();
 
         <div class="p-flow__main--item">
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step4.jpg" alt="商品登録・設定">
+            <img src="<?php echo esc_url(katsucode_flow_image(4)); ?>" alt="商品登録・設定">
           </figure>
           <div class="p-flow__main--info">
             <p class="number">04</p>
@@ -533,7 +533,7 @@ get_header();
 
         <div class="p-flow__main--item">
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step5.jpg" alt="決済・配送設定">
+            <img src="<?php echo esc_url(katsucode_flow_image(5)); ?>" alt="決済・配送設定">
           </figure>
           <div class="p-flow__main--info">
             <p class="number">05</p>
@@ -553,7 +553,7 @@ get_header();
 
         <div class="p-flow__main--item">
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step6.jpg" alt="テスト注文・動作確認">
+            <img src="<?php echo esc_url(katsucode_flow_image(6)); ?>" alt="テスト注文・動作確認">
           </figure>
           <div class="p-flow__main--info">
             <p class="number">06</p>
@@ -573,7 +573,7 @@ get_header();
 
         <div class="p-flow__main--item">
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step7.jpg" alt="本番公開・販売開始">
+            <img src="<?php echo esc_url(katsucode_flow_image(7)); ?>" alt="本番公開・販売開始">
           </figure>
           <div class="p-flow__main--info">
             <p class="number">07</p>
@@ -593,7 +593,7 @@ get_header();
 
         <div class="p-flow__main--item">
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step8.jpg" alt="運用サポート・売上分析">
+            <img src="<?php echo esc_url(katsucode_flow_image(8)); ?>" alt="運用サポート・売上分析">
           </figure>
           <div class="p-flow__main--info">
             <p class="number">08</p>

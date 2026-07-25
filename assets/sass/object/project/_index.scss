@@ -126,7 +126,7 @@
     }
     span {
       position: relative;
-      font-size: clamp($fs24, 4vw, $fs40);
+      font-size: clamp($fs20, 4vw, $fs32);
       color: $accent-dark;
       line-height: 1.4;
       z-index: 2;
@@ -158,7 +158,6 @@
       background-color: lighten($accent, 10%);
       backdrop-filter: blur(10px);
       padding: 24px 20px;
-      border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.2);
       display: flex;
       align-items: center;
@@ -306,7 +305,7 @@
 
   /* ---------- Index - Strength ---------- */
   &__strength {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #f5f7fa 0%, $accent-light 100%);
     position: relative;
     overflow: hidden;
     .section__lead p {
@@ -335,7 +334,6 @@
     &--item {
       background: $white;
       padding: 32px 24px;
-      border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
@@ -374,7 +372,6 @@
         align-items: center;
         justify-content: center;
         background: linear-gradient(135deg, $accent 0%, $accent-yellow 100%);
-        border-radius: 16px;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         @include mq(lg) {
           width: 64px;

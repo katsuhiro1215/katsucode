@@ -441,7 +441,7 @@ get_header();
           <!-- Step 1 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step1.jpg" alt="ヒアリング・ターゲット分析" />
+              <img src="<?php echo esc_url(katsucode_flow_image(1)); ?>" alt="ヒアリング・ターゲット分析" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">01</span>
@@ -461,7 +461,7 @@ get_header();
           <!-- Step 2 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step2.jpg" alt="構成案・キャッチコピー作成" />
+              <img src="<?php echo esc_url(katsucode_flow_image(2)); ?>" alt="構成案・キャッチコピー作成" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">02</span>
@@ -481,7 +481,7 @@ get_header();
           <!-- Step 3 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step3.jpg" alt="ワイヤーフレーム作成" />
+              <img src="<?php echo esc_url(katsucode_flow_image(3)); ?>" alt="ワイヤーフレーム作成" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">03</span>
@@ -501,7 +501,7 @@ get_header();
           <!-- Step 4 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step4.jpg" alt="デザイン制作" />
+              <img src="<?php echo esc_url(katsucode_flow_image(4)); ?>" alt="デザイン制作" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">04</span>
@@ -521,7 +521,7 @@ get_header();
           <!-- Step 5 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step5.jpg" alt="コーディング・実装" />
+              <img src="<?php echo esc_url(katsucode_flow_image(5)); ?>" alt="コーディング・実装" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">05</span>
@@ -541,7 +541,7 @@ get_header();
           <!-- Step 6 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step6.jpg" alt="テスト・調整" />
+              <img src="<?php echo esc_url(katsucode_flow_image(6)); ?>" alt="テスト・調整" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">06</span>
@@ -561,7 +561,7 @@ get_header();
           <!-- Step 7 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step7.jpg" alt="公開・計測設定" />
+              <img src="<?php echo esc_url(katsucode_flow_image(7)); ?>" alt="公開・計測設定" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">07</span>
@@ -581,7 +581,7 @@ get_header();
           <!-- Step 8 -->
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step8.jpg" alt="ABテスト・改善" />
+              <img src="<?php echo esc_url(katsucode_flow_image(8)); ?>" alt="ABテスト・改善" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">08</span>

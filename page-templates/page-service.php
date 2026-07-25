@@ -170,7 +170,7 @@ get_header();
               オリジナル開発にも対応し、売上アップを実現します。
             </p>
             <ul class="p-service__list--features">
-              <li>Shopify / WooCommerce</li>
+              <li>Shopify / WooCommerce / 当社EC機能を活用した構築</li>
               <li>決済システム導入</li>
               <li>在庫管理・顧客管理</li>
               <li>オリジナル開発も対応</li>
@@ -405,15 +405,15 @@ get_header();
           <div class="p-service__examples--card-price">
             <div class="p-service__examples--card-price-original">
               <span class="p-service__examples--card-price-label">通常価格</span>
-              <span class="p-service__examples--card-price-value">¥500,000</span>
+              <span class="p-service__examples--card-price-value">¥600,000</span>
             </div>
             <div class="p-service__examples--card-price-discount">
               <span class="p-service__examples--card-price-arrow">→</span>
               <span class="p-service__examples--card-price-special">
                 <span class="p-service__examples--card-price-label">リピート価格</span>
-                <span class="p-service__examples--card-price-value">¥400,000</span>
+                <span class="p-service__examples--card-price-value">¥480,000</span>
               </span>
-              <span class="p-service__examples--card-price-save">¥100,000お得</span>
+              <span class="p-service__examples--card-price-save">¥120,000お得</span>
             </div>
           </div>
           <ul class="p-service__examples--card-features">

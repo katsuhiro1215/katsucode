@@ -232,7 +232,6 @@
     padding: 24px;
     background-color: $white;
     border-left: 4px solid $accent;
-    border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
     @include mq(md) {
@@ -302,7 +301,6 @@
     gap: 20px;
     padding: 24px;
     background-color: $white;
-    border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     transition:
       transform 0.3s ease,
@@ -381,7 +379,6 @@
     margin-bottom: 40px;
     padding: 28px;
     background-color: $white;
-    border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
     @include mq(md) {
@@ -450,7 +447,6 @@
     padding: 20px;
     background: linear-gradient(90deg, rgba(253, 126, 20, 0.1) 0%, rgba(253, 126, 20, 0.05) 100%);
     border-left: 4px solid $accent;
-    border-radius: 4px;
 
     @include mq(md) {
       padding: 24px;

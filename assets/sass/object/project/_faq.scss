@@ -36,7 +36,6 @@
     &--item {
       margin-bottom: 20px;
       border: 1px solid #ddd;
-      border-radius: 8px;
       overflow: hidden;
       background-color: $white;
       transition: all 0.3s ease;
@@ -171,12 +170,11 @@
           background-color: $accent;
           color: $white;
           text-decoration: none;
-          border-radius: 4px;
           font-size: 1.4rem;
           transition: background-color 0.3s ease;
 
           &:hover {
-            background-color: #e66a1f;
+            background-color: $accent-dark;
           }
         }
       }
@@ -247,7 +245,6 @@
         background-color: $accent;
         color: $white;
         font-size: 1.4rem;
-        border-radius: 4px;
         margin-right: 10px;
       }
     }
@@ -264,7 +261,6 @@
         align-items: flex-start;
         padding: 20px;
         background-color: #f8f8f8;
-        border-radius: 8px;
 
         @include mq(md) {
           padding: 30px;
@@ -371,7 +367,6 @@
         background-color: $dark;
         color: $white;
         text-decoration: none;
-        border-radius: 4px;
         font-size: 1.6rem;
         transition: background-color 0.3s ease;
 
@@ -419,7 +414,6 @@
     &--item {
       background-color: $white;
       border: 1px solid #ddd;
-      border-radius: 8px;
       overflow: hidden;
       transition: all 0.3s ease;
 

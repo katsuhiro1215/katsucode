@@ -15,20 +15,19 @@ get_header();
 <!-- コンセプト -->
 <section class="l-section p-company concept">
   <div class="container">
-    <div class="section__header">
-      <h3 class="section__title" data-en="Concept">
-        <span>コンセプト</span>
-      </h3>
-    </div>
-    <div class="section__body">
-      <h4>想いを形にし、人と人をつなぐ</h4>
+    <div class="p-company__header">
+      <span class="p-company__header-kicker" aria-hidden="true">Concept</span>
+      <h3 class="p-company__header-title">想いを形にし、<br class="sp-only">人と人をつなぐ</h3>
       <p class="p-company__concept--message">
         人と人との繋がりに最高のデジタルで<br />より良い未来を創る
       </p>
+    </div>
+    <div class="section__body">
       <div class="p-about__concept--list">
         <div class="p-about__concept--item">
+          <span class="p-about__concept--number" aria-hidden="true">01</span>
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/step1.jpg" alt="" />
+            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_1', get_template_directory_uri() . '/assets/img/about/step1.jpg')); ?>" alt="" />
           </figure>
           <div class="p-about__concept--info">
             <h3>どんなお役に立てるのか</h3>
@@ -42,8 +41,9 @@ get_header();
           </div>
         </div>
         <div class="p-about__concept--item">
+          <span class="p-about__concept--number" aria-hidden="true">02</span>
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/step2.jpg" alt="" />
+            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_2', get_template_directory_uri() . '/assets/img/about/step2.jpg')); ?>" alt="" />
           </figure>
           <div class="p-about__concept--info">
             <h3>質を優先しています</h3>
@@ -56,8 +56,9 @@ get_header();
           </div>
         </div>
         <div class="p-about__concept--item">
+          <span class="p-about__concept--number" aria-hidden="true">03</span>
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/step3.jpg" alt="" />
+            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_3', get_template_directory_uri() . '/assets/img/about/step3.jpg')); ?>" alt="" />
           </figure>
           <div class="p-about__concept--info">
             <h3>成長させること</h3>
@@ -77,17 +78,16 @@ get_header();
 <!-- 制作者について -->
 <section class="l-section p-company introduction">
   <div class="container">
-    <div class="section__header">
-      <h3 class="section__title" data-en="Introduction">
-        <span>制作者について</span>
-      </h3>
+    <div class="p-company__header">
+      <span class="p-company__header-kicker" aria-hidden="true">Introduction</span>
+      <h3 class="p-company__header-title">制作者について</h3>
     </div>
     <div class="section__body">
       <div class="p-company__introduction--wrapper">
         <div class="p-company__introduction--profile">
           <div class="profile-image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/profile/sample01.jpg" alt="制作者プロフィール写真" class="profile-main">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/profile/sample02.jpg" alt="制作者プロフィール写真（ホバー）" class="profile-hover">
+            <img src="<?php echo esc_url(katsucode_page_image('company_profile_image', get_template_directory_uri() . '/assets/img/profile/sample01.jpg')); ?>" alt="制作者プロフィール写真" class="profile-main">
+            <img src="<?php echo esc_url(katsucode_page_image('company_profile_image_hover', get_template_directory_uri() . '/assets/img/profile/sample02.jpg')); ?>" alt="制作者プロフィール写真（ホバー）" class="profile-hover">
           </div>
         </div>
         <div class="p-company__introduction--content">
@@ -108,7 +108,7 @@ get_header();
             専門的なことがわからない方でも安心してご相談いただけるよう、<br />
             できるだけわかりやすく、丁寧にサポートいたします。
           </p>
-          <p>
+          <p class="p-company__introduction--closing">
             小さなことでもお気軽にご相談ください。
           </p>
         </div>
@@ -120,24 +120,27 @@ get_header();
 <!-- Company Reason -->
 <section class="l-section p-company reason">
   <div class="container">
-    <div class="section__header">
-      <h3 class="section__title" data-en="Reason">
-        <span>選ばれる理由</span>
-      </h3>
+    <div class="p-company__header">
+      <span class="p-company__header-kicker" aria-hidden="true">Reason</span>
+      <h3 class="p-company__header-title">選ばれる理由</h3>
     </div>
     <div class="section__body">
-      <h4>一貫したサポート</h4>
-      <p>ヒアリングから制作、公開後の運用まで一貫して対応します。
-        途中で担当が変わることなく、安心してご相談いただけます。</p>
-      <div class="content">
-        <h4>技術とビジネスの両立</h4>
-        <p>見た目だけでなく、成果につながる設計を重視しています。
-          「作ること」ではなく「役に立つこと」を目的としています。</p>
-      </div>
-      <div class="content">
-        <h4>小回りのきく柔軟な対応</h4>
-        <p>小さな修正やご相談にも柔軟に対応いたします。
-          長くお付き合いできる関係を大切にしています。</p>
+      <div class="p-company__reason-grid">
+        <div class="p-company__reason-card">
+          <span class="p-company__reason-number" aria-hidden="true">01</span>
+          <h4>一貫したサポート</h4>
+          <p>ヒアリングから制作、公開後の運用まで一貫して対応します。途中で担当が変わることなく、安心してご相談いただけます。</p>
+        </div>
+        <div class="p-company__reason-card">
+          <span class="p-company__reason-number" aria-hidden="true">02</span>
+          <h4>技術とビジネスの両立</h4>
+          <p>見た目だけでなく、成果につながる設計を重視しています。「作ること」ではなく「役に立つこと」を目的としています。</p>
+        </div>
+        <div class="p-company__reason-card">
+          <span class="p-company__reason-number" aria-hidden="true">03</span>
+          <h4>小回りのきく柔軟な対応</h4>
+          <p>小さな修正やご相談にも柔軟に対応いたします。長くお付き合いできる関係を大切にしています。</p>
+        </div>
       </div>
     </div>
   </div>
@@ -147,7 +150,7 @@ get_header();
 <section class="l-section p-company__info">
   <div class="container">
     <div class="section__header">
-      <h3 class="section__title" data-en="Company">
+      <h3 class="section__title  p-index__title" data-en="Company">
         <span>かつコード概要</span>
       </h3>
     </div>

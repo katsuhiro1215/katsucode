@@ -146,7 +146,6 @@
     &--item {
       background-color: $white;
       border: 1px solid #e0e0e0;
-      border-radius: 8px;
       overflow: hidden;
       transition: all 0.3s ease;
 
@@ -184,7 +183,6 @@
       font-size: 1.2rem;
       font-weight: 700;
       padding: 6px 16px;
-      border-radius: 20px;
       z-index: 1;
 
       @include mq(md) {
@@ -241,7 +239,6 @@
         font-size: 1.2rem;
         font-weight: 500;
         padding: 6px 14px;
-        border-radius: 16px;
         border: 1px solid #e0e0e0;
         transition: all 0.2s ease;
 

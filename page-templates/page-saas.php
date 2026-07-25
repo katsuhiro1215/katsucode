@@ -18,7 +18,7 @@ get_header();
     <div class="p-service-detail__intro--header">
       <h1 class="c-title__page-secondary">
         <div class="c-title__page-secondary--logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="かつコード" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="かつコード" />
         </div>
         <div class="c-title__page-secondary-en">SaaS Development</div>
         <div class="c-title__page-secondary-ja">SaaS開発</div>

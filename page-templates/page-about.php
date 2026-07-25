@@ -36,7 +36,7 @@ get_header();
   <section class="p-about__scroll-section">
 
     <!-- WHY Content -->
-    <div class="scroll_content_section active" data-index="0" data-bg="why">
+    <div class="scroll_content_section active" data-index="0" data-bg="why" style="background-image: url('<?php echo esc_url(katsucode_page_image('about_bg_why', get_template_directory_uri() . '/assets/img/about/step1.jpg')); ?>');">
       <div class="container">
         <div class="section__header">
           <h3 class="section__title">
@@ -59,7 +59,7 @@ get_header();
     </div>
 
     <!-- WHAT Content -->
-    <div class="scroll_content_section" data-index="1" data-bg="what">
+    <div class="scroll_content_section" data-index="1" data-bg="what" style="background-image: url('<?php echo esc_url(katsucode_page_image('about_bg_what', get_template_directory_uri() . '/assets/img/about/step2.jpg')); ?>');">
       <div class="container">
         <div class="section__header">
           <h3 class="section__title">
@@ -82,7 +82,7 @@ get_header();
     </div>
 
     <!-- HOW Content -->
-    <div class="scroll_content_section" data-index="2" data-bg="how">
+    <div class="scroll_content_section" data-index="2" data-bg="how" style="background-image: url('<?php echo esc_url(katsucode_page_image('about_bg_how', get_template_directory_uri() . '/assets/img/about/step3.jpg')); ?>');">
       <div class="container">
         <div class="section__header">
           <h3 class="section__title">
@@ -94,7 +94,7 @@ get_header();
           <div class="how__list">
             <div class="how__item">
               <div class="img">
-                <img src="" alt="">
+                <img src="<?php echo esc_url(katsucode_page_image('about_how_image_1', get_template_directory_uri() . '/assets/img/about/step1.jpg')); ?>" alt="">
               </div>
               <div class="content">
                 <h4>丁寧に聞くこと</h4>
@@ -106,7 +106,7 @@ get_header();
             </div>
             <div class="how__item">
               <div class="img">
-                <img src="" alt="">
+                <img src="<?php echo esc_url(katsucode_page_image('about_how_image_2', get_template_directory_uri() . '/assets/img/about/step2.jpg')); ?>" alt="">
               </div>
               <div class="content">
                 <h4>シンプルでわかりやすく</h4>
@@ -118,7 +118,7 @@ get_header();
             </div>
             <div class="how__item">
               <div class="img">
-                <img src="" alt="">
+                <img src="<?php echo esc_url(katsucode_page_image('about_how_image_3', get_template_directory_uri() . '/assets/img/about/step3.jpg')); ?>" alt="">
               </div>
               <div class="content">
                 <h4>長く使える設計</h4>
@@ -130,7 +130,7 @@ get_header();
             </div>
             <div class="how__item">
               <div class="img">
-                <img src="" alt="">
+                <img src="<?php echo esc_url(katsucode_page_image('about_how_image_4', get_template_directory_uri() . '/assets/img/about/step1.jpg')); ?>" alt="">
               </div>
               <div class="content">
                 <h4>継続して支えること</h4>
@@ -205,7 +205,7 @@ get_header();
 
       <!-- 右側：画像 -->
       <div class="p-page__trust__image">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/step1.jpg" alt="信頼できるパートナーとして">
+        <img src="<?php echo esc_url(katsucode_page_image('about_trust_image', get_template_directory_uri() . '/assets/img/about/step1.jpg')); ?>" alt="信頼できるパートナーとして">
       </div>
     </div>
   </div>

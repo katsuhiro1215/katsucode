@@ -1,4 +1,234 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
 /* ---------- Recruit Page ---------- */
 .p-recruit {
-  // スタイルは必要に応じて追加
+  padding: 40px 0;
+  background-color: $white;
+
+  @include mq(md) {
+    padding: 80px 0;
+  }
+
+  @include mq(lg) {
+    padding: 100px 0;
+  }
+
+  &.why {
+    background-color: #f8f9fa;
+  }
+}
+
+/* ---------- Section Header（左寄せ・非対称レイアウト） ---------- */
+.p-recruit__header {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto 32px;
+  padding-left: 16px;
+  border-left: 4px solid $accent;
+
+  @include mq(md) {
+    margin: 0 0 56px;
+    padding-left: 28px;
+  }
+
+  &-kicker {
+    display: block;
+    font-family: $sub-font;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 8px;
+
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &-title {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.5;
+    color: $dark;
+    margin: 0;
+  }
+
+  &-lead {
+    font-size: clamp(1.4rem, 2.6vw, 1.7rem);
+    line-height: 1.9;
+    color: #666;
+    margin: 16px 0 0;
+  }
+}
+
+/* ---------- Why Recruit：4カードグリッド ---------- */
+.p-recruit__feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @include mq(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @include mq(lg) {
+    gap: 28px;
+  }
+}
+
+.p-recruit__feature-card {
+  position: relative;
+  overflow: hidden;
+  background-color: $white;
+  border-top: 4px solid $accent;
+  border-radius: 4px 12px 12px 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+
+  @include mq(md) {
+    padding: 32px 28px;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $dark;
+    margin: 8px 0 14px;
+
+    @include mq(md) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.4rem;
+    line-height: 1.9;
+    color: #666;
+    margin: 0;
+
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.p-recruit__feature-number {
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 12px;
+  z-index: 0;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba($accent, 0.1);
+  pointer-events: none;
+
+  @include mq(md) {
+    font-size: 6.4rem;
+  }
+}
+
+/* ---------- Message ---------- */
+.p-recruit__message {
+  max-width: 720px;
+  margin: 0 auto;
+
+  p {
+    font-size: clamp(1.4rem, 2.6vw, 1.6rem);
+    line-height: 2.1;
+    color: $dark;
+    text-align: left;
+    margin-bottom: 28px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* ---------- 募集要項ステータス ---------- */
+.p-recruit__status-card {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f8f9fa;
+  border: 1px solid rgba($accent, 0.2);
+  border-radius: 12px;
+  padding: 40px 24px;
+
+  @include mq(md) {
+    padding: 56px 48px;
+  }
+}
+
+.p-recruit__status-badge {
+  display: inline-block;
+  background-color: $accent-light;
+  color: $accent-dark;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 50px;
+  margin: 0 0 24px;
+
+  @include mq(md) {
+    font-size: 1.6rem;
+  }
+}
+
+.p-recruit__status-text {
+  font-size: clamp(1.4rem, 2.4vw, 1.6rem);
+  line-height: 2;
+  color: $dark;
+  margin: 0 0 32px;
+}
+
+.p-recruit__status-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 36px;
+  background: linear-gradient(135deg, $accent 0%, $accent-dark 100%);
+  color: $white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 16px rgba($accent, 0.3);
+  transition: all 0.3s ease;
+
+  @include mq(md) {
+    padding: 20px 44px;
+    font-size: 1.6rem;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba($accent, 0.4);
+
+    svg {
+      transform: translateX(4px);
+    }
+  }
 }

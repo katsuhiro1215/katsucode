@@ -57,6 +57,46 @@ function get_page_info_safe($page_identifier, $field = 'title')
 }
 
 /**
+ * 制作の流れ画像取得関数（STEP1〜8）
+ * ACFオプションページ（制作の流れ画像設定）で設定されていればその画像を、
+ * 未設定であればデフォルト画像（assets/img/flow/stepN.jpg）を返す。
+ *
+ * @param int $step ステップ番号（1〜8）
+ * @return string 画像URL
+ */
+function katsucode_flow_image($step)
+{
+  $default = get_template_directory_uri() . '/assets/img/flow/step' . $step . '.jpg';
+
+  if (!function_exists('get_field')) {
+    return $default;
+  }
+
+  $image = get_field('flow_step_' . $step, 'option');
+
+  return $image ? $image : $default;
+}
+
+/**
+ * ページ単位のACF画像取得関数（現在の投稿/ページに紐づくフィールド用）
+ * ACFで設定されていればその画像を、未設定であればデフォルト画像を返す。
+ *
+ * @param string $field_name ACFフィールド名
+ * @param string $default    デフォルト画像URL
+ * @return string 画像URL
+ */
+function katsucode_page_image($field_name, $default)
+{
+  if (!function_exists('get_field')) {
+    return $default;
+  }
+
+  $image = get_field($field_name);
+
+  return $image ? $image : $default;
+}
+
+/**
  * 複数のタームから最も深い階層のタームを取得する関数
  *
  * @param array $terms タームオブジェクトの配列

@@ -47,7 +47,7 @@ get_header();
         <ul class="p-flow__main--list">
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step1.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(1)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">01</span>
@@ -63,7 +63,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step2.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(2)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">02</span>
@@ -83,7 +83,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step3.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(3)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">03</span>
@@ -103,7 +103,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step3.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(3)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">04</span>
@@ -127,7 +127,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step4.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(4)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">05</span>
@@ -147,7 +147,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step5.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(5)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">06</span>
@@ -164,7 +164,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step6.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(6)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">07</span>
@@ -184,7 +184,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step7.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(7)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">08</span>
@@ -200,7 +200,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step8.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(8)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">09</span>
@@ -219,7 +219,7 @@ get_header();
         <ul class="p-flow__main--list">
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step1.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(1)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">01</span>
@@ -235,7 +235,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step2.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(2)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">02</span>
@@ -255,7 +255,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step3.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(3)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">03</span>
@@ -275,7 +275,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step3.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(3)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">04</span>
@@ -298,7 +298,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step4.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(4)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">05</span>
@@ -318,7 +318,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step5.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(5)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">06</span>
@@ -334,7 +334,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step6.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(6)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">07</span>
@@ -354,7 +354,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step7.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(7)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">08</span>
@@ -370,7 +370,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/step8.jpg" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(8)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">09</span>

@@ -27,6 +27,7 @@ $black: #383838;
 // アクセントカラー
 $accent: #10B981;           // メインアクセント（対比・強調用）- 鮮やかな緑
 $accent-dark: #059669;      // アクセント（深い緑）
+$accent-light: #D1FAE5;     // アクセント（淡い緑）
 $accent-yellow: #FACC15;     // サブアクセント（ロゴとの調和用）- モダンな黄色
 $accent-yellow-dark: #BFA00A; // サブアクセント（深い黄色）
 
@@ -102,6 +103,7 @@ $transition-3: all 0.7s;
 $easing: cubic-bezier(.2, 1, .2, 1);
 
 // Z-index
+$z-cursor: 9999;
 $z-loader: 1000;
 $z-hamburger: 900;
 $z-global-nav: 800;

@@ -202,7 +202,7 @@
     position: absolute;
     top: -12px;
     right: 20px;
-    background: linear-gradient(135deg, $accent 0%, #ff8c42 100%);
+    background: linear-gradient(135deg, $accent 0%, $accent-dark 100%);
     color: $white;
     font-size: 1.2rem;
     font-weight: 700;
@@ -228,7 +228,7 @@
     }
 
     .c-list__price--header {
-      background: linear-gradient(180deg, #fff5f0 0%, #ffffff 100%);
+      background: linear-gradient(180deg, $accent-light 0%, #ffffff 100%);
       border-bottom: 2px solid $accent;
     }
   }

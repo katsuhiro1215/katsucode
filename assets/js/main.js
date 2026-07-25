@@ -3,7 +3,7 @@
 /* ---------- transition screen ---------- */
 window.onload = () => {
   const transition_el = document.querySelector('.transition');
-  const anchors = document.querySelector('a');
+  const anchors = document.querySelectorAll('a');
 
   setTimeout(() => {
     transition_el.classList.remove('is-active');
@@ -63,16 +63,18 @@ document.addEventListener("mousemove", function (e) {
   mouseY = e.pageY;
 });
 
-const anchors = document.querySelector("a");
+const cursorAnchors = document.querySelectorAll("a");
 
-anchors.addEventListener("mouseenter", function () {
-  cursor.addClass("is-active");
-  follower.addClass("is-active");
-});
+cursorAnchors.forEach((anchor) => {
+  anchor.addEventListener("mouseenter", function () {
+    cursor.classList.add("is-active");
+    follower.classList.add("is-active");
+  });
 
-anchors.addEventListener("mouseleave", function () {
-  cursor.removeClass("is-active");
-  follower.removeClass("is-active");
+  anchor.addEventListener("mouseleave", function () {
+    cursor.classList.remove("is-active");
+    follower.classList.remove("is-active");
+  });
 });
 
 /* ---------- menu toggle ---------- */
