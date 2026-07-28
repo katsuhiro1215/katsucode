@@ -111,6 +111,13 @@ get_header();
           <p class="p-company__introduction--closing">
             小さなことでもお気軽にご相談ください。
           </p>
+          <a href="<?php echo esc_url(home_url('greeting')); ?>" class="p-company__introduction--more">
+            <span>詳しくはこちら</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
     </div>

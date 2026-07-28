@@ -18,7 +18,7 @@
 
           <?php
           $args = array(
-            'post_type' => 'blog', // 投稿タイプを指定
+            'post_type' => 'post', // 投稿タイプを指定（'blog'は archive スラッグ名であり post_type ではない）
             'posts_per_page' => 10, // 表示する記事数
           );
 

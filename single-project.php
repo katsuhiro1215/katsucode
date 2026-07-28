@@ -140,24 +140,31 @@
             <?php endif; ?>
 
             <?php
-            // その他の画像（繰り返しフィールド）
-            if (have_rows('additional_screens')) :
-              while (have_rows('additional_screens')) : the_row();
-                $image = get_sub_field('image');
-                $label = get_sub_field('label');
-                if ($image) :
+            // その他の画像（最大2枚）
+            $additional_screen_1 = get_field('additional_screen_1');
+            $additional_screen_1_label = get_field('additional_screen_1_label');
+            if ($additional_screen_1) :
             ?>
-                  <div class="screen-item">
-                    <?php if ($label) : ?>
-                      <div class="screen-label"><?php echo esc_html($label); ?></div>
-                    <?php endif; ?>
-                    <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($label); ?>">
-                  </div>
+              <div class="screen-item">
+                <?php if ($additional_screen_1_label) : ?>
+                  <div class="screen-label"><?php echo esc_html($additional_screen_1_label); ?></div>
+                <?php endif; ?>
+                <img src="<?php echo esc_url($additional_screen_1); ?>" alt="<?php echo esc_attr($additional_screen_1_label); ?>">
+              </div>
+            <?php endif; ?>
+
             <?php
-                endif;
-              endwhile;
-            endif;
+            $additional_screen_2 = get_field('additional_screen_2');
+            $additional_screen_2_label = get_field('additional_screen_2_label');
+            if ($additional_screen_2) :
             ?>
+              <div class="screen-item">
+                <?php if ($additional_screen_2_label) : ?>
+                  <div class="screen-label"><?php echo esc_html($additional_screen_2_label); ?></div>
+                <?php endif; ?>
+                <img src="<?php echo esc_url($additional_screen_2); ?>" alt="<?php echo esc_attr($additional_screen_2_label); ?>">
+              </div>
+            <?php endif; ?>
           </div>
         </div>
 

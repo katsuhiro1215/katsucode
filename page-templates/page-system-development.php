@@ -353,57 +353,58 @@ get_header();
     </div>
     <div class="section__body">
       <div class="p-service-detail__case-studies--grid">
-        <div class="p-service-detail__case-study--item">
-          <div class="p-service-detail__case-study--image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/default.jpg" alt="不動産仲介D社">
-            <span class="p-service-detail__case-study--category">顧客管理システム</span>
+        <?php
+        $system_development_cases = new WP_Query(array(
+          'post_type' => 'project',
+          'posts_per_page' => 3,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'project-cat',
+              'field' => 'slug',
+              'terms' => 'system-development',
+            ),
+          ),
+        ));
+
+        if ($system_development_cases->have_posts()) :
+          while ($system_development_cases->have_posts()) : $system_development_cases->the_post();
+            $case_categories = get_the_terms(get_the_ID(), 'project-cat');
+            $case_tags = get_the_terms(get_the_ID(), 'project_tag');
+        ?>
+          <div class="p-service-detail__case-study--item">
+            <div class="p-service-detail__case-study--image">
+              <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail(); ?>
+              <?php else : ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/default.jpg" alt="<?php the_title_attribute(); ?>">
+              <?php endif; ?>
+              <?php if ($case_categories && !is_wp_error($case_categories)) : ?>
+                <span class="p-service-detail__case-study--category"><?php echo esc_html($case_categories[0]->name); ?></span>
+              <?php endif; ?>
+            </div>
+            <div class="p-service-detail__case-study--content">
+              <h3 class="p-service-detail__case-study--title"><?php the_title(); ?></h3>
+              <p class="p-service-detail__case-study--description">
+                <?php echo has_excerpt() ? esc_html(get_the_excerpt()) : esc_html(wp_trim_words(get_the_content(), 40)); ?>
+              </p>
+              <?php if ($case_tags && !is_wp_error($case_tags)) : ?>
+                <ul class="p-service-detail__case-study--tags">
+                  <?php foreach (array_slice($case_tags, 0, 3) as $tag) : ?>
+                    <li><?php echo esc_html($tag->name); ?></li>
+                  <?php endforeach; ?>
+                </ul>
+              <?php endif; ?>
+            </div>
           </div>
-          <div class="p-service-detail__case-study--content">
-            <h3 class="p-service-detail__case-study--title">不動産仲介D社</h3>
-            <p class="p-service-detail__case-study--description">
-              顧客情報と物件情報を一元管理し、条件マッチで自動通知。営業効率が2倍に向上。
-            </p>
-            <ul class="p-service-detail__case-study--tags">
-              <li>PHP</li>
-              <li>不動産</li>
-              <li>効率2倍</li>
-            </ul>
-          </div>
-        </div>
-        <div class="p-service-detail__case-study--item">
-          <div class="p-service-detail__case-study--image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/default.jpg" alt="美容サロンE社">
-            <span class="p-service-detail__case-study--category">予約管理システム</span>
-          </div>
-          <div class="p-service-detail__case-study--content">
-            <h3 class="p-service-detail__case-study--title">美容サロンE社</h3>
-            <p class="p-service-detail__case-study--description">
-              ネット予約、顧客カルテ管理、リピート率分析を統合。リマインド機能でキャンセル率30%減。
-            </p>
-            <ul class="p-service-detail__case-study--tags">
-              <li>予約システム</li>
-              <li>美容</li>
-              <li>キャンセル減</li>
-            </ul>
-          </div>
-        </div>
-        <div class="p-service-detail__case-study--item">
-          <div class="p-service-detail__case-study--image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/default.jpg" alt="製造業F社">
-            <span class="p-service-detail__case-study--category">在庫管理システム</span>
-          </div>
-          <div class="p-service-detail__case-study--content">
-            <h3 class="p-service-detail__case-study--title">製造業F社</h3>
-            <p class="p-service-detail__case-study--description">
-              在庫状況をリアルタイム可視化、発注業務を自動化。過剰在庫を20%削減。
-            </p>
-            <ul class="p-service-detail__case-study--tags">
-              <li>在庫管理</li>
-              <li>製造業</li>
-              <li>在庫削減</li>
-            </ul>
-          </div>
-        </div>
+        <?php
+          endwhile;
+          wp_reset_postdata();
+        else :
+        ?>
+          <p class="p-service-detail__case-studies--empty">制作実績はまだ登録されていません。</p>
+        <?php endif; ?>
       </div>
     </div>
   </div>

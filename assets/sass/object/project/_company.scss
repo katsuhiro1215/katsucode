@@ -346,6 +346,33 @@
     background: rgba($accent, 0.06);
     border-left: 3px solid $accent;
   }
+
+  // 詳しくはこちら（page-greetingへの導線）
+  .p-company__introduction--more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $accent-dark;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: darken($accent-dark, 8%);
+
+      svg {
+        transform: translateX(4px);
+      }
+    }
+  }
 }
 
 /* ---------- Reason（ナンバリングカードの段違いグリッド） ---------- */

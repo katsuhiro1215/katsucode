@@ -214,3 +214,69 @@ if (function_exists('acf_add_local_field_group')) {
     ),
   ));
 }
+
+/**
+ * ACFフィールドグループ: Greetingページ（page-greeting.php）の画像
+ */
+if (function_exists('acf_add_local_field_group')) {
+  acf_add_local_field_group(array(
+    'key'    => 'group_katsucode_greeting_images',
+    'title'  => 'Greetingページ画像',
+    'fields' => array(
+      array(
+        'key'   => 'field_katsucode_greeting_profile_image',
+        'label' => '自己紹介 プロフィール写真',
+        'name'  => 'greeting_profile_image',
+        'type'  => 'image',
+        'return_format' => 'url',
+        'preview_size'  => 'medium',
+        'instructions'  => '未設定の場合はデフォルト画像（assets/img/profile/sample01.jpg）が表示されます。',
+      ),
+      array(
+        'key'   => 'field_katsucode_greeting_history_image_1',
+        'label' => '沿革「2022 かつコード創業」画像',
+        'name'  => 'greeting_history_image_1',
+        'type'  => 'image',
+        'return_format' => 'url',
+        'preview_size'  => 'medium',
+        'instructions'  => '未設定の場合はデフォルト画像（assets/img/about/step1.jpg）が表示されます。',
+      ),
+      array(
+        'key'   => 'field_katsucode_greeting_history_image_2',
+        'label' => '沿革「2023 事業領域の拡大」画像',
+        'name'  => 'greeting_history_image_2',
+        'type'  => 'image',
+        'return_format' => 'url',
+        'preview_size'  => 'medium',
+        'instructions'  => '未設定の場合はデフォルト画像（assets/img/about/step2.jpg）が表示されます。',
+      ),
+      array(
+        'key'   => 'field_katsucode_greeting_history_image_3',
+        'label' => '沿革「2024 体制の強化」画像',
+        'name'  => 'greeting_history_image_3',
+        'type'  => 'image',
+        'return_format' => 'url',
+        'preview_size'  => 'medium',
+        'instructions'  => '未設定の場合はデフォルト画像（assets/img/about/step3.jpg）が表示されます。',
+      ),
+      array(
+        'key'   => 'field_katsucode_greeting_history_image_4',
+        'label' => '沿革「2026 新たな挑戦へ」画像',
+        'name'  => 'greeting_history_image_4',
+        'type'  => 'image',
+        'return_format' => 'url',
+        'preview_size'  => 'medium',
+        'instructions'  => '未設定の場合はデフォルト画像（assets/img/about/step1.jpg）が表示されます。',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param'    => 'page_template',
+          'operator' => '==',
+          'value'    => 'page-templates/page-greeting.php',
+        ),
+      ),
+    ),
+  ));
+}

@@ -438,57 +438,58 @@ get_header();
     </div>
     <div class="section__body">
       <div class="p-service-detail__case-studies--grid">
-        <div class="p-service-detail__case-study--item">
-          <div class="p-service-detail__case-study--image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/default.jpg" alt="製造業A社">
-            <span class="p-service-detail__case-study--category">コーポレートサイト</span>
+        <?php
+        $web_production_cases = new WP_Query(array(
+          'post_type' => 'project',
+          'posts_per_page' => 3,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'project-cat',
+              'field' => 'slug',
+              'terms' => 'web-production',
+            ),
+          ),
+        ));
+
+        if ($web_production_cases->have_posts()) :
+          while ($web_production_cases->have_posts()) : $web_production_cases->the_post();
+            $case_categories = get_the_terms(get_the_ID(), 'project-cat');
+            $case_tags = get_the_terms(get_the_ID(), 'project_tag');
+        ?>
+          <div class="p-service-detail__case-study--item">
+            <div class="p-service-detail__case-study--image">
+              <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail(); ?>
+              <?php else : ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/default.jpg" alt="<?php the_title_attribute(); ?>">
+              <?php endif; ?>
+              <?php if ($case_categories && !is_wp_error($case_categories)) : ?>
+                <span class="p-service-detail__case-study--category"><?php echo esc_html($case_categories[0]->name); ?></span>
+              <?php endif; ?>
+            </div>
+            <div class="p-service-detail__case-study--content">
+              <h3 class="p-service-detail__case-study--title"><?php the_title(); ?></h3>
+              <p class="p-service-detail__case-study--description">
+                <?php echo has_excerpt() ? esc_html(get_the_excerpt()) : esc_html(wp_trim_words(get_the_content(), 40)); ?>
+              </p>
+              <?php if ($case_tags && !is_wp_error($case_tags)) : ?>
+                <ul class="p-service-detail__case-study--tags">
+                  <?php foreach (array_slice($case_tags, 0, 3) as $tag) : ?>
+                    <li><?php echo esc_html($tag->name); ?></li>
+                  <?php endforeach; ?>
+                </ul>
+              <?php endif; ?>
+            </div>
           </div>
-          <div class="p-service-detail__case-study--content">
-            <h3 class="p-service-detail__case-study--title">製造業A社</h3>
-            <p class="p-service-detail__case-study--description">
-              老舗製造業のブランドイメージ刷新。採用強化を目的に企業理念を前面に配置。公開後3ヶ月で応募数2倍に増加。
-            </p>
-            <ul class="p-service-detail__case-study--tags">
-              <li>WordPress</li>
-              <li>レスポンシブ</li>
-              <li>採用強化</li>
-            </ul>
-          </div>
-        </div>
-        <div class="p-service-detail__case-study--item">
-          <div class="p-service-detail__case-study--image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/default.jpg" alt="飲食店B社">
-            <span class="p-service-detail__case-study--category">店舗サイト</span>
-          </div>
-          <div class="p-service-detail__case-study--content">
-            <h3 class="p-service-detail__case-study--title">飲食店B社</h3>
-            <p class="p-service-detail__case-study--description">
-              地域密着型レストランのWebサイト。メニュー更新機能、予約フォーム最適化によりネット予約率が50%向上。
-            </p>
-            <ul class="p-service-detail__case-study--tags">
-              <li>WordPress</li>
-              <li>予約システム</li>
-              <li>飲食店</li>
-            </ul>
-          </div>
-        </div>
-        <div class="p-service-detail__case-study--item">
-          <div class="p-service-detail__case-study--image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/default.jpg" alt="士業C事務所">
-            <span class="p-service-detail__case-study--category">コーポレートサイト</span>
-          </div>
-          <div class="p-service-detail__case-study--content">
-            <h3 class="p-service-detail__case-study--title">士業C事務所</h3>
-            <p class="p-service-detail__case-study--description">
-              税理士事務所のWebサイト。SEO記事を週1本投稿し、半年で自然検索流入が3倍に。問い合わせ数も月5件→15件へ増加。
-            </p>
-            <ul class="p-service-detail__case-study--tags">
-              <li>WordPress</li>
-              <li>SEO</li>
-              <li>士業</li>
-            </ul>
-          </div>
-        </div>
+        <?php
+          endwhile;
+          wp_reset_postdata();
+        else :
+        ?>
+          <p class="p-service-detail__case-studies--empty">制作実績はまだ登録されていません。</p>
+        <?php endif; ?>
       </div>
     </div>
   </div>

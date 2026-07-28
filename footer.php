@@ -78,14 +78,14 @@
               <div class="l-footer__sub-card">
                 <h4 class="l-footer__sub-title">Blog</h4>
                 <p class="l-footer__sub-description">長年利用している技術ブログ。プログラミングやWeb制作に関する記事を発信しています。</p>
-                <a href="#" class="l-footer__sub-button" target="_blank" rel="noopener noreferrer">
+                <a href="https://katsu-coach.com/" class="l-footer__sub-button" target="_blank" rel="noopener noreferrer">
                   ブログを見る
                   <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
             </div>
             <!-- Smart Sprouts -->
-            <div class="col-6 col-md-4">
+            <!-- <div class="col-6 col-md-4">
               <div class="l-footer__sub-card">
                 <h4 class="l-footer__sub-title">Smart Sprouts</h4>
                 <p class="l-footer__sub-description">教育サービスのブランドサイト。子どもたちの成長をサポートする教育コンテンツを提供。</p>
@@ -94,10 +94,10 @@
                   <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
-            </div>
+            </div> -->
 
             <!-- Spra -->
-            <div class="col-6 col-md-4">
+            <!-- <div class="col-6 col-md-4">
               <div class="l-footer__sub-card">
                 <h4 class="l-footer__sub-title">Spra</h4>
                 <p class="l-footer__sub-description">中央管理システム「Spra」の専用サイト。業務効率化を実現するSaaSプラットフォーム。</p>
@@ -106,7 +106,7 @@
                   <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
