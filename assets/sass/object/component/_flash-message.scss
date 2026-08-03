@@ -1,0 +1,70 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+/* ---------- Flash Message (トースト通知) ---------- */
+.c-flash-message-container {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  left: 16px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+  @include mq(sm) {
+    left: auto;
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+.c-flash-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  background-color: $white;
+  border-left: 4px solid $accent;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
+
+  &.is-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &--invalid {
+    border-left-color: $accent-yellow;
+  }
+
+  &--error {
+    border-left-color: #e74c3c;
+  }
+
+  &__text {
+    flex: 1;
+    font-size: clamp($fs13, 1.4vw, $fs14);
+    line-height: 1.6;
+    color: $dark;
+  }
+
+  &__close {
+    flex-shrink: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: $fs20;
+    line-height: 1;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $dark;
+    }
+  }
+}
