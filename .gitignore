@@ -1,0 +1,16 @@
+# Claude Code
+.claude/
+
+# WordPress設定・秘匿情報（テーマリポジトリには含めない）
+wp-config.php
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node / ビルド関連
+node_modules/
+npm-debug.log*
+
+# エディタ（.vscode/settings.jsonはチーム共有設定のため追跡対象）
+.idea/
