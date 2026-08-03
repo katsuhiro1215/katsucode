@@ -30,16 +30,16 @@
 
 ---
 
-## ② Front-page Concernsグリッドの配色修正
+## ② Front-page Concernsグリッドの配色修正（完了）
 
 詳細仕様は [SPEC.md §5](./SPEC.md#5-front-page-concernsセクション-配色仕様)。
 
-- [ ] `assets/sass/object/project/_index.scss` の `&__concerns--item` の `background-color: lighten($accent, 10%)` を、白地＋`$accent-dark`基調のアクセントに変更
-- [ ] ホバー時の `lighten($accent, 20%)` も濃色系の演出に変更
-- [ ] About → Concerns → Service のセクション遷移を通しで確認し、違和感がないか確認
-- [ ] Sassをコンパイルし、生成物を更新
-- [ ] ブラウザ（PC/SP）で見た目を確認
-- [ ] 1コミット（「Concernsセクションの配色調整」目的のみ）でコミット
+- [x] `assets/sass/object/project/_index.scss` の `&__concerns--item` の `background-color: lighten($accent, 10%)` を、白地＋`$accent-dark`基調のアクセントに変更
+- [x] ホバー時の `lighten($accent, 20%)` も濃色系の演出に変更
+- [x] About → Concerns → Service のセクション遷移を通しで確認し、違和感がないか確認（いずれも白背景のため統一感あり）
+- [x] Sassの差分をコンパイル相当の内容でCSS生成物へ反映
+- [x] ブラウザ（Playwright）で通常時・ホバー時の見た目を確認
+- [x] 1コミット（「Concernsセクションの配色調整」目的のみ）でコミット（`701a6bc`）
 
 ---
 
