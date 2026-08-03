@@ -525,3 +525,51 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+/* ---------- Flash Message (トースト通知) ---------- */
+function showFlashMessage(type, message) {
+  let container = document.querySelector('.c-flash-message-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.className = 'c-flash-message-container';
+    document.body.appendChild(container);
+  }
+
+  const toast = document.createElement('div');
+  toast.className = `c-flash-message c-flash-message--${type}`;
+  toast.setAttribute('role', 'status');
+  toast.setAttribute('aria-live', 'polite');
+
+  const text = document.createElement('p');
+  text.className = 'c-flash-message__text';
+  text.textContent = message;
+
+  const closeButton = document.createElement('button');
+  closeButton.type = 'button';
+  closeButton.className = 'c-flash-message__close';
+  closeButton.setAttribute('aria-label', '閉じる');
+  closeButton.textContent = '×';
+
+  const removeToast = () => {
+    toast.classList.remove('is-active');
+    toast.addEventListener('transitionend', () => toast.remove(), { once: true });
+  };
+
+  closeButton.addEventListener('click', removeToast);
+  toast.append(text, closeButton);
+  container.appendChild(toast);
+
+  requestAnimationFrame(() => toast.classList.add('is-active'));
+  setTimeout(removeToast, 5000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const flashData = document.getElementById('flash-message-data');
+  if (!flashData) return;
+
+  const { flashType, flashMessage } = flashData.dataset;
+  if (flashType && flashMessage) {
+    showFlashMessage(flashType, flashMessage);
+  }
+  flashData.remove();
+});

@@ -14,3 +14,6 @@ npm-debug.log*
 
 # エディタ（.vscode/settings.jsonはチーム共有設定のため追跡対象）
 .idea/
+
+# Playwright MCP自動テスト出力
+.playwright-mcp/

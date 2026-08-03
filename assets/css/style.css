@@ -2685,6 +2685,70 @@ p {
   }
 }
 
+/* ---------- Flash Message (トースト通知) ---------- */
+.c-flash-message-container {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  left: 16px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+@media (min-width: 576px) {
+  .c-flash-message-container {
+    left: auto;
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+.c-flash-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  background-color: #fff;
+  border-left: 4px solid #10B981;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
+}
+.c-flash-message.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.c-flash-message--invalid {
+  border-left-color: #FACC15;
+}
+.c-flash-message--error {
+  border-left-color: #e74c3c;
+}
+.c-flash-message__text {
+  flex: 1;
+  font-size: clamp(1.3rem, 1.4vw, 1.4rem);
+  line-height: 1.6;
+  color: #3e3b3f;
+}
+.c-flash-message__close {
+  flex-shrink: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.c-flash-message__close:hover {
+  color: #3e3b3f;
+}
+
 .c-flex {
   display: flex;
 }

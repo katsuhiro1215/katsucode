@@ -24,12 +24,16 @@ get_header();
     <div class="section__body">
       <?php the_content(); ?>
 
-      <?php if (($_GET['contact'] ?? '') === 'success'): ?>
-        <p class="contact-form__notice contact-form__notice--success">お問い合わせいただき、ありがとうございます。1〜2営業日以内にご返信いたします。</p>
-      <?php elseif (($_GET['contact'] ?? '') === 'invalid'): ?>
-        <p class="contact-form__notice contact-form__notice--error">未入力の必須項目があります。ご確認の上、再度送信してください。</p>
-      <?php elseif (($_GET['contact'] ?? '') === 'error'): ?>
-        <p class="contact-form__notice contact-form__notice--error">送信に失敗しました。お手数ですが<a href="mailto:info@katsucode.jp">info@katsucode.jp</a>までご連絡ください。</p>
+      <?php
+      $contact_flash_messages = array(
+        'success' => 'お問い合わせいただき、ありがとうございます。1〜2営業日以内にご返信いたします。',
+        'invalid' => '未入力の必須項目があります。ご確認の上、再度送信してください。',
+        'error'   => '送信に失敗しました。お手数ですがinfo@katsucode.jpまでご連絡ください。',
+      );
+      $contact_flash_type = sanitize_key($_GET['contact'] ?? '');
+      if (isset($contact_flash_messages[$contact_flash_type])):
+      ?>
+        <div id="flash-message-data" hidden data-flash-type="<?php echo esc_attr($contact_flash_type); ?>" data-flash-message="<?php echo esc_attr($contact_flash_messages[$contact_flash_type]); ?>"></div>
       <?php endif; ?>
 
       <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
