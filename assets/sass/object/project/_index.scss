@@ -155,10 +155,11 @@
       }
     }
     &--item {
-      background-color: lighten($accent, 10%);
-      backdrop-filter: blur(10px);
+      background-color: $white;
       padding: 24px 20px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba($accent-dark, 0.12);
+      border-left: 4px solid $accent-dark;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
       display: flex;
       align-items: center;
       gap: 16px;
@@ -168,9 +169,10 @@
         gap: 20px;
       }
       &:hover {
-        background: lighten($accent, 20%);
+        background-color: $accent-light;
+        border-left-color: $accent;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         transform: translateX(8px);
-        border-color: rgba(255, 255, 255, 0.3);
       }
       &-icon {
         flex-shrink: 0;
@@ -179,7 +181,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(231, 76, 60, 0.2);
+        background: rgba($accent, 0.12);
         border-radius: 50%;
         @include mq(lg) {
           width: 48px;
@@ -188,7 +190,7 @@
         svg {
           width: 24px;
           height: 24px;
-          color: #e74c3c;
+          color: $accent-dark;
           @include mq(lg) {
             width: 28px;
             height: 28px;
@@ -200,7 +202,7 @@
         margin: 0;
         font-size: clamp($fs14, 2vw, $fs18);
         line-height: 1.7;
-        color: $white;
+        color: $dark;
         flex: 1;
         .sp-only {
           display: inline;
