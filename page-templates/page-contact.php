@@ -23,7 +23,19 @@ get_header();
     </div>
     <div class="section__body">
       <?php the_content(); ?>
-      <form method="post" action enctype="multipart/form-data">
+
+      <?php if (($_GET['contact'] ?? '') === 'success'): ?>
+        <p class="contact-form__notice contact-form__notice--success">お問い合わせいただき、ありがとうございます。1〜2営業日以内にご返信いたします。</p>
+      <?php elseif (($_GET['contact'] ?? '') === 'invalid'): ?>
+        <p class="contact-form__notice contact-form__notice--error">未入力の必須項目があります。ご確認の上、再度送信してください。</p>
+      <?php elseif (($_GET['contact'] ?? '') === 'error'): ?>
+        <p class="contact-form__notice contact-form__notice--error">送信に失敗しました。お手数ですが<a href="mailto:info@katsucode.jp">info@katsucode.jp</a>までご連絡ください。</p>
+      <?php endif; ?>
+
+      <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+        <?php wp_nonce_field('spra_contact_submit'); ?>
+        <input type="hidden" name="action" value="spra_contact_submit" />
+        <input type="hidden" name="redirect_to" value="<?php echo esc_url(get_permalink()); ?>" />
         <table class="contact-form__table">
           <tbody>
             <tr>
@@ -41,46 +53,16 @@ get_header();
               </td>
             </tr>
             <tr>
-              <th>ご検討中の内容</th>
+              <th>
+                ご検討中の内容<span>必須</span>
+              </th>
               <td>
-                <div class="flex">
-                  <label>
-                    <input type="checkbox" name="service" value="ホームページ新規作成" />
-                    <span>ホームページ新規作成</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="service" value="既存のホームページをリニューアル" />
-                    <span>既存のホームページをリニューアル</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="service" value="LP新規作成" />
-                    <span>LP新規作成</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="service" value="LPリニューアル" />
-                    <span>LPリニューアル</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="service" value="ECサイト新規作成" />
-                    <span>ECサイト新規作成</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="service" value="ECサイトリニューアル" />
-                    <span>ECサイトリニューアル</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="service" value="システム開発" />
-                    <span>システム開発</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="service" value="ちょっとした更新" />
-                    <span>ちょっとした更新</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="service" value="その他" />
-                    <span>その他</span>
-                  </label>
-                </div>
+                <select name="category" id="category" required>
+                  <option value="" selected disabled>選択してください</option>
+                  <?php foreach (spra_get_contact_categories() as $category): ?>
+                    <option value="<?php echo esc_attr($category['id']); ?>"><?php echo esc_html($category['name']); ?></option>
+                  <?php endforeach; ?>
+                </select>
               </td>
             </tr>
             <tr>
@@ -89,7 +71,7 @@ get_header();
               </th>
               <td>
                 <label>
-                  <input type="text" name="name" placeholder="山田 太郎" />
+                  <input type="text" name="name" placeholder="山田 太郎" required />
                 </label>
               </td>
             </tr>
@@ -99,7 +81,7 @@ get_header();
               </th>
               <td>
                 <label>
-                  <input type="text" name="name_kana" placeholder="やまだ たろう" />
+                  <input type="text" name="name_kana" placeholder="やまだ たろう" required />
                 </label>
               </td>
             </tr>
@@ -119,7 +101,7 @@ get_header();
               </th>
               <td>
                 <label>
-                  <input type="tel" name="tel" placeholder="090-1234-5678" />
+                  <input type="tel" name="tel" placeholder="090-1234-5678" required />
                 </label>
               </td>
             </tr>
@@ -129,7 +111,7 @@ get_header();
               </th>
               <td>
                 <label>
-                  <input type="email" name="email" placeholder="example@katsucode.jp" />
+                  <input type="email" name="email" placeholder="example@katsucode.jp" required />
                 </label>
               </td>
             </tr>
@@ -139,7 +121,7 @@ get_header();
               </th>
               <td>
                 <label>
-                  <textarea name="message" placeholder="お気軽にご相談内容をご記入ください。&#10;例：ホームページの制作を検討しています。予算や納期についてご相談させてください。"></textarea>
+                  <textarea name="message" placeholder="お気軽にご相談内容をご記入ください。&#10;例：ホームページの制作を検討しています。予算や納期についてご相談させてください。" required></textarea>
                 </label>
               </td>
             </tr>
@@ -151,7 +133,7 @@ get_header();
         <p class="contact-form__privacy">
           <span>
             <label>
-              <input type="checkbox" value="プライバシーポリシーに同意する" />
+              <input type="checkbox" name="privacy_agree" value="1" required />
               <span>プライバシーポリシーに同意する</span>
             </label>
           </span>
@@ -159,13 +141,13 @@ get_header();
         <p class="contact-form__privacy">
           <span>
             <label>
-              <input type="checkbox" value="営業・勧誘を目的としたお問い合わせではありません。" />
+              <input type="checkbox" name="not_sales_agree" value="1" required />
               <span>営業・勧誘を目的としたお問い合わせではありません。</span>
             </label>
           </span>
         </p>
         <div class="p-contact__btn">
-          <input type="submit" value="確認画面へ" />
+          <input type="submit" value="送信する" />
         </div>
       </form>
     </div>

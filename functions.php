@@ -20,3 +20,4 @@ require get_template_directory() . '/inc/plugins.php';
 require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/custom-post-type.php';
 require get_template_directory() . '/inc/acf-fields.php';
+require get_template_directory() . '/inc/spra-contact-api.php';

@@ -40,21 +40,7 @@ get_header();
           <p class="p-greeting__profile-name">
             栫 勝宏<span>Katsuhiro Kakoi</span>
           </p>
-          <p>
-            はじめまして。奈良県奈良市を拠点に、Web制作・システム開発を行っている「かつコード」代表の栫（かこい）です。
-          </p>
-          <p>
-            これまでシステムエンジニアとして、様々な業種のお客様のホームページ制作や業務システムの開発に携わってきました。<br>
-            その中で強く感じたのは、「良いサービスや想いがあっても、それがうまく伝わっていない」ケースがとても多いということです。
-          </p>
-          <p>
-            どれだけ良いものを作っても、伝わらなければ意味がありません。<br>
-            だからこそ私は、技術力だけでなく"伝わる設計"を大切にした制作を心がけています。
-          </p>
-          <p>
-            2022年5月、かつコードとして独立し、現在はアシスタント2名とともに、少人数だからこそできる丁寧な対応を強みに活動しています。<br>
-            専門的なことがわからない方でも安心してご相談いただけるよう、できるだけわかりやすく、丁寧にサポートいたします。
-          </p>
+          <p><?php echo get_field('greeting_profile_description'); ?></p>
           <p class="p-greeting__profile-closing">
             小さなことでもお気軽にご相談ください。
           </p>
@@ -78,54 +64,104 @@ get_header();
     <div class="section__body">
       <div class="p-greeting__history-list">
         <div class="p-greeting__history-item">
-          <span class="p-greeting__history-year" aria-hidden="true">2022</span>
+          <span class="p-greeting__history-year" aria-hidden="true"><?php echo get_field('greeting_history_year_1'); ?></span>
           <figure>
-            <img src="<?php echo esc_url(katsucode_page_image('greeting_history_image_1', get_template_directory_uri() . '/assets/img/about/step1.jpg')); ?>" alt="かつコード創業">
+            <?php if (get_field('greeting_history_image_1')) : ?>
+              <img src="<?php echo esc_url(get_field('greeting_history_image_1')); ?>" alt="かつコード創業">
+            <?php else : ?>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/about/step1.jpg'); ?>" alt="かつコード創業">
+            <?php endif; ?>
           </figure>
           <div class="p-greeting__history-info">
-            <span class="p-greeting__history-date">2022年5月</span>
-            <h3>かつコード創業</h3>
+            <span class="p-greeting__history-date"><?php echo get_field('greeting_history_date_1'); ?></span>
+            <h3><?php echo get_field('greeting_history_title_1'); ?></h3>
             <p>
-              「デジタルの可能性を活かし、人と人とをやさしくつなぐ存在でありたい」という想いのもと、奈良県奈良市にてかつコードを設立。Webサイト制作を中心に活動をスタートしました。
+              <?php echo get_field('greeting_history_description_1'); ?>
             </p>
           </div>
         </div>
         <div class="p-greeting__history-item">
-          <span class="p-greeting__history-year" aria-hidden="true">2023</span>
+          <span class="p-greeting__history-year" aria-hidden="true"><?php echo get_field('greeting_history_year_2'); ?></span>
           <figure>
-            <img src="<?php echo esc_url(katsucode_page_image('greeting_history_image_2', get_template_directory_uri() . '/assets/img/about/step2.jpg')); ?>" alt="事業領域の拡大">
+            <?php if (get_field('greeting_history_image_2')) : ?>
+              <img src="<?php echo esc_url(get_field('greeting_history_image_2')); ?>" alt="かつコード創業">
+            <?php else : ?>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/about/step1.jpg'); ?>" alt="かつコード創業">
+            <?php endif; ?>
           </figure>
           <div class="p-greeting__history-info">
-            <span class="p-greeting__history-date">2023年</span>
-            <h3>事業領域の拡大</h3>
+            <span class="p-greeting__history-date"><?php echo get_field('greeting_history_date_2'); ?></span>
+            <h3><?php echo get_field('greeting_history_title_2'); ?></h3>
             <p>
-              コーポレートサイトやLP制作に加え、業務システムの受託開発を開始。Webサイトだけでなく、お客様の業務課題そのものに向き合う機会が増えていきました。
+              <?php echo get_field('greeting_history_description_2'); ?>
             </p>
           </div>
         </div>
         <div class="p-greeting__history-item">
-          <span class="p-greeting__history-year" aria-hidden="true">2024</span>
+          <span class="p-greeting__history-year" aria-hidden="true"><?php echo get_field('greeting_history_year_3'); ?></span>
           <figure>
-            <img src="<?php echo esc_url(katsucode_page_image('greeting_history_image_3', get_template_directory_uri() . '/assets/img/about/step3.jpg')); ?>" alt="体制の強化">
+            <?php if (get_field('greeting_history_image_3')) : ?>
+              <img src="<?php echo esc_url(get_field('greeting_history_image_3')); ?>" alt="かつコード創業">
+            <?php else : ?>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/about/step1.jpg'); ?>" alt="かつコード創業">
+            <?php endif; ?>
           </figure>
           <div class="p-greeting__history-info">
-            <span class="p-greeting__history-date">2024年</span>
-            <h3>体制の強化</h3>
+            <span class="p-greeting__history-date"><?php echo get_field('greeting_history_date_3'); ?></span>
+            <h3><?php echo get_field('greeting_history_title_3'); ?></h3>
             <p>
-              アシスタント2名を迎え、少人数ながらも一貫したサポート体制を構築。ヒアリングから制作、公開後の運用まで、担当が変わることのない安心感を大切にしています。
+              <?php echo get_field('greeting_history_description_3'); ?>
             </p>
           </div>
         </div>
         <div class="p-greeting__history-item">
-          <span class="p-greeting__history-year" aria-hidden="true">2026</span>
+          <span class="p-greeting__history-year" aria-hidden="true"><?php echo get_field('greeting_history_year_4'); ?></span>
           <figure>
-            <img src="<?php echo esc_url(katsucode_page_image('greeting_history_image_4', get_template_directory_uri() . '/assets/img/about/step1.jpg')); ?>" alt="新たな挑戦">
+            <?php if (get_field('greeting_history_image_4')) : ?>
+              <img src="<?php echo esc_url(get_field('greeting_history_image_4')); ?>" alt="かつコード創業">
+            <?php else : ?>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/about/step1.jpg'); ?>" alt="かつコード創業">
+            <?php endif; ?>
           </figure>
           <div class="p-greeting__history-info">
-            <span class="p-greeting__history-date">2026年</span>
-            <h3>新たな挑戦へ</h3>
+            <span class="p-greeting__history-date"><?php echo get_field('greeting_history_date_4'); ?></span>
+            <h3><?php echo get_field('greeting_history_title_4'); ?></h3>
             <p>
-              ホームページとシステムが融合したオールインワンSaaS「Spra」の開発、奈良の地元企業様・水泳関係者様向けの特化サービスなど、これまで培った技術と経験を活かした新しい取り組みを進めています。
+              <?php echo get_field('greeting_history_description_4'); ?>
+            </p>
+          </div>
+        </div>
+        <div class="p-greeting__history-item">
+          <span class="p-greeting__history-year" aria-hidden="true"><?php echo get_field('greeting_history_year_5'); ?></span>
+          <figure>
+            <?php if (get_field('greeting_history_image_5')) : ?>
+              <img src="<?php echo esc_url(get_field('greeting_history_image_5')); ?>" alt="かつコード創業">
+            <?php else : ?>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/about/step1.jpg'); ?>" alt="かつコード創業">
+            <?php endif; ?>
+          </figure>
+          <div class="p-greeting__history-info">
+            <span class="p-greeting__history-date"><?php echo get_field('greeting_history_date_5'); ?></span>
+            <h3><?php echo get_field('greeting_history_title_5'); ?></h3>
+            <p>
+              <?php echo get_field('greeting_history_description_5'); ?>
+            </p>
+          </div>
+        </div>
+        <div class="p-greeting__history-item">
+          <span class="p-greeting__history-year" aria-hidden="true"><?php echo get_field('greeting_history_year_6'); ?></span>
+          <figure>
+            <?php if (get_field('greeting_history_image_6')) : ?>
+              <img src="<?php echo esc_url(get_field('greeting_history_image_6')); ?>" alt="かつコード創業">
+            <?php else : ?>
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/about/step1.jpg'); ?>" alt="かつコード創業">
+            <?php endif; ?>
+          </figure>
+          <div class="p-greeting__history-info">
+            <span class="p-greeting__history-date"><?php echo get_field('greeting_history_date_6'); ?></span>
+            <h3><?php echo get_field('greeting_history_title_6'); ?></h3>
+            <p>
+              <?php echo get_field('greeting_history_description_6'); ?>
             </p>
           </div>
         </div>

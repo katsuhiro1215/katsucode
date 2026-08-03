@@ -159,12 +159,12 @@
       position: absolute;
       top: 16px;
       left: 16px;
-      font-size: clamp($fs18, 2.5vw, $fs24);
+      font-size: clamp($fs16, 2vw, $fs18);
       padding: 24px 20px;
       font-weight: 700;
       line-height: 1.6;
       color: $black;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(15px);
       writing-mode: vertical-rl;
       text-orientation: upright;

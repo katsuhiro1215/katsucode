@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- LP Banner Section Start -->
-<?php get_template_part('template-parts/front-page/lp'); ?>
+ <!--  -->
 <!-- LP Banner Section End -->
 
 <!-- About Section Start -->

@@ -85,16 +85,16 @@
               </div>
             </div>
             <!-- Smart Sprouts -->
-            <!-- <div class="col-6 col-md-4">
+            <div class="col-6 col-md-4">
               <div class="l-footer__sub-card">
                 <h4 class="l-footer__sub-title">Smart Sprouts</h4>
-                <p class="l-footer__sub-description">教育サービスのブランドサイト。子どもたちの成長をサポートする教育コンテンツを提供。</p>
-                <a href="#" class="l-footer__sub-button" target="_blank" rel="noopener noreferrer">
+                <p class="l-footer__sub-description">中央管理システム「Smart Sprouts」の専用サイト。</p>
+                <a href="https://smartsprouts.jp/" class="l-footer__sub-button" target="_blank" rel="noopener noreferrer">
                   サイトを見る
                   <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
-            </div> -->
+            </div>
 
             <!-- Spra -->
             <!-- <div class="col-6 col-md-4">
