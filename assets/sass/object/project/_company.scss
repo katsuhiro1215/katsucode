@@ -1,0 +1,695 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+/* ---------- Company Page ---------- */
+.p-company {
+  padding: 40px 0;
+  background-color: $white;
+
+  @include mq(md) {
+    padding: 80px 0;
+  }
+
+  @include mq(lg) {
+    padding: 100px 0;
+  }
+
+  // Concept Section
+  &.concept {
+    background-color: #f8f9fa;
+  }
+
+  // Introduction Section
+  &.introduction {
+    background-color: $white;
+  }
+
+  // Reason Section
+  &.reason {
+    background-color: #f8f9fa;
+  }
+}
+
+/* ---------- Section Header（左寄せ・非対称レイアウト） ---------- */
+.p-company__header {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto 32px;
+  padding-left: 16px;
+  border-left: 4px solid $accent;
+
+  @include mq(md) {
+    margin: 0 0 56px;
+    padding-left: 28px;
+  }
+
+  &-kicker {
+    display: block;
+    font-family: $sub-font;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 8px;
+
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &-title {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.5;
+    color: $dark;
+    margin: 0;
+  }
+}
+
+/* ---------- Concept Message ---------- */
+.p-company__concept--message {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: $accent;
+  line-height: 1.8;
+  margin: 20px 0 0;
+  text-align: left;
+}
+
+/* ---------- About Concept List（ジグザグ＋ナンバリング） ---------- */
+.p-about__concept {
+  &--list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+
+    @include mq(md) {
+      gap: 64px;
+      margin-top: 24px;
+    }
+
+    @include mq(lg) {
+      gap: 88px;
+    }
+  }
+
+  &--item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: $white;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    @include mq(md) {
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+      padding: 32px;
+    }
+
+    @include mq(lg) {
+      gap: 48px;
+      padding: 40px;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+    }
+
+    &:nth-child(even) {
+      @include mq(md) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    figure {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      flex-shrink: 0;
+      overflow: hidden;
+
+      @include mq(md) {
+        width: 40%;
+        max-width: 400px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &:hover figure img {
+      transform: scale(1.05);
+    }
+  }
+
+  // 背景の大きなナンバリング
+  &--number {
+    position: absolute;
+    top: -14px;
+    left: -6px;
+    z-index: 0;
+    font-size: 5.6rem;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba($accent, 0.12);
+    pointer-events: none;
+
+    @include mq(md) {
+      font-size: 8rem;
+      top: -22px;
+      left: -12px;
+    }
+  }
+
+  &--info {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $dark;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid $accent;
+
+      @include mq(md) {
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.9;
+      color: $dark;
+      margin-bottom: 12px;
+
+      @include mq(md) {
+        font-size: 1.6rem;
+        line-height: 2;
+        margin-bottom: 16px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* ---------- Introduction（非対称の写真フレーム＋引用） ---------- */
+.p-company__introduction--wrapper {
+  display: block;
+
+  @include mq(md) {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+  }
+
+  @include mq(lg) {
+    gap: 72px;
+  }
+}
+
+// プロフィール写真エリア（オフセットの枠線で非対称に）
+.p-company__introduction--profile {
+  position: relative;
+  margin: 16px 0 40px;
+
+  @include mq(md) {
+    flex: 0 0 280px;
+    margin: 8px 0 0;
+  }
+
+  @include mq(lg) {
+    flex: 0 0 320px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: -14px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid $accent;
+    z-index: 0;
+
+    @include mq(md) {
+      top: -20px;
+      left: -20px;
+    }
+  }
+
+  .profile-image {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: opacity 0.4s ease;
+    }
+
+    .profile-main {
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+    }
+
+    &:hover {
+      .profile-main {
+        opacity: 0;
+      }
+
+      .profile-hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// テキストエリア（大きな引用符＋強調の結び）
+.p-company__introduction--content {
+  position: relative;
+  flex: 1;
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: -34px;
+    left: -4px;
+    z-index: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba($accent, 0.15);
+
+    @include mq(md) {
+      font-size: 11rem;
+      top: -46px;
+      left: -8px;
+    }
+  }
+
+  p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: $dark;
+    margin-bottom: 20px;
+    text-align: left;
+
+    @include mq(md) {
+      font-size: 1.7rem;
+      margin-bottom: 28px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // 結びの一文を強調
+  .p-company__introduction--closing {
+    display: inline-block;
+    font-weight: 700;
+    color: darken($accent, 10%);
+    padding: 14px 20px;
+    background: rgba($accent, 0.06);
+    border-left: 3px solid $accent;
+  }
+
+  // 詳しくはこちら（page-greetingへの導線）
+  .p-company__introduction--more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $accent-dark;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: darken($accent-dark, 8%);
+
+      svg {
+        transform: translateX(4px);
+      }
+    }
+  }
+}
+
+/* ---------- Reason（ナンバリングカードの段違いグリッド） ---------- */
+.p-company__reason-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  @include mq(lg) {
+    gap: 32px;
+  }
+}
+
+.p-company__reason-card {
+  position: relative;
+  overflow: hidden;
+  background-color: $white;
+  border-top: 4px solid $accent;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+
+  @include mq(md) {
+    padding: 36px 28px;
+
+    &:nth-child(2) {
+      margin-top: 28px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 56px;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  h4 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: $dark;
+    margin: 8px 0 14px;
+
+    @include mq(md) {
+      font-size: 2.1rem;
+    }
+  }
+
+  p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.4rem;
+    line-height: 1.9;
+    color: #666;
+    margin: 0;
+
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.p-company__reason-number {
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 12px;
+  z-index: 0;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba($accent, 0.1);
+  pointer-events: none;
+
+  @include mq(md) {
+    font-size: 6.4rem;
+  }
+}
+
+/* ---------- Company Info Section ---------- */
+.p-company {
+  &__info {
+    padding: 60px 0 0;
+    background-color: $white;
+
+    @include mq(md) {
+      padding: 80px 0 0;
+    }
+
+    @include mq(lg) {
+      padding: 100px 0 0;
+    }
+
+    .section__header {
+      text-align: center;
+      .section__title::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--table {
+      width: 100%;
+      margin: 0 auto;
+
+      @include mq(md) {
+        max-width: 900px;
+      }
+      border-collapse: collapse;
+      background-color: $white;
+
+      tbody {
+        tr {
+          border-bottom: 1px solid #e0e0e0;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          th,
+          td {
+            padding: 20px 16px;
+            text-align: left;
+            vertical-align: top;
+
+            @include mq(md) {
+              padding: 24px 20px;
+            }
+          }
+
+          th {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $dark;
+            background-color: #f8f9fa;
+            width: 200px;
+
+            @include mq(md) {
+              font-size: 1.6rem;
+              width: 240px;
+            }
+          }
+
+          td {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: $dark;
+
+            @include mq(md) {
+              font-size: 1.6rem;
+              line-height: 1.9;
+            }
+
+            a {
+              color: $accent;
+              text-decoration: none;
+              transition: all 0.3s ease;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+
+            br {
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------- Button Group ---------- */
+.btn__group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  padding: 32px 16px;
+
+  @include mq(md) {
+    margin: 60px 0;
+    padding: 40px 32px;
+  }
+
+  @include mq(lg) {
+    margin: 80px 0;
+    padding: 80px 40px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.btn__primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 18px 56px 18px 24px;
+  background: linear-gradient(135deg, $accent 0%, darken($accent, 10%) 100%);
+  color: $white;
+  box-shadow: 0 4px 16px rgba($accent, 0.3);
+  transition: all 0.3s ease;
+
+  @include mq(md) {
+    max-width: 400px;
+    padding: 20px 64px 20px 32px;
+  }
+
+  @include mq(lg) {
+    max-width: 480px;
+    padding: 24px 72px 24px 40px;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, darken($accent, 5%) 0%, darken($accent, 15%) 100%);
+    box-shadow: 0 6px 20px rgba($accent, 0.4);
+    transform: translateY(-4px);
+
+    .btn__primary--arrow {
+      transform: translateX(8px);
+    }
+  }
+
+  &--text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+
+    @include mq(md) {
+      font-size: 1.6rem;
+    }
+
+    @include mq(lg) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &--arrow {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+
+    @include mq(md) {
+      right: 32px;
+      font-size: 2.4rem;
+    }
+
+    i {
+      display: block;
+    }
+  }
+}
+
+/* ---------- Company Info（レスポンシブ・テーブル） ---------- */
+.p-company__info--table {
+  tbody {
+    tr {
+      display: block;
+      margin-bottom: 24px;
+      border: 1px solid #e0e0e0;
+      overflow: hidden;
+
+      @include mq(md) {
+        display: table-row;
+        margin-bottom: 0;
+        border: none;
+        border-radius: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      th,
+      td {
+        display: block;
+        width: 100%;
+        padding: 12px 16px;
+
+        @include mq(md) {
+          display: table-cell;
+          width: auto;
+          padding: 20px 24px;
+        }
+      }
+
+      th {
+        border-bottom: 1px solid #e0e0e0;
+
+        @include mq(md) {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+@use 'variable' as *;
+
+/* ---------- Mixins ---------- */
+
+// メディアクエリー
+@mixin mq($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$breakpoint}";
+  }
+}
+
+// モバイルファースト用のメディアクエリー
+@mixin mq-down($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint) - 1px}) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$breakpoint}";
+  }
+}
+
+// フレックスボックスセンタリング
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 位置指定（絶対配置）
+@mixin position-absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// 位置指定（固定配置）
+@mixin position-fixed($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// サイズ指定
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// 円形
+@mixin circle($size) {
+  @include size($size);
+  border-radius: 50%;
+}
+
+// 正方形
+@mixin square($size) {
+  @include size($size);
+}
+
+// トランジション
+@mixin transition($property: all, $duration: 0.3s, $easing: ease) {
+  transition: $property $duration $easing;
+}
+
+// ホバーエフェクト
+@mixin hover-effect($transform: translateY(-2px), $shadow: 0 4px 8px rgba(0, 0, 0, 0.1)) {
+  transition: $transition-1;
+
+  &:hover {
+    transform: $transform;
+    box-shadow: $shadow;
+  }
+}
+
+// テキストの省略
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 複数行テキストの省略
+@mixin text-ellipsis-multi($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// アスペクト比の維持
+@mixin aspect-ratio($width: 16, $height: 9) {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// クリアフィックス
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// グラデーション
+@mixin gradient($direction: to bottom, $color1: $primary-color, $color2: #c89838) {
+  background: linear-gradient($direction, $color1, $color2);
+}
+
+// ボックスシャドウ
+@mixin box-shadow($shadow: 0 2px 10px rgba(0, 0, 0, 0.1)) {
+  box-shadow: $shadow;
+}
+
+// ボーダー
+@mixin border($width: 1px, $style: solid, $color: $gray) {
+  border: $width $style $color;
+}
+
+// フォントサイズ（レスポンシブ）
+@mixin font-size($min-size, $max-size, $min-vw: 320px, $max-vw: 1200px) {
+  font-size: clamp(
+    #{$min-size},
+    #{$min-size} + (#{$max-size} - #{$min-size}) *
+      ((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw})),
+    #{$max-size}
+  );
+}
+
+// スクロールバーカスタム
+@mixin scrollbar($width: 8px, $track-color: $light, $thumb-color: $gray) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+    border-radius: $width / 2;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $gray-dark;
+  }
+}
+
+// プレースホルダー
+@mixin placeholder {
+  &::placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// フォーカススタイル
+@mixin focus-style($color: $primary-color, $width: 2px) {
+  outline: none;
+  box-shadow: 0 0 0 $width rgba($color, 0.3);
+}
+
+// リセットボタン
+@mixin reset-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+// リセットリスト
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

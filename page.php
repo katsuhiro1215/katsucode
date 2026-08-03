@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-<!-- Page Section Start -->
-<section class="p-page__main">
-  <div class="p-page__main--wrapper">
-    <div class="container">
 
-    </div>
+<!-- Page Section Start -->
+<section class="p-page__content">
+  <div class="container">
+    <?php the_content(); ?>
   </div>
 </section>
-<!-- About Section End -->
+<!-- Page Section End -->
+
 <?php get_footer(); ?>

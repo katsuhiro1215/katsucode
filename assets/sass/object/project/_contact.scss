@@ -1,148 +1,411 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
 /* ---------- Contact Page ---------- */
 .p-contact {
-  // Main
-  &__main {
-    &--wrapper {
-      padding-top: 120px;
-      padding-bottom: 120px;
-    }
-    &--header {
-      p {
-        font-size: 2.4rem;
-        font-weight: 400;
-        line-height: 2;
-        margin-bottom: 0;
-        overflow: hidden;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background: linear-gradient(135deg, #f5f7fa 0%, $accent-light 100%);
+  min-height: calc(100vh - 300px);
+  @include mq(lg) {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
 
-        &:not(:first-of-type) {
-          margin-top: 20px;
+  .section__header {
+    margin: 0 auto 60px;
+    text-align: center;
+
+    @include mq(md) {
+      max-width: 800px;
+    }
+
+    h1,
+    h2 {
+      font-size: clamp($fs24, 4vw, $fs36);
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 32px;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, $accent 0%, $accent-dark 100%);
+      }
+    }
+
+    p {
+      font-size: clamp($fs14, 2vw, $fs16);
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: $accent;
+        text-decoration: underline;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $accent-dark;
         }
       }
     }
-    &--body {
-      .contact-form {
+  }
+
+  .section__body {
+    margin: 0 auto;
+    background: $white;
+    padding: 40px 24px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+
+    @include mq(md) {
+      max-width: 900px;
+    }
+
+    @include mq(lg) {
+      padding: 60px 80px;
+    }
+  }
+
+  // フォームテーブル
+  .contact-form__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #e0e0e0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    th,
+    td {
+      padding: 24px 0;
+      @include mq(lg) {
+        padding: 32px 0;
+      }
+    }
+
+    th {
+      width: 30%;
+      text-align: left;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+      vertical-align: top;
+      padding-right: 20px;
+      @include mq(lg) {
+        font-size: 1.6rem;
+      }
+
+      span {
+        display: inline-block;
+        margin-left: 8px;
+        padding: 2px 8px;
+        background: #e74c3c;
+        color: $white;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+    }
+
+    td {
+      width: 70%;
+
+      label {
+        display: block;
         width: 100%;
-        max-width: 720px;
-        margin: 40px auto;
+      }
+
+      input[type='text'],
+      input[type='email'],
+      input[type='tel'],
+      select {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 1.5rem;
+        border: 2px solid #e0e0e0;
+        background: $white;
+        color: #333;
+        transition: all 0.3s ease;
+        font-family: inherit;
+
+        &:focus {
+          outline: none;
+          border-color: $accent;
+          box-shadow: 0 0 0 3px rgba($accent, 0.1);
+        }
+
+        &:hover {
+          border-color: #ccc;
+        }
+      }
+
+      select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        background-size: 24px;
+        padding-right: 40px;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 1.5rem;
+        border: 2px solid #e0e0e0;
+        background: $white;
+        color: #333;
+        min-height: 150px;
+        resize: vertical;
+        transition: all 0.3s ease;
+        font-family: inherit;
+
+        &:focus {
+          outline: none;
+          border-color: $accent;
+          box-shadow: 0 0 0 3px rgba($accent, 0.1);
+        }
+
+        &:hover {
+          border-color: #ccc;
+        }
+      }
+
+      // チェックボックスグループ
+      .flex {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        &__name {
-          flex: 0 0 40%;
-          max-width: 40%;
-          color: #333;
-          font-size: 1.6rem;
-          font-weight: bold;
-          text-align: left;
-          vertical-align: middle;
-          padding: 16px;
+        gap: 12px;
+
+        label {
+          display: inline-flex;
+          align-items: center;
+          cursor: pointer;
+          padding: 8px 16px;
+          background: #f5f5f5;
+          transition: all 0.3s ease;
+          width: auto;
+
+          &:hover {
+            background: #e8e8e8;
+          }
+
+          input[type='checkbox'] {
+            width: auto;
+            margin-right: 8px;
+            cursor: pointer;
+            accent-color: $accent;
+          }
+
           span {
-            display: inline-block;
-            color: var(--red);
             font-size: 1.4rem;
-            font-weight: 600;
-            margin-left: 8px;
-            &::before {
-              content: "*";
-              padding-right: 4px;
-            }
+            color: #333;
+            user-select: none;
           }
-        }
-        &__form {
-          flex: 0 0 60%;
-          max-width: 60%;
-          position: relative;
-          padding: 16px;
-          input {
-            width: 100%;
-            border: 1px solid #1f1f1f;
-            border-radius: 4px;
-            background-color: #fff;
-            color: #1f1f1f;
-            font: 16px/24px sans-serif;
-            letter-spacing: 1px;
-            text-indent: 4px;
-            padding: 12px 8px;
-          }
-          textarea {
-            width: 100%;
-            border: 1px solid #1f1f1f;
-            color: #1f1f1f;
-            font: 16px/24px sans-serif;
-            letter-spacing: 1px;
-            text-indent: 4px;
-            padding: 12px 8px;
-          }
-        }
-        &__text {
-          text-align: center;
-          margin-bottom: 20px;
-          font-size: 1.6rem;
-          font-weight: 400;
-          a {
-            display: inline-block;
-            text-decoration: underline;
-          }
-        }
-        &__privacy {
-          text-align: center;
-          margin-bottom: 40px;
-          font-size: 1.6rem;
-          font-weight: 400;
         }
       }
     }
   }
-  // Button
+
+  // フォームテキスト
+  .contact-form__text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+
+    a {
+      color: $accent;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $accent-dark;
+      }
+    }
+  }
+
+  // プライバシーポリシー同意
+  .contact-form__privacy {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+
+    span {
+      display: inline-block;
+
+      label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 8px 16px;
+        background: #f9f9f9;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #f0f0f0;
+        }
+
+        input[type='checkbox'] {
+          margin-right: 8px;
+          cursor: pointer;
+          accent-color: $accent;
+        }
+
+        span {
+          color: #333;
+          user-select: none;
+        }
+      }
+    }
+  }
+
+  // 送信ボタン
   &__btn {
-    margin-right: auto;
-    margin-left: auto;
+    margin: 40px auto 0;
+
+    @include mq(md) {
+      max-width: 400px;
+    }
+
+    input[type='submit'] {
+      width: 100%;
+      padding: 16px 32px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: $white;
+      background: linear-gradient(135deg, $accent 0%, $accent-dark 100%);
+      border: none;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 16px rgba($accent, 0.3);
+      font-family: inherit;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba($accent, 0.4);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 16px rgba($accent, 0.3);
+      }
+    }
+  }
+}
+
+// モバイルファーストのレスポンシブ
+// ベース（モバイル）スタイル
+.p-contact {
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  @include mq(sm) {
+    padding-top: 60px;
+    padding-bottom: 80px;
   }
 
-  @media screen and (max-width: 991px) {
-    &__main {
-      &--header {
-        p {
-          font-size: 2.0rem;
+  @include mq(md) {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  .section__header {
+    margin-bottom: 40px;
+
+    @include mq(md) {
+      margin-bottom: 60px;
+    }
+
+    h1,
+    h2 {
+      margin-bottom: 24px;
+
+      @include mq(md) {
+        margin-bottom: 32px;
+      }
+
+      &::after {
+        width: 60px;
+        height: 3px;
+        bottom: -8px;
+
+        @include mq(md) {
+          width: 80px;
+          height: 4px;
+          bottom: -12px;
         }
       }
     }
   }
 
-  @media screen and (max-width: 767px) {
-    &__main {
-      &--header {
-        p {
-          font-size: 1.8rem;
-        }
-      }
-      &--body {
-        .contact-form {
-          display: block;
-          max-width: 100%;
-          tr {
-            display: block;
-            max-width: 100%;
-          }
-          th {
-            display: block;
-            max-width: 100%;
-          }
-          td {
-            display: block;
-            max-width: 100%;
-          }
-        }
-      }
+  .section__body {
+    padding: 24px 16px;
+
+    @include mq(sm) {
+      padding: 28px 18px;
+    }
+
+    @include mq(lg) {
+      padding: 32px 20px;
     }
   }
 
-  @media screen and (max-width: 575px) {
-    &__main {
-      &--header {
-        p {
-          font-size: 1.6rem;
-        }
+  .contact-form__table {
+    th,
+    td {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+    }
+
+    th {
+      padding-bottom: 8px;
+      padding-right: 0;
+
+      @include mq(lg) {
+        display: table-cell;
+        width: 30%;
+        padding: 20px 24px 20px 0;
+      }
+    }
+
+    td {
+      padding-top: 8px;
+      padding-bottom: 24px;
+
+      @include mq(lg) {
+        display: table-cell;
+        width: 70%;
+        padding: 20px 0;
+      }
+    }
+
+    tr {
+      display: block;
+      padding: 16px 0;
+
+      @include mq(lg) {
+        display: table-row;
+        padding: 0;
       }
     }
   }

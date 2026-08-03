@@ -1,0 +1,86 @@
+@use '../foundation/variable' as *;
+@use '../foundation/mixin' as *;
+
+/* ----- Section ----- */
+.l-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include mq(sm) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include mq(md) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @include mq(lg) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.section__header {
+  position: relative;
+  margin-bottom: 28px;
+  @include mq(sm) {
+    margin-bottom: 32px;
+  }
+  @include mq(md) {
+    margin-bottom: 36px;
+  }
+  @include mq(lg) {
+    margin-bottom: 40px;
+  }
+  &--title {
+    position: relative;
+    margin: 0;
+    font-weight: 700;
+  }
+}
+
+.section__body {
+  position: relative;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  @include mq(sm) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  @include mq(md) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  @include mq(lg) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.section__lead {
+  h3 {
+    font-size: clamp($fs24, 4vw, $fs32);
+    line-height: 2;
+    margin-bottom: 28px;
+    overflow: hidden;
+    @include mq(sm) {
+      margin-bottom: 32px;
+    }
+    @include mq(md) {
+      margin-bottom: 36px;
+    }
+    @include mq(lg) {
+      margin-bottom: 40px;
+    }
+  }
+  p {
+    font-size: clamp($fs16, 2.4vw, $fs24);
+    font-weight: 400;
+    line-height: 2;
+    text-align: center;
+    overflow: hidden;
+    &:not(:first-of-type) {
+      margin-top: 20px;
+    }
+  }
+}

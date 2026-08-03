@@ -1,32 +1,37 @@
-.c-btn__primary {
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+/* ---------- Button ---------- */
+.c-btn {
   position: relative;
   width: 100%;
-  max-width: 320px;
-  transition: all 0.5s ease-in-out;
   cursor: pointer;
-
-  &--wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    padding: 24px 12px;
-    background-color: #1f1f1f;
-    color: #fff;
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  &:hover {
+    opacity: 0.8;
   }
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
 
+.c-btn__primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 320px;
+  padding: 24px 12px;
+  background-color: $black;
+  color: $white;
+  transition: $transition-2;
   &--text {
     z-index: 3;
     position: relative;
-    font-size: 1.8rem;
+    font-size: clamp($fs16, 2.5vw, $fs18);
     font-weight: 400;
     text-align: center;
   }
-
   &--arrow {
     z-index: 3;
     position: absolute;
@@ -36,10 +41,6 @@
     transform: translateY(-50%);
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-    font-size: 1.8rem;
-  }
-
-  &:hover {
-    opacity: 0.8;
+    font-size: clamp($fs16, 2.5vw, $fs18);
   }
 }

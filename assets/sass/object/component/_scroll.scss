@@ -1,3 +1,6 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
 .scrolldown {
   position: absolute;
   bottom: 50px;
@@ -10,7 +13,7 @@
   position: relative;
   text-decoration: none;
   svg {
-    fill: #111;
+    fill: $accent-yellow;
   }
 
   .scroll-text {
@@ -61,18 +64,29 @@
   }
 }
 
-@media screen and (max-width: 991px) {
-  .scrolldown {
+// モバイルファースト
+.scrolldown {
+  display: none;
+
+  @include mq(md) {
+    display: block;
     left: 8rem;
   }
-  .scrolldown-box {
-    svg {
-      fill: #fff;
-    }
-  } 
+
+  @include mq(lg) {
+    left: 12rem;
+  }
 }
-@media screen and (max-width: 767px) {
-  .scrolldown {
-    display: none;
+
+.scrolldown-box {
+  .scroll-text {
+    @include mq(md) {
+      fill: $black;
+    }
+  }
+  .scroll-icon {
+    @include mq(md) {
+      fill: $accent;
+    }
   }
 }

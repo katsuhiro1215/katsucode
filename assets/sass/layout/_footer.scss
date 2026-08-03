@@ -1,125 +1,343 @@
+@use '../foundation/variable' as *;
+@use '../foundation/mixin' as *;
+
 .l-footer {
   width: 100%;
   position: relative;
+  background-color: #333;
+
   &__wrapper {
-    padding-top: 80px;
-    background-color: #333;
+    display: flex;
+    flex-direction: column;
   }
 
-  &__main {
-    padding-bottom: 40px;
+  // メニューエリア
+  &__menu {
+    padding: 60px 0 40px;
+    border-bottom: 1px solid rgba($white, 0.1);
+
+    @include mq(lg) {
+      padding: 80px 0 60px;
+    }
+  }
+
+  &__menu-column {
+    margin-bottom: 32px;
+
+    @include mq(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__menu-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid $accent;
+    letter-spacing: 0.05em;
+
+    @include mq(lg) {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-size: 1.4rem;
+      color: rgba($white, 0.85);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+      padding-left: 12px;
+
+      &::before {
+        content: '›';
+        position: absolute;
+        left: 0;
+        color: $accent;
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        color: $white;
+        padding-left: 16px;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  // サブメニューエリア（関連サイト）
+  &__sub-menu {
+    padding: 40px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba($white, 0.1);
+
+    @include mq(lg) {
+      padding: 50px 0;
+    }
+  }
+
+  &__sub-card {
+    background: rgba($white, 0.05);
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba($white, 0.1);
+
+    @include mq(md) {
+      margin-bottom: 0;
+      padding: 28px;
+    }
+
+    &:hover {
+      background: rgba($white, 0.08);
+      border-color: rgba($accent, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__sub-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+
+    @include mq(lg) {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__sub-description {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: rgba($white, 0.8);
+    margin-bottom: 20px;
+    flex-grow: 1;
+
+    @include mq(lg) {
+      font-size: 1.4rem;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__sub-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: $accent;
+    color: $white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+
+    @include mq(lg) {
+      padding: 14px 28px;
+      font-size: 1.5rem;
+    }
+
+    i {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background-color: darken($accent, 8%);
+      box-shadow: 0 4px 12px rgba($accent, 0.4);
+
+      i {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  // 会社情報エリア
+  &__info {
+    padding: 40px 0;
+
+    @include mq(lg) {
+      padding: 60px 0;
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   &__logo {
-    padding-bottom: 40px;
-    img {
-      width: 60px;
+    margin-bottom: 32px;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
     }
+
+    img {
+      width: 50px;
+
+      @include mq(lg) {
+        width: 60px;
+      }
+    }
+
     span {
       padding-left: 15px;
-      font-size: 2.8rem;
-      font-family: "Roboto", sans-serif;
+      font-size: 2.4rem;
+      font-family: 'Roboto', sans-serif;
       font-weight: 400;
-      color: #fff;
+      color: $white;
+
+      @include mq(lg) {
+        font-size: 2.8rem;
+      }
     }
   }
 
   &__address {
-    padding-right: 40px;
-    dt {
-      font-size: 1.6rem;
-      font-weight: 400;
-      line-height: 3;
-      color: #fff;
-      border-bottom: 6px double #fff;
+    margin-bottom: 32px;
+
+    @include mq(md) {
+      max-width: 800px;
     }
+
+    dl {
+      margin: 0;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+
+      @include mq(md) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    dt {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $accent;
+      margin-bottom: 4px;
+
+      @include mq(md) {
+        margin-bottom: 0;
+        min-width: 100px;
+        text-align: right;
+      }
+
+      @include mq(lg) {
+        font-size: 1.5rem;
+      }
+    }
+
     dd {
-      padding: 16px 0;
-      font-size: 1.6rem;
+      margin: 0;
+      font-size: 1.4rem;
       font-weight: 400;
-      line-height: 1.5;
-      color: #fff;
+      line-height: 1.6;
+      color: rgba($white, 0.9);
+
+      @include mq(lg) {
+        font-size: 1.5rem;
+      }
     }
   }
 
   &__sns-list {
-    display: inline-block;
-    height: 60px;
-    padding: 15px 0;
-    letter-spacing: -.40em;
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+
+    @include mq(lg) {
+      gap: 32px;
+    }
   }
-  
+
   &__sns-item {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 25px;
     font-size: 2.4rem;
-    line-height: 30px;
-    letter-spacing: 0.05em;
+    line-height: 1;
+
+    @include mq(lg) {
+      font-size: 2.8rem;
+    }
   }
-  
+
   &__sns-link {
-    .icon {
-      display: inline-block;
-      animation: float 5s ease-in-out infinite;
-      &.facebook {
-        color: var(--facebook-color);
-      }
-      &.twitter {
-        color: var(--twitter-color);
-        animation-delay: 1s;
-      }
-      &.instagram {
-        color: var(--instagram-color);
-        animation-delay: 2s;
-      }
-      &.line {
-        color: var(--line-color);
-        animation-delay: 3s;
+    display: block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    img {
+      width: 24px;
+      @include mq(lg) {
+        width: 28px;
       }
     }
   }
 
+  // コピーライト
   &__copyright {
-    padding: 16px 0;
+    padding: 24px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+
     p {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-weight: 400;
+      color: rgba($white, 0.7);
       text-align: center;
-    }
-  }
+      margin: 0;
 
-  @media screen and (max-width: 991px) {
-    &__logo {
-      img {
-        width: 50px;
-      }
-      span {
-        font-size: 2.4rem;
+      @include mq(lg) {
+        font-size: 1.4rem;
       }
     }
-    &__address {
-      padding-right: 0;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-  }
-
-  @media screen and (max-width: 575px) {
-    
-  }
-
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0)
-  }
-  50% {
-    transform: translateY(-15px)
-  }
-  100% {
-    transform: translateY(0)
   }
 }
+
+// 削除: floatアニメーションは使わない方向で

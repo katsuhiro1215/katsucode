@@ -1,5 +1,82 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
 /* ---------- Flow Page ---------- */
 .p-flow {
+  // Tab Navigation
+  .tab {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #e5e5e5;
+    flex-wrap: wrap;
+
+    @include mq(md) {
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .tablinks {
+    padding: 12px 24px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.3s ease;
+    position: relative;
+    bottom: -2px;
+
+    @include mq(md) {
+      padding: 16px 32px;
+      font-size: 1.6rem;
+    }
+
+    @include mq(lg) {
+      font-size: 1.7rem;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &.active {
+      color: $accent;
+      border-bottom-color: $accent;
+      font-weight: 600;
+    }
+  }
+
+  // Section Body
+  .section__body {
+    .tab-content {
+      &:first-of-type {
+        display: block;
+      }
+
+      h4 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 32px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid $accent;
+        color: $dark;
+
+        @include mq(md) {
+          font-size: 2.2rem;
+          margin-bottom: 40px;
+        }
+
+        @include mq(lg) {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+
   // Main
   &__main {
     &--wrapper {
@@ -33,7 +110,7 @@
         font-size: 3.2rem;
         font-weight: 600;
         line-height: 2;
-        color: var(--orange);
+        color: $accent;
       }
       h3 {
         font-size: 2.4rem;
@@ -59,8 +136,8 @@
       width: 24px;
       height: 24px;
       margin-left: -12px;
-      border-left: 4px solid var(--yellow);
-      border-bottom: 4px solid var(--yellow);
+      border-left: 4px solid $yellow;
+      border-bottom: 4px solid $yellow;
       transform: rotate(-45deg);
       animation: arrow 2s infinite;
       opacity: 0;
@@ -79,48 +156,327 @@
     }
   }
 
-  @media screen and (max-width: 991px) {
-    &__main {
-      &--info {
-        .number {
-          font-size: 3.0rem;
-        }
-        h3 {
-          font-size: 2.2rem;
+  // モバイルファーストのレスポンシブ
+  &__main {
+    &--item {
+      display: block;
+
+      @include mq(md) {
+        display: flex;
+      }
+
+      figure {
+        margin-right: 0;
+        margin-bottom: 40px;
+
+        @include mq(md) {
+          margin-right: 40px;
+          margin-bottom: 0;
         }
       }
     }
-  }
 
-  @media screen and (max-width: 767px) {
-    &__main {
-      &--item {
-        display: block;
-        figure {
-          margin-right: 0;
-          margin-bottom: 40px;
-        }
-      }
-      &--info {
-        flex: 1;
-        .number {
+    &--info {
+      flex: 1;
+
+      .number {
+        font-size: 2.6rem;
+
+        @include mq(sm) {
           font-size: 2.8rem;
         }
-        h3 {
-          font-size: 2.0rem;
+
+        @include mq(lg) {
+          font-size: 3rem;
+        }
+
+        @include mq(xl) {
+          font-size: 3.6rem;
+        }
+      }
+
+      h3 {
+        font-size: 1.8rem;
+
+        @include mq(sm) {
+          font-size: 2rem;
+        }
+
+        @include mq(lg) {
+          font-size: 2.2rem;
+        }
+
+        @include mq(xl) {
+          font-size: 2.6rem;
+        }
+      }
+    }
+  }
+}
+
+/* ---------- Management System Section ---------- */
+.p-flow__system {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+
+  @include mq(md) {
+    padding: 80px 0;
+  }
+
+  @include mq(lg) {
+    padding: 100px 0;
+  }
+
+  &--intro {
+    margin-bottom: 40px;
+    padding: 24px;
+    background-color: $white;
+    border-left: 4px solid $accent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    @include mq(md) {
+      margin-bottom: 60px;
+      padding: 32px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+
+      @include mq(md) {
+        font-size: 1.6rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--features {
+    margin-bottom: 60px;
+
+    @include mq(md) {
+      margin-bottom: 80px;
+    }
+
+    h4 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid $accent;
+      color: $dark;
+
+      @include mq(md) {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+      }
+
+      @include mq(lg) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &--list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    @include mq(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    @include mq(lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+  }
+
+  &--item {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    background-color: $white;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    @include mq(md) {
+      padding: 28px;
+    }
+
+    @include mq(lg) {
+      padding: 32px;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 20px rgba(253, 126, 20, 0.15);
+    }
+  }
+
+  &--icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, $accent 0%, darken($accent, 10%) 100%);
+    border-radius: 50%;
+    color: $white;
+
+    @include mq(md) {
+      width: 56px;
+      height: 56px;
+    }
+
+    i {
+      font-size: 2rem;
+
+      @include mq(md) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &--content {
+    flex: 1;
+
+    h5 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: $dark;
+
+      @include mq(md) {
+        font-size: 1.7rem;
+        margin-bottom: 12px;
+      }
+
+      @include mq(lg) {
+        font-size: 1.8rem;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.7;
+      color: #666;
+
+      @include mq(md) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &--benefits {
+    margin-bottom: 40px;
+    padding: 28px;
+    background-color: $white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    @include mq(md) {
+      margin-bottom: 60px;
+      padding: 36px;
+    }
+
+    @include mq(lg) {
+      padding: 40px;
+    }
+
+    h4 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: $dark;
+
+      @include mq(md) {
+        font-size: 2.2rem;
+        margin-bottom: 32px;
+      }
+
+      @include mq(lg) {
+        font-size: 2.4rem;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        position: relative;
+        padding-left: 32px;
+        margin-bottom: 16px;
+        font-size: 1.5rem;
+        line-height: 1.8;
+
+        @include mq(md) {
+          font-size: 1.6rem;
+          margin-bottom: 20px;
+        }
+
+        &::before {
+          content: '\f00c';
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          position: absolute;
+          left: 0;
+          color: $accent;
+          font-size: 1.6rem;
+
+          @include mq(md) {
+            font-size: 1.8rem;
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
   }
 
-  @media screen and (max-width: 575px) {
-    &__main {
-      &--info {
-        .number {
-          font-size: 2.6rem;
-        }
-        h3 {
-          font-size: 1.8rem;
+  &--note {
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(253, 126, 20, 0.1) 0%, rgba(253, 126, 20, 0.05) 100%);
+    border-left: 4px solid $accent;
+
+    @include mq(md) {
+      padding: 24px;
+    }
+
+    @include mq(lg) {
+      padding: 28px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1.7;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+
+      @include mq(md) {
+        font-size: 1.5rem;
+        gap: 16px;
+      }
+
+      i {
+        color: $accent;
+        font-size: 1.8rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+
+        @include mq(md) {
+          font-size: 2rem;
         }
       }
     }

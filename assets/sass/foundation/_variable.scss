@@ -1,43 +1,129 @@
-:root {
-  // Color
-  --red: #dc3545;
-  --blue: #007bff;
-  --green: #28a745;
-  --pink: #e83e8c;
-  --cyan: #17a2b8;
-  --yellow: #ffc107;
-  --orange: #fd7e14;
-  --indigo: #6610f2;
-  --teal: #20c997;
-  --purple: #6f42c1;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #fbca5a;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f5f5f5;
-  --dark: #3e3b3f;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
 
-  // Break Point
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
+// Color
+$red: #dc3545;
+$blue: #007bff;
+$green: #28a745;
+$pink: #e83e8c;
+$cyan: #17a2b8;
+$yellow: #ffc107;
+$orange: #fd7e14;
+$indigo: #6610f2;
+$teal: #20c997;
+$purple: #6f42c1;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$primary: #fbca5a;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f5f5f5;
+$dark: #3e3b3f;
+$black: #383838;
 
-  // Font
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+// アクセントカラー
+$accent: #10B981;           // メインアクセント（対比・強調用）- 鮮やかな緑
+$accent-dark: #059669;      // アクセント（深い緑）
+$accent-light: #D1FAE5;     // アクセント（淡い緑）
+$accent-yellow: #FACC15;     // サブアクセント（ロゴとの調和用）- モダンな黄色
+$accent-yellow-dark: #BFA00A; // サブアクセント（深い黄色）
+
+$facebook-color: #3B5998;
+$twitter-x-color: #000000;
+$instagram-color: #E425AB;
+$youtube-color: #FF0000;
+$line-color: #08C656;
+
+// Nara LP カラー（親しみやすい薄緑・爽やかな印象）
+$nara-green: #7FB69B;        // メイン(優しい若草色)
+$nara-green-dark: #4F8C6E;   // ボタン・強調用の深緑
+$nara-green-light: #EAF6EE;  // 背景用の淡い緑
+$nara-tan: #C9A876;          // 鹿・自然のイメージに合わせた差し色(ベージュ)
+
+// Swim LP カラー（爽快感のあるブルー・波のイメージ）
+$swim-blue: #2E9BD6;         // メイン(プールの水色寄りブルー)
+$swim-blue-dark: #14507D;    // ボタン・強調用の深いブルー
+$swim-blue-light: #E6F5FB;   // 背景用の淡いブルー
+$swim-aqua: #6FD6E8;         // 波のハイライト用アクア
+
+// Font
+$main-font: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'MS Pゴシック', 'MS PGothic', sans-serif;
+$sub-font: -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  // SNS Color
-  --facebook-color: rgb(59, 89, 152);
-  --twitter-color: rgb(29, 161, 242);
-  --instagram-color: rgb(228, 39, 171);
-  --youtube-color: rgb(255, 0, 0);
-  --line-color: rgb(8, 198, 86);
-}
+// Font Size
+$fs10: 1.0rem;
+$fs11: 1.1rem;
+$fs12: 1.2rem;
+$fs13: 1.3rem;
+$fs14: 1.4rem;
+$fs15: 1.5rem;
+$fs16: 1.6rem;
+$fs18: 1.8rem;
+$fs20: 2.0rem;
+$fs22: 2.2rem;
+$fs24: 2.4rem;
+$fs26: 2.6rem;
+$fs28: 2.8rem;
+$fs30: 3.0rem;
+$fs32: 3.2rem;
+$fs34: 3.4rem;
+$fs36: 3.6rem;
+$fs40: 4.0rem;
+
+// Font Weight
+$fw100: 100;
+$fw200: 200;
+$fw300: 300;
+$fw400: 400;
+$fw500: 500;
+$fw600: 600;
+$fw700: 700;
+$fw800: 800;
+$fw900: 900;
+
+// gap {
+$gap0: 0;
+$gap1: 0.4rem;
+$gap2: 0.8rem;
+$gap4: 1.6rem;
+$gap5: 2.0rem;
+$gap6: 2.4rem;
+$gap8: 3.2rem;
+$gap10: 4.0rem;
+
+// Transition
+$transition-1: all 0.3s;
+$transition-2: all 0.5s;
+$transition-3: all 0.7s;
+$easing: cubic-bezier(.2, 1, .2, 1);
+
+// Z-index
+$z-cursor: 9999;
+$z-loader: 1000;
+$z-hamburger: 900;
+$z-global-nav: 800;
+$z-circle-bg: 700;
+$z-header-logo: 650;
+$z-header: 600;
+$z-page-to-top: 500;
+$z-cta-nav: 400;
+$z-ticker: 300;
+$z-catch: 200;
+$z-overlay: 100;
+
+// Box shadow
+// $box-shadow: .8rem .8rem 1.2rem rgba(0, 0, 0, .1), -.8rem -.8rem 1.2rem #fff;
+$box-shadow: .8rem .8rem 1.2rem rgba(0, 0, 0, .2), -.8rem -.8rem 1.2rem #fff;
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

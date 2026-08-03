@@ -1,41 +1,96 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
 /* ---------- Page - Key Visual ---------- */
 .p-page {
   &__visual {
     margin-top: -60px;
-    padding-left: 405px;
+    padding-left: 0;
+    height: 400px;
     position: relative;
     z-index: 1;
-    &-image {
-      height: calc(100vh - 240px);
-      position: relative;
-      background-color: #888;
-      img {
-        width: 100%;
-        height: calc(100vh - 240px);
-        object-fit: cover;
-        z-index: 10;
-      }
+    @include mq(md) {
+      height: 480px;
+    }
+    @include mq(lg) {
+      padding-left: 405px;
+      height: 560px;
     }
   }
-
+  &__thumbnail {
+    height: 100%;
+    position: relative;
+    background-color: #888;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   &__title {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 40%;
-    height: calc(50vh - 120px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
     z-index: 20;
-  }
-
-  &__intro {
-    &--wrapper {
-      padding-top: 120px;
-      padding-bottom: 120px;
+    background-color: $accent;
+    margin-bottom: 0;
+    color: $white;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include mq(sm) {
+      width: 80%;
+      padding: 36px 32px;
     }
-    &--body {
+    @include mq(md) {
+      width: 70%;
+      padding: 40px 40px;
+    }
+    @include mq(lg) {
+      left: 0;
+      transform: none;
+      width: 45%;
+      max-width: none;
+      height: 240px;
+      padding: 48px 40px;
+      text-align: left;
+      align-items: flex-start;
+    }
+    @include mq(xl) {
+      width: 40%;
+    }
+  }
+  &__title-ja {
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  &__title-en {
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+    text-transform: uppercase;
+  }
+  &__intro {
+    .section__header,
+    .section__body {
+      h3 {
+        font-size: clamp($fs24, 4vw, $fs40);
+        font-weight: $fw700;
+        line-height: 1.4;
+      }
       p {
-        font-size: 2.4rem;
-        font-weight: 400;
+        font-size: clamp($fs14, 3vw, $fs18);
+        font-weight: $fw700;
         line-height: 2;
         margin-bottom: 0;
         overflow: hidden;
@@ -43,47 +98,14 @@
           margin-top: 40px;
         }
       }
-    }
-  }
-
-  @media screen and (max-width: 1199px) {
-    &__title {
-      width: 50%;
-    }
-  }
-
-  @media screen and (max-width: 991px) {
-    &__visual {
-      padding-left: 0;
-    }
-    &__title {
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60%;
-    }
-    &__intro {
-      &--body {
-        p {
-          font-size: 2rem;
+      img {
+        width: 100%;
+        height: 400px;
+        @include mq(sm) {
+          height: 480px;
         }
-      }
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    &__title {
-      width: 70%;
-    }
-  }
-
-  @media screen and (max-width: 575px) {
-    &__title {
-      width: 80%;
-    }
-    &__intro {
-      &--body {
-        p {
-          font-size: 1.6rem;
+        @include mq(lg) {
+          height: 560px;
         }
       }
     }
@@ -106,14 +128,5 @@
       object-fit: cover;
       z-index: 10;
     }
-  }
-
-  @media screen and (max-width: 991px) {
-  }
-
-  @media screen and (max-width: 767px) {
-  }
-
-  @media screen and (max-width: 575px) {
   }
 }

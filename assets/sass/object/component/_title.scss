@@ -1,21 +1,8 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
 /* ---------- Index Title ---------- */
 .c-title {
-  &__primary {
-    margin: 0;
-    font-weight: 600;
-    &-en {
-      font-size: 2.4rem;
-      color: var(--yellow);
-    }
-    &-ja {
-      z-index: 2;
-      position: relative;
-      margin-top: 6px;
-      font-size: 3.2rem;
-      line-height: 1.4;
-    }
-  }
-
   &__secondary {
     margin: 0;
     font-weight: 600;
@@ -29,7 +16,7 @@
   }
 
   &__contact-primary {
-    color: var(--orange);
+    color: $accent;
     font-size: 3.2rem;
     font-weight: 600;
   }
@@ -40,11 +27,11 @@
     border-top: 6px double #333;
     border-bottom: 6px double #333;
   }
-  
+
   &__page-primary {
     z-index: 20;
     line-height: 2;
-    background-color: var(--yellow);
+    background-color: $yellow;
     opacity: 0.8;
     &--wrapper {
       display: inline-block;
@@ -63,7 +50,7 @@
           display: block;
           font-size: 1.6rem;
           background-color: #fff;
-          color: var(--yellow);
+          color: $yellow;
           padding: 1rem 2rem;
         }
       }
@@ -72,8 +59,8 @@
 
   &__page-secondary {
     text-align: center;
-    border-top: 2px double var(--yellow);
-    border-bottom: 2px double var(--yellow);
+    border-top: 2px double $yellow;
+    border-bottom: 2px double $yellow;
     padding: 20px 0;
     &--logo {
       img {
@@ -93,9 +80,9 @@
 
   &__category {
     span {
-      color: var(--orange);
+      color: $accent;
       margin-right: 16px;
-      font-size: 4.0rem;
+      font-size: 4rem;
     }
     font-size: 3.2rem;
     font-weight: 400;
@@ -106,7 +93,7 @@
   &__nara {
     z-index: 1000;
     line-height: 2;
-    background-color: var(--yellow);
+    background-color: $yellow;
     opacity: 0.8;
     &--wrapper {
       display: inline-block;
@@ -118,7 +105,7 @@
       &-ja {
         font-size: 4rem;
         font-weight: bold;
-        color: #fff;
+        color: $white;
       }
       &-en {
         span {
@@ -126,77 +113,129 @@
           font-weight: 400;
           font-style: normal;
           font-size: 12rem;
-          background-color: #fff;
-          color: var(--yellow);
+          background-color: $white;
+          color: $yellow;
           padding: 1rem 2rem;
         }
       }
     }
   }
 
-  @media screen and (max-width: 991px) {
-    &__primary {
-      &-en {
-        font-size: 2.0rem;
+  // モバイルファーストの調整
+  &__primary {
+    &-en {
+      font-size: 2rem;
+
+      @include mq(lg) {
+        font-size: 2.4rem;
       }
-      &-ja {
+
+      @include mq(xl) {
         font-size: 2.8rem;
       }
     }
-  
-    &__secondary {
-      &-ja {
-        font-size: 2.2rem;
-      }
-    }
-  
-    &__contact-primary {
+    &-ja {
       font-size: 2.8rem;
-    }
-    
-    &__page-primary {
-      &--wrapper {
-        &-ja {
-          font-size: 2.8em;
-        }
+
+      @include mq(lg) {
+        font-size: 3.2rem;
       }
-    }
-  
-    &__page-secondary {
-      &-ja {
-        font-size: 2.2rem;
-      }
-    }
-  
-    &__category {
-      span {
+
+      @include mq(xl) {
         font-size: 3.6rem;
       }
-      font-size: 2.8rem;
     }
-  
-    &__nara {
-      &--wrapper {
-        &-ja {
-          font-size: 4rem;
+  }
+
+  &__secondary {
+    &-ja {
+      font-size: 2.2rem;
+
+      @include mq(lg) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &__contact-primary {
+    font-size: 2.8rem;
+
+    @include mq(lg) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__page-primary {
+    &--wrapper {
+      &-ja {
+        font-size: 2.8em;
+
+        @include mq(lg) {
+          font-size: 3.2em;
         }
-        &-en {
-          span {
-            font-size: 12rem;
-            padding: 1rem 2rem;
+      }
+    }
+  }
+
+  &__page-secondary {
+    &-ja {
+      font-size: 2.2rem;
+
+      @include mq(lg) {
+        font-size: 2.4rem;
+      }
+
+      @include mq(xl) {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  &__category {
+    font-size: 2.8rem;
+
+    @include mq(lg) {
+      font-size: 3.2rem;
+    }
+
+    span {
+      font-size: 3.6rem;
+
+      @include mq(lg) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__nara {
+    &--wrapper {
+      &-ja {
+        font-size: 4rem;
+
+        @include mq(lg) {
+          font-size: 5rem;
+        }
+
+        @include mq(xl) {
+          font-size: 6rem;
+        }
+      }
+      &-en {
+        span {
+          font-size: 12rem;
+          padding: 1rem 2rem;
+
+          @include mq(lg) {
+            font-size: 14rem;
+            padding: 1.5rem 2.5rem;
+          }
+
+          @include mq(xl) {
+            font-size: 16rem;
+            padding: 2rem 3rem;
           }
         }
       }
     }
   }
-
-  @media screen and (max-width: 767px) {
-
-  }
-
-  @media screen and (max-width: 575px) {
-
-  }
 }
-
-
