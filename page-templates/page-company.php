@@ -27,7 +27,7 @@ get_header();
         <div class="p-about__concept--item">
           <span class="p-about__concept--number" aria-hidden="true">01</span>
           <figure>
-            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_1', get_template_directory_uri() . '/assets/img/about/step1.jpg')); ?>" alt="" />
+            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_1', get_template_directory_uri() . '/assets/img/company/company1.png')); ?>" alt="" />
           </figure>
           <div class="p-about__concept--info">
             <h3>まずは気軽にご相談を</h3>
@@ -42,7 +42,7 @@ get_header();
         <div class="p-about__concept--item">
           <span class="p-about__concept--number" aria-hidden="true">02</span>
           <figure>
-            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_2', get_template_directory_uri() . '/assets/img/about/step2.jpg')); ?>" alt="" />
+            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_2', get_template_directory_uri() . '/assets/img/company/company2.jpg')); ?>" alt="" />
           </figure>
           <div class="p-about__concept--info">
             <h3>必要な分だけ、柔軟に</h3>
@@ -57,7 +57,7 @@ get_header();
         <div class="p-about__concept--item">
           <span class="p-about__concept--number" aria-hidden="true">03</span>
           <figure>
-            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_3', get_template_directory_uri() . '/assets/img/about/step3.jpg')); ?>" alt="" />
+            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_3', get_template_directory_uri() . '/assets/img/company/company3.jpg')); ?>" alt="" />
           </figure>
           <div class="p-about__concept--info">
             <h3>幅広い技術で、ワンストップに</h3>

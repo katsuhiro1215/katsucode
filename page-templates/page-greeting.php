@@ -34,7 +34,7 @@ get_header();
     <div class="section__body">
       <div class="p-greeting__profile-wrapper">
         <div class="p-greeting__profile-image">
-          <img src="<?php echo esc_url(katsucode_page_image('greeting_profile_image', get_template_directory_uri() . '/assets/img/profile/sample01.jpg')); ?>" alt="代表 栫 勝宏">
+          <img src="<?php echo esc_url(katsucode_page_image('greeting_profile_image', get_template_directory_uri() . '/assets/img/profile/profile2.png')); ?>" alt="代表 栫 勝宏">
         </div>
         <div class="p-greeting__profile-content">
           <p class="p-greeting__profile-name">

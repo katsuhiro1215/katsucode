@@ -53,7 +53,7 @@
           <!-- Web制作 -->
           <div class="p-index__service--item is-active" data-content="1">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/webdesign.jpg" alt="" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service/webdesign.png" alt="" />
             </figure>
             <div class="p-index__service--item-contents">
               <h4 class="p-index__service--item-title">
@@ -68,7 +68,7 @@
           <!-- LP制作 -->
           <div class="p-index__service--item" data-content="2">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/webdesign.jpg" alt="" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service/lp.png" alt="" />
             </figure>
             <div class="p-index__service--item-contents">
               <h4 class="p-index__service--item-title">
@@ -83,7 +83,7 @@
           <!-- ECサイト制作 -->
           <div class="p-index__service--item" data-content="3">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/webdesign.jpg" alt="" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service/ec.png" alt="" />
             </figure>
             <div class="p-index__service--item-contents">
               <h4 class="p-index__service--item-title">
@@ -102,7 +102,7 @@
           <!-- システム開発 -->
           <div class="p-index__service--item" data-content="4">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/webdesign.jpg" alt="" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service/system.jpg" alt="" />
             </figure>
             <div class="p-index__service--item-contents">
               <h4 class="p-index__service--item-title">
@@ -122,7 +122,7 @@
           <!-- アプリ開発 -->
           <div class="p-index__service--item" data-content="5">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/webdesign.jpg" alt="" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service/app.png" alt="" />
             </figure>
             <div class="p-index__service--item-contents">
               <h4 class="p-index__service--item-title">
@@ -143,7 +143,7 @@
           <!-- SaaS開発 -->
           <div class="p-index__service--item" data-content="6">
             <figure>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/webdesign.jpg" alt="" />
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/service/saas.png" alt="" />
             </figure>
             <div class="p-index__service--item-contents">
               <h4 class="p-index__service--item-title">
