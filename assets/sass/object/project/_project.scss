@@ -28,6 +28,17 @@
   }
   &--group-item {
     height: 100%;
+    // PCのみ: 奇数を少し上に、偶数を少し下にずらしてリズムを出す（SPはそのまま）
+    @include mq(lg) {
+      &:nth-child(odd) {
+        position: relative;
+        top: -20px;
+      }
+      &:nth-child(even) {
+        position: relative;
+        top: 20px;
+      }
+    }
   }
   &--empty {
     margin-top: 60px;
