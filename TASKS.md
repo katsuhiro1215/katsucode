@@ -59,18 +59,20 @@
 
 ---
 
-## ④ 実績カード（Project）のデザイン統一・フロント特集カード化（ソース完了・CSS未コミット）
+## ④ 実績カード（Project）のデザイン統一（ソース完了・CSS未コミット）
 
 Front-pageの実績カードが縦書き・画像オーバーレイで読みにくいという指摘を受け、archive-project.phpの
-横書きカードに統一。tane-be.co.jp を参考に、フロントページ1件目のみ右側がビューポート端まで
-はみ出す「特集カード」にする案を採用。
+横書きカードに統一。当初はtane-be.co.jpを参考に1件目のみ右はみ出しの「特集カード」にしたが、
+実際の写真で確認したところ画像が不自然に引き伸ばされ2枚目以降と一貫性がなかったため撤回。
+最終的に**全カードを完全に同じ見た目**で統一した。
 
 - [x] `template-parts/loop/project-card.php` を新規作成（archive・フロント共通の実績カードマークアップ）
 - [x] `template-parts/loop/project.php`（archive用ラッパー）を上記partialを呼び出す形にリファクタリング。`data-categories` によるタブ絞り込みは維持
-- [x] `template-parts/front-page/project.php` を書き換え。1件目は `.p-index__project--featured` + `c-card__project--featured` 修飾、2・3件目は通常グリッド
-- [x] `assets/sass/object/component/_card.scss` に `.c-card__project`（共通カード）を追加。`--featured` 修飾で特集レイアウト（lg以上で画像/本文2カラム）
+- [x] `template-parts/front-page/project.php` を書き換え。全件 `.p-index__project--group` の統一グリッド（sm:1列/md:2列/lg:3列）で表示
+- [x] `assets/sass/object/component/_card.scss` に `.c-card__project`（共通カード）を追加
 - [x] `assets/sass/object/project/_project.scss` から旧 `.p-index__project--item`（clip-path・縦書き）と `.p-project__card`（archiveの旧カードスタイル、`.c-card__project`と重複）を削除
-- [x] ブラウザ（Playwright）でフロント特集カード・archiveグリッド・タブ絞り込み・モバイル1カラム・横スクロール未発生を確認
+- [x] 特集カード案（`--featured`修飾・右はみ出し）を撤回し、関連コードを削除
+- [x] ブラウザ（Playwright）でフロントグリッド・archiveグリッド・タブ絞り込み・モバイル1カラム・横スクロール未発生を確認
 - [x] ソース（SCSS/PHP）のみ1コミット（`29a9c7a`）
 - [ ] **コンパイル済みCSS（`assets/css/style.*.css` 等）は他の作業中の変更と混在するため未コミット。別途ユーザー側でSassを再コンパイルしてコミットするか、Claude Codeに依頼してください。**
 
