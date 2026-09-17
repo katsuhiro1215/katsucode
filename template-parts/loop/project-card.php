@@ -10,9 +10,8 @@ if (!defined('ABSPATH')) exit;
 
 $project_categories = get_the_terms(get_the_ID(), 'project-cat');
 $project_tags = get_the_terms(get_the_ID(), 'project_tag');
-$is_featured = !empty($args['featured']);
 ?>
-<a href="<?php the_permalink(); ?>" class="c-card__project<?php echo $is_featured ? ' c-card__project--featured' : ''; ?>">
+<a href="<?php the_permalink(); ?>" class="c-card__project">
   <div class="c-card__project--image">
     <?php if (has_post_thumbnail()) : ?>
       <?php the_post_thumbnail('large'); ?>

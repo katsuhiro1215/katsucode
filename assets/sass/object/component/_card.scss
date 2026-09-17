@@ -266,45 +266,4 @@
       }
     }
   }
-
-  // フロントページ1件目: 特集カード（右はみ出しと組み合わせて使用）
-  &--featured {
-    @include mq(lg) {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      align-items: stretch;
-    }
-
-    .c-card__project--image {
-      padding-top: 66.67%;
-      @include mq(lg) {
-        padding-top: 0;
-        height: 100%;
-      }
-    }
-
-    .c-card__project--body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      @include mq(lg) {
-        padding: 40px 48px;
-      }
-    }
-
-    .c-card__project--title {
-      font-size: 2rem;
-      @include mq(lg) {
-        font-size: 2.6rem;
-        margin-bottom: 20px;
-      }
-    }
-
-    .c-card__project--description {
-      @include mq(lg) {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-      }
-    }
-  }
 }

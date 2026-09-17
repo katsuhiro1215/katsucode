@@ -30,21 +30,13 @@
 
       <?php if ($front_projects->have_posts()) : ?>
 
-        <?php // 1件目: 右側が画面幅いっぱいにはみ出る特集カード ?>
-        <?php $front_projects->the_post(); ?>
-        <div class="p-index__project--featured">
-          <?php get_template_part('template-parts/loop/project-card', null, array('featured' => true)); ?>
+        <div class="p-index__project--group">
+          <?php while ($front_projects->have_posts()) : $front_projects->the_post(); ?>
+            <div class="p-index__project--group-item">
+              <?php get_template_part('template-parts/loop/project-card'); ?>
+            </div>
+          <?php endwhile; ?>
         </div>
-
-        <?php if ($front_projects->post_count > 1) : ?>
-          <div class="p-index__project--group">
-            <?php while ($front_projects->have_posts()) : $front_projects->the_post(); ?>
-              <div class="p-index__project--group-item">
-                <?php get_template_part('template-parts/loop/project-card'); ?>
-              </div>
-            <?php endwhile; ?>
-          </div>
-        <?php endif; ?>
 
         <?php wp_reset_postdata(); ?>
 
