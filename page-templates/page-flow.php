@@ -28,9 +28,6 @@ get_header();
   <div class="container">
     <div class="section__header">
       <h3 class="section__title">
-        <div class="section__title--logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="" />
-        </div>
         <div class="section__title-en">Flow</div>
         <div class="section__title-ja">制作の流れ</div>
       </h3>
@@ -392,9 +389,6 @@ get_header();
   <div class="container">
     <div class="section__header">
       <h3 class="section__title">
-        <div class="section__title--logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="" />
-        </div>
         <div class="section__title-en">Management System</div>
         <div class="section__title-ja">進捗管理システムについて</div>
       </h3>
