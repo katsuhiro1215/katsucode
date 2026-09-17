@@ -69,10 +69,10 @@ get_header();
               <span class="number">02</span>
               <h3>打ち合わせ・見積書</h3>
               <p>
-                ご要望を汲み取って、打ち合わせや仮の見積書の作成を行います。
+                表面的なご要望だけでなく、「なぜそれが必要か」「どなたに見てもらいたいか」といった背景まで丁寧にお伺いし、課題を整理した上で仮の見積書を作成します。
               </p>
               <p>
-                打ち合わせには、ZoomやSkypeといったツールを使って、打ち合わせを行います。ITが苦手な方は、こちらからお教えいたしますので、ご安心ください。
+                打ち合わせには、ZoomやSkypeといったツールを使用します。ITが苦手な方には操作方法からご案内しますので、ご安心ください。
               </p>
             </div>
           </li>
@@ -89,34 +89,10 @@ get_header();
               <span class="number">03</span>
               <h3>提案書の提出</h3>
               <p>
-                ここでは、制作から納品までの制作スケジュールをメールにてお送りします。
+                ヒアリングした内容をもとに、なぜその構成・デザインの方向性が適しているのかを整理した提案書と、制作から納品までの制作スケジュールをお送りします。ご要望によっては、複数の方向性をご提案することもあります。
               </p>
               <p>
-                また、確定の見積書をお渡しし、了承されましたら、次のステップへ進みます。
-              </p>
-            </div>
-          </li>
-          <div class="p-flow--arrow">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <li class="p-flow__main--item">
-            <figure>
-              <img src="<?php echo esc_url(katsucode_flow_image(3)); ?>" alt="" />
-            </figure>
-            <div class="p-flow__main--info">
-              <span class="number">04</span>
-              <h3>ご契約・システム登録</h3>
-              <p>
-                見積書の内容にご納得いただけましたら、正式にご契約を締結いたします。
-              </p>
-              <p>
-                ご契約後、お客様専用の中央管理システムにプロジェクトを登録いたします。ログイン情報をお送りしますので、いつでも進捗状況や契約内容を確認できます。
-              </p>
-              <p>
-                また、お支払い条件についてもこの段階でご説明いたします。<br>
-                <span style="font-size: 1.3rem; color: #666;">※Web制作：50%前払い、残り50%完了時｜システム開発（100万円以上）：初期費用・中間金・完了金の3段階払い</span>
+                あわせて確定の見積書をお渡しし、内容にご納得いただけましたら、次のステップへ進みます。
               </p>
             </div>
           </li>
@@ -128,6 +104,29 @@ get_header();
           <li class="p-flow__main--item">
             <figure>
               <img src="<?php echo esc_url(katsucode_flow_image(4)); ?>" alt="" />
+            </figure>
+            <div class="p-flow__main--info">
+              <span class="number">04</span>
+              <h3>ご契約・システム登録</h3>
+              <p>
+                見積書の内容にご納得いただけましたら、正式にご契約を締結いたします。
+              </p>
+              <p>
+                ご契約後、お客様専用の中央管理システムにプロジェクトを登録いたします。ログイン情報をお送りしますので、いつでも進捗状況や契約内容を確認できます。
+              </p>
+              <p>
+                お支払い条件についても、この段階でご案内いたします。案件の規模や内容に応じてご相談させていただきます。
+              </p>
+            </div>
+          </li>
+          <div class="p-flow--arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <li class="p-flow__main--item">
+            <figure>
+              <img src="<?php echo esc_url(katsucode_flow_image(5)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">05</span>
@@ -147,7 +146,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo esc_url(katsucode_flow_image(5)); ?>" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(6)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">06</span>
@@ -164,7 +163,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo esc_url(katsucode_flow_image(6)); ?>" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(7)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">07</span>
@@ -184,7 +183,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo esc_url(katsucode_flow_image(7)); ?>" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(8)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">08</span>
@@ -241,10 +240,10 @@ get_header();
               <span class="number">02</span>
               <h3>打ち合わせ・見積書</h3>
               <p>
-                ご要望を汲み取って、打ち合わせや仮の見積書の作成を行います。
+                表面的なご要望だけでなく、「何を解決したいのか」「今どこに困っているのか」といった背景まで丁寧にお伺いし、課題を整理した上で仮の見積書を作成します。
               </p>
               <p>
-                打ち合わせには、ZoomやSkypeといったツールを使って、打ち合わせを行います。ITが苦手な方は、こちらからお教えいたしますので、ご安心ください。
+                打ち合わせには、ZoomやSkypeといったツールを使用します。ITが苦手な方には操作方法からご案内しますので、ご安心ください。
               </p>
             </div>
           </li>
@@ -261,7 +260,7 @@ get_header();
               <span class="number">03</span>
               <h3>提案書・要件定義</h3>
               <p>
-                お伺いした内容を元に、システムの要件定義書と制作スケジュールを作成いたします。
+                お伺いした内容をもとに、「何を解決するためにどんな機能が必要か」を整理した要件定義書と制作スケジュールを作成いたします。実現方法に複数の選択肢がある場合は、メリット・デメリットを添えてご提案します。
               </p>
               <p>
                 確定の見積書とともに提出し、内容をご確認いただきます。
@@ -275,7 +274,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo esc_url(katsucode_flow_image(3)); ?>" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(4)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">04</span>
@@ -287,7 +286,7 @@ get_header();
                 ご契約後、お客様専用の中央管理システムにプロジェクトを登録いたします。開発状況、タスク進捗、仕様書などをいつでも確認できます。
               </p>
               <p>
-                お支払い条件についてもこの段階でご説明いたします。大規模案件では初期費用・中間金・完了金の3段階払いを採用しています。
+                お支払い条件についてもこの段階でご案内いたします。案件の規模や内容に応じてご相談の上、分割でのお支払いにも対応いたします。
               </p>
             </div>
           </li>
@@ -298,7 +297,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo esc_url(katsucode_flow_image(4)); ?>" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(5)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">05</span>
@@ -318,7 +317,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo esc_url(katsucode_flow_image(5)); ?>" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(6)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">06</span>
@@ -334,7 +333,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo esc_url(katsucode_flow_image(6)); ?>" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(7)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">07</span>
@@ -354,7 +353,7 @@ get_header();
           </div>
           <li class="p-flow__main--item">
             <figure>
-              <img src="<?php echo esc_url(katsucode_flow_image(7)); ?>" alt="" />
+              <img src="<?php echo esc_url(katsucode_flow_image(8)); ?>" alt="" />
             </figure>
             <div class="p-flow__main--info">
               <span class="number">08</span>

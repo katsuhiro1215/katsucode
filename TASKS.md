@@ -76,6 +76,20 @@ Front-pageの実績カードが縦書き・画像オーバーレイで読みに�
 
 ---
 
+## ⑤ page-flow / page-company / page-about のコンテンツ改善（テキスト完了・写真は撮影待ち）
+
+- [x] `page-templates/page-flow.php`: Web制作・システム開発 両タブの02〜04の文章を、単なる手続き説明から「何を診断してどう提案するか」が伝わる内容に修正（提案力の強化）
+- [x] `page-templates/page-flow.php`: 04の画像が03と同じ`katsucode_flow_image(3)`を指していたバグを修正。9ステップ/8画像のズレを08・09で共用する形に整理
+- [x] `page-templates/page-flow.php`: 04の支払い条件の記載（前払い50%等の具体数値）を、FAQドラフトの「ご相談内容により異なる」という方針に合わせて抽象化
+- [x] `page-templates/page-company.php`: 「コンセプト」3項目が`page-about.php`のWHY/WHAT/HOW・TRUSTと内容面で重複していたため、実務的なスタンス（気軽な相談・柔軟な契約・ワンストップ対応）に書き直し
+- [x] `page-templates/page-company.php`: 「選ばれる理由①一貫したサポート」が`page-about.php`のTRUSTとほぼ同文だったため、「独自の進捗管理システム」に差し替え
+- [x] `page-templates/page-company.php`: コンセプト01の重複文（同じ一文が2回入っていた）を修正
+- [x] `page-templates/page-about.php`: 内容の大きな改善は不要と判断（写真差し替えのみで対応）
+- [x] `docs/photo-shotlist.md` を作成。flow(8枚)・company コンセプト(3枚)・about(8枚・ボーナス)の撮影リストをまとめ、ユーザーが撮影・アップロード予定
+- [ ] ユーザーが写真を撮影・アップロードし、Claude Codeが確認・差し替え
+
+---
+
 ## 今後の申し送り事項（今回のスコープ外）
 
 - `page-service.php` の6サービスカード画像・`_service.scss` / `_project.scss` の配色は、service関連リニューアルとまとめて別途対応。
