@@ -7,9 +7,6 @@
   <div class="container">
     <div class="section__header">
       <h3 class="section__title">
-        <div class="section__title--logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="" />
-        </div>
         <div class="section__title-en">Privacy Policy</div>
         <div class="section__title-ja">プライバシーポリシー</div>
       </h3>
