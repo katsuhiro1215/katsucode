@@ -31,6 +31,35 @@ get_header();
 </section>
 <!-- Intro Section End -->
 
+<!-- Mission Section Start -->
+<section class="l-section p-page__mission">
+  <div class="container">
+    <div class="section__header">
+      <h3 class="section__title">
+        <div class="section__title-en">MISSION</div>
+        <div class="section__title-ja">使命</div>
+      </h3>
+    </div>
+    <div class="section__body">
+      <p>「相談しやすい」だけでなく、実際に安心していただける仕組みも大切にしています。
+      </p>
+      <p>
+        かつコードでは中央管理システム「SmartSprouts」を通じて、お見積り・ご契約・請求書の発行から、制作の進捗確認、保守作業の報告まで、すべてWebで完結。
+      </p>
+      <p>
+        ご契約後も、いつでもご自身のアカウントで状況をご確認いただけます。
+      </p>
+      <p>
+        想いを込めてつくるだけでなく、その後もきちんと届いているかを、見える形でお伝えし続けたいと考えています。
+      </p>
+      <p>
+        このように、かつコードは単なる制作会社ではなく、クライアントの想いを形にし、その後も確実に届けることを使命としています。
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Mission Section End -->
+
 <!-- About Scroll Section Start -->
 <div class="p-about__scroll-wrapper" style="height: 400vh;">
   <section class="p-about__scroll-section">

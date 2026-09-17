@@ -64,7 +64,8 @@ $nara_url = get_permalink();
           <span class="js-nara-line">ホームページを。</span>
         </h1>
         <p class="p-nara__hero-subtitle">
-          奈良県奈良市を拠点に活動する、地元企業様・クライアント様のための特別なWeb制作サービス。<br class="sp-only">
+          30万円から。進捗が見える。いつでも相談できる。<br>
+          奈良県奈良市を拠点に、地元企業様・クライアント様のための特別なWeb制作サービス。<br class="sp-only">
           顔の見える距離感で、あなたのビジネスの魅力をじっくり形にします。
         </p>
         <div class="p-nara__hero-cta-group">
@@ -149,40 +150,270 @@ $nara_url = get_permalink();
     </section>
     <!-- Problems Section End -->
 
-    <!-- Service Section Start -->
-    <section class="p-nara__section">
+    <!-- Transparency Section Start -->
+    <section class="p-nara__section p-nara__transparency">
       <div class="container">
         <div class="p-nara__section-header js-nara-reveal">
-          <span class="p-nara__section-label">Service</span>
-          <h2 class="p-nara__section-title">奈良の皆様へお届けする3つの安心</h2>
+          <span class="p-nara__section-label">Transparency</span>
+          <h2 class="p-nara__section-title">制作の進捗、すべて見える。<br class="sp-only">不安をゼロに。</h2>
         </div>
 
-        <div class="p-nara__features">
-          <div class="p-nara__feature-card js-nara-reveal">
-            <div class="p-nara__feature-icon">🤝</div>
-            <h3 class="p-nara__feature-title">対面でじっくりヒアリング</h3>
-            <p class="p-nara__feature-text">
-              奈良市内・近郊であれば直接お伺いしてお話をお聞きします。画面越しでは伝わりにくい想いも、しっかり形にします。
+        <div class="p-nara__transparency-grid">
+          <div class="p-nara__transparency-card js-nara-reveal">
+            <div class="p-nara__transparency-icon">📊</div>
+            <h3 class="p-nara__transparency-title">見積〜請求まで<br>すべてオンライン</h3>
+            <p class="p-nara__transparency-text">
+              自社システム「Spra」で、見積もり・契約・進捗・請求・領収証まで一元管理。いつでもご確認いただけます。
             </p>
           </div>
-          <div class="p-nara__feature-card js-nara-reveal">
-            <div class="p-nara__feature-icon">🦌</div>
-            <h3 class="p-nara__feature-title">地域に根ざした提案</h3>
-            <p class="p-nara__feature-text">
-              奈良の街や文化を知っているからこそできる、地元のお客様に伝わりやすいデザイン・言葉選びをご提案します。
+          <div class="p-nara__transparency-card js-nara-reveal">
+            <div class="p-nara__transparency-icon">🔍</div>
+            <h3 class="p-nara__transparency-title">制作状況が<br>リアルタイムで分かる</h3>
+            <p class="p-nara__transparency-text">
+              「今どこまで進んでいるの？」「いつ完成するの？」そんな不安を解消。進捗状況を常に可視化しています。
             </p>
           </div>
-          <div class="p-nara__feature-card js-nara-reveal">
-            <div class="p-nara__feature-icon">🌱</div>
-            <h3 class="p-nara__feature-title">公開後も気軽に相談できる</h3>
-            <p class="p-nara__feature-text">
-              近い距離感だからこそ、ちょっとした更新や困りごとも気軽にご相談いただけます。長くお付き合いできる関係を大切にしています。
+          <div class="p-nara__transparency-card js-nara-reveal">
+            <div class="p-nara__transparency-icon">💬</div>
+            <h3 class="p-nara__transparency-title">修正依頼も<br>履歴で管理</h3>
+            <p class="p-nara__transparency-text">
+              メールで散在しがちな修正依頼も、システム上で一元管理。「あれ、どこで言ったっけ？」がなくなります。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Transparency Section End -->
+
+    <!-- Results Section Start -->
+    <section class="p-nara__section p-nara__section--light p-nara__results">
+      <div class="container">
+        <div class="p-nara__section-header js-nara-reveal">
+          <span class="p-nara__section-label">Results</span>
+          <h2 class="p-nara__section-title">奈良での実績。<br class="sp-only">Web制作からシステム開発まで。</h2>
+        </div>
+
+        <div class="p-nara__results-grid">
+          <div class="p-nara__results-category js-nara-reveal">
+            <h3>🌐 Web制作</h3>
+            <ul>
+              <li>整骨院・クリニック向けサイト</li>
+              <li>農家向けECサイト</li>
+              <li>小売店・サービス業向けポータル</li>
+              <li>飲食店の予約機能付きサイト</li>
+            </ul>
+          </div>
+          <div class="p-nara__results-category js-nara-reveal">
+            <h3>⚙️ システム開発</h3>
+            <ul>
+              <li>体操教室の業務管理システム</li>
+              <li>ECプラットフォーム改修</li>
+              <li>自治体向け中継サーバー構築</li>
+              <li>コミックアプリのバックエンド実装</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 32px; font-size: 1.4rem; color: #666;">
+          奈良の事業規模なら、Web制作から本格的なシステム開発まで、<br class="sp-only">ワンストップで対応できます。
+        </p>
+      </div>
+    </section>
+    <!-- Results Section End -->
+
+    <!-- Pricing Section Start -->
+    <section class="p-nara__section p-nara__pricing">
+      <div class="container">
+        <div class="p-nara__section-header js-nara-reveal">
+          <span class="p-nara__section-label">Pricing</span>
+          <h2 class="p-nara__section-title">30万円から。<br class="sp-only">わかりやすい料金プラン。</h2>
+        </div>
+
+        <div class="p-nara__pricing-grid">
+          <div class="p-nara__pricing-card js-nara-reveal">
+            <div class="p-nara__pricing-label">ベーシック</div>
+            <div class="p-nara__pricing-price">
+              <span class="price-from">30万円〜</span>
+              <span class="price-suffix">（税込）</span>
+            </div>
+            <ul class="p-nara__pricing-features">
+              <li>5ページまでの小規模サイト</li>
+              <li>レスポンシブ対応</li>
+              <li>お問い合わせフォーム</li>
+              <li>3ヶ月間の無料サポート</li>
+            </ul>
+          </div>
+
+          <div class="p-nara__pricing-card p-nara__pricing-card--featured js-nara-reveal">
+            <div class="p-nara__pricing-badge">人気</div>
+            <div class="p-nara__pricing-label">スタンダード</div>
+            <div class="p-nara__pricing-price">
+              <span class="price-from">60万円〜</span>
+              <span class="price-suffix">（税込）</span>
+            </div>
+            <ul class="p-nara__pricing-features">
+              <li>10ページまでの中規模サイト</li>
+              <li>WordPress導入</li>
+              <li>SEO基本対策</li>
+              <li>6ヶ月間の無料サポート</li>
+            </ul>
+          </div>
+
+          <div class="p-nara__pricing-card js-nara-reveal">
+            <div class="p-nara__pricing-label">プレミアム</div>
+            <div class="p-nara__pricing-price">
+              <span class="price-from">120万円〜</span>
+              <span class="price-suffix">（税込）</span>
+            </div>
+            <ul class="p-nara__pricing-features">
+              <li>大規模サイト・EC構築</li>
+              <li>カスタム機能開発</li>
+              <li>システム連携</li>
+              <li>1年間の無料サポート</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="p-nara__pricing-note js-nara-reveal">
+          ※システム開発は別途お見積もり（規模により100万円〜）<br>
+          詳細な料金は <a href="<?php echo esc_url(home_url('/service')); ?>" style="color: #2C3E50; font-weight: 700; text-decoration: underline;">サービスページ</a> をご覧ください。
+        </p>
+      </div>
+    </section>
+    <!-- Pricing Section End -->
+
+    <!-- Support Section Start -->
+    <section class="p-nara__section p-nara__support">
+      <div class="container">
+        <div class="p-nara__section-header js-nara-reveal">
+          <span class="p-nara__section-label">Support</span>
+          <h2 class="p-nara__section-title">公開後も安心。<br class="sp-only">月6,600円からの保守プラン。</h2>
+        </div>
+
+        <div class="p-nara__support-grid">
+          <div class="p-nara__support-card js-nara-reveal">
+            <h3>ライト</h3>
+            <div class="p-nara__support-price">
+              月額 <strong>6,600円</strong>（税込）
+            </div>
+            <ul>
+              <li>WordPress / PHP更新</li>
+              <li>プラグイン更新</li>
+              <li>セキュリティ監視</li>
+            </ul>
+          </div>
+
+          <div class="p-nara__support-card p-nara__support-card--featured js-nara-reveal">
+            <div class="p-nara__support-badge">人気</div>
+            <h3>スタンダード</h3>
+            <div class="p-nara__support-price">
+              月額 <strong>11,000円</strong>（税込）
+            </div>
+            <ul>
+              <li>上記すべて</li>
+              <li>テキスト・画像の軽微な変更</li>
+              <li>月1回までの簡易修正</li>
+            </ul>
+          </div>
+
+          <div class="p-nara__support-card js-nara-reveal">
+            <h3>プレミアム</h3>
+            <div class="p-nara__support-price">
+              月額 <strong>22,000円</strong>（税込）
+            </div>
+            <ul>
+              <li>上記すべて</li>
+              <li>月3回までの修正対応</li>
+              <li>緊急時の優先対応</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Support Section End -->
+
+    <!-- Service Section Start -->
+    <section class="p-nara__section p-nara__section--light p-nara__strengths">
+      <div class="container">
+        <div class="p-nara__section-header js-nara-reveal">
+          <span class="p-nara__section-label">Strengths</span>
+          <h2 class="p-nara__section-title">奈良だからこそ、できること。</h2>
+        </div>
+
+        <div class="p-nara__strengths-grid">
+          <div class="p-nara__strength-card js-nara-reveal">
+            <div class="p-nara__strength-icon">🚀</div>
+            <h3>即日面談も可能</h3>
+            <p>
+              奈良市内・近郊であれば、当日中にお伺いすることも可能です。遠方の制作会社では難しい、スピード感のある対応を実現します。
+            </p>
+          </div>
+          <div class="p-nara__strength-card js-nara-reveal">
+            <div class="p-nara__strength-icon">🔧</div>
+            <h3>Web制作から<br>システム開発まで</h3>
+            <p>
+              小規模なホームページから、業務システム・ECサイトまで幅広く対応。奈良の事業規模に合わせた、ちょうどいいご提案をいたします。
+            </p>
+          </div>
+          <div class="p-nara__strength-card js-nara-reveal">
+            <div class="p-nara__strength-icon">💬</div>
+            <h3>柔軟な対応・<br>気軽に相談</h3>
+            <p>
+              「ちょっと直したい」「こんなことできる？」といった小さな相談も、地域密着だからこそ気軽にご連絡いただけます。
             </p>
           </div>
         </div>
       </div>
     </section>
     <!-- Service Section End -->
+
+    <!-- FAQ Section Start -->
+    <section class="p-nara__section p-nara__faq">
+      <div class="container">
+        <div class="p-nara__section-header js-nara-reveal">
+          <span class="p-nara__section-label">FAQ</span>
+          <h2 class="p-nara__section-title">よくあるご質問</h2>
+        </div>
+
+        <div class="p-nara__faq-list">
+          <div class="p-nara__faq-item js-nara-reveal">
+            <h3 class="p-nara__faq-question">見積もりは無料ですか？</h3>
+            <p class="p-nara__faq-answer">
+              はい、無料です。お電話またはお問い合わせフォームからご相談ください。ヒアリング後、自社システムで見積もりをご確認いただけます。
+            </p>
+          </div>
+
+          <div class="p-nara__faq-item js-nara-reveal">
+            <h3 class="p-nara__faq-question">制作期間はどれくらいですか？</h3>
+            <p class="p-nara__faq-answer">
+              規模により異なりますが、小規模サイトで1〜2ヶ月、中規模サイトで2〜3ヶ月が目安です。進捗は常にシステム上で確認できます。
+            </p>
+          </div>
+
+          <div class="p-nara__faq-item js-nara-reveal">
+            <h3 class="p-nara__faq-question">途中で連絡が取れなくなることはありませんか？</h3>
+            <p class="p-nara__faq-answer">
+              ご安心ください。自社システムで進捗を常に可視化しており、定期的なご報告も行っています。奈良という地域密着だからこそ、顔の見える関係を大切にしています。
+            </p>
+          </div>
+
+          <div class="p-nara__faq-item js-nara-reveal">
+            <h3 class="p-nara__faq-question">SNSで見る格安サービスとの違いは何ですか？</h3>
+            <p class="p-nara__faq-answer">
+              テンプレート販売ではなく、事細かなヒアリングであなたのビジネスを理解し、成長を支援するパートナーとしての価値をご提供しています。完成後も柔軟にサポートいたします。
+            </p>
+          </div>
+
+          <div class="p-nara__faq-item js-nara-reveal">
+            <h3 class="p-nara__faq-question">事務所の住所を教えてください。</h3>
+            <p class="p-nara__faq-answer">
+              自宅兼オフィスのため、セキュリティ上、契約後に正式な住所をお伝えしております。奈良市内の奈良公園近郊です。ご面談の際は、お客様の事業所または最寄りのカフェ等でお会いすることも可能です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section End -->
 
     <!-- CTA Section Start -->
     <section id="contact" class="p-nara__cta-section">
@@ -210,6 +441,18 @@ $nara_url = get_permalink();
       </div>
     </section>
     <!-- CTA Section End -->
+
+    <!-- Location Note Start -->
+    <div class="container">
+      <div class="p-nara__location-note">
+        <p>
+          <strong>📍 事務所について</strong><br>
+          セキュリティ上、詳細な住所は契約後にお伝えしております（奈良市内・奈良公園近郊）。<br>
+          ご面談は、お客様の事業所またはご指定の場所でも承っております。
+        </p>
+      </div>
+    </div>
+    <!-- Location Note End -->
 
     <!-- Minimal Footer -->
     <footer class="p-nara__footer">

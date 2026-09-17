@@ -1,37 +1,82 @@
           <div class="p-index__visual">
-            <h2 class="p-index__visual-catch">Welcome to <span>Katsucode.</span></h2>
             <div class="p-index__visual-image swiper-container swiper01">
               <div class="swiper-wrapper">
-                <div href="web.html" class="swiper-slide">
+                <!-- スライド1: SmartSprouts -->
+                <div class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/image1.jpg" alt="" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero/hero1.png" alt="SmartSprouts" />
                     </div>
-                    <h2 class="slide-title">Web Design</h2>
+                    <div class="slide-content">
+                      <h2 class="slide-catch">見積もりから請求まで、<br>すべてWebで<span>完結</span></h2>
+                      <p class="slide-lead">専用アカウントで、お見積り・ご契約・請求書・領収書の発行までワンストップ管理。書類のやり取りに時間を取られることはありません。</p>
+                      <h3 class="slide-title">SmartSprouts</h3>
+                    </div>
                   </article>
                 </div>
-                <div href="nara.html" class="swiper-slide">
+                <!-- スライド2: Web制作 -->
+                <div class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/image2.jpg" alt="" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero/hero2.png" alt="Web制作" />
                     </div>
-                    <h2 class="slide-title">Web Marketing</h2>
+                    <div class="slide-content">
+                      <h2 class="slide-catch">成果につながる<br><span>Webサイト</span>を構築</h2>
+                      <p class="slide-lead">ユーザー目線の設計とSEO対策で、集客から成約まで導く戦略的なWebサイトを制作。デザインだけでなく、ビジネスの成果を追求します。</p>
+                      <h3 class="slide-title">Web制作</h3>
+                    </div>
                   </article>
                 </div>
-                <div href="#" class="swiper-slide">
+                <!-- スライド3: システム開発 -->
+                <div class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/image3.jpg" alt="" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero/hero3.png" alt="システム開発" />
                     </div>
-                    <h2 class="slide-title">Web System</h2>
+                    <div class="slide-content">
+                      <h2 class="slide-catch">業務効率を劇的に<br><span>向上</span>させる</h2>
+                      <p class="slide-lead">貴社の業務フローに合わせた完全オーダーメイドのシステムを開発。手作業の削減、データ管理の最適化で、本業に専念できる環境を実現します。</p>
+                      <h3 class="slide-title">システム開発</h3>
+                    </div>
                   </article>
                 </div>
-                <div href="swim.html" class="swiper-slide">
+                <!-- スライド4: LP制作 -->
+                <div class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/image4.jpg" alt="" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero/hero4.png" alt="LP制作" />
                     </div>
-                    <h2 class="slide-title">Application</h2>
+                    <div class="slide-content">
+                      <h2 class="slide-catch">高い<span>成約率</span>を実現する<br>ランディングページ</h2>
+                      <p class="slide-lead">訴求力の高いデザインと心理学に基づいた導線設計で、訪問者を確実にコンバージョンへ導くLPを制作します。</p>
+                      <h3 class="slide-title">LP制作</h3>
+                    </div>
+                  </article>
+                </div>
+                <!-- スライド5: ECサイト -->
+                <div class="swiper-slide">
+                  <article class="slide">
+                    <div class="slide-media">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero/hero5.png" alt="ECサイト" />
+                    </div>
+                    <div class="slide-content">
+                      <h2 class="slide-catch">売上を最大化する<br><span>ECサイト</span>構築</h2>
+                      <p class="slide-lead">使いやすさと売れる仕組みを両立したECサイトを構築。決済システムから在庫管理まで、オンライン販売を総合的にサポートします。</p>
+                      <h3 class="slide-title">ECサイト</h3>
+                    </div>
+                  </article>
+                </div>
+                <!-- スライド6: アプリ開発 -->
+                <div class="swiper-slide">
+                  <article class="slide">
+                    <div class="slide-media">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero/hero6.png" alt="アプリ開発" />
+                    </div>
+                    <div class="slide-content">
+                      <h2 class="slide-catch">ビジネスを加速する<br><span>アプリ</span>開発</h2>
+                      <p class="slide-lead">iOS・Androidに対応したネイティブアプリから、クロスプラットフォーム対応まで。ユーザー体験を重視したアプリを開発します。</p>
+                      <h3 class="slide-title">アプリ開発</h3>
+                    </div>
                   </article>
                 </div>
               </div>

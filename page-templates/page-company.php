@@ -17,9 +17,9 @@ get_header();
   <div class="container">
     <div class="p-company__header">
       <span class="p-company__header-kicker" aria-hidden="true">Concept</span>
-      <h3 class="p-company__header-title">想いを形にし、<br class="sp-only">人と人をつなぐ</h3>
+      <h3 class="p-company__header-title">気軽に相談でき、<br class="sp-only">無理なく続けられる関係を</h3>
       <p class="p-company__concept--message">
-        人と人との繋がりに最高のデジタルで<br />より良い未来を創る
+        お客様の状況に合わせて、必要な分だけご提案します
       </p>
     </div>
     <div class="section__body">
@@ -27,46 +27,45 @@ get_header();
         <div class="p-about__concept--item">
           <span class="p-about__concept--number" aria-hidden="true">01</span>
           <figure>
-            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_1', get_template_directory_uri() . '/assets/img/about/step1.jpg')); ?>" alt="" />
+            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_1', get_template_directory_uri() . '/assets/img/company/company1.png')); ?>" alt="" />
           </figure>
           <div class="p-about__concept--info">
-            <h3>どんなお役に立てるのか</h3>
+            <h3>まずは気軽にご相談を</h3>
             <p>
-              まず、私たちにできることは何か、お客様が求めているものは何かを探ります。
-              どちらかの一方的な考えではなく、お互いの意見を通して、より良い方向へと導き出します。
+              「何から始めればいいかわからない」という段階でも構いません。ご要望をお伺いした上で、ご予算や状況に合わせた進め方をご提案します。
             </p>
             <p>
-              どちらかの一方的な考えではなく、お互いの意見を通して、より良い方向へと導き出します。
+              専門用語を使わず、わかりやすい言葉でのご説明を心がけています。
             </p>
           </div>
         </div>
         <div class="p-about__concept--item">
           <span class="p-about__concept--number" aria-hidden="true">02</span>
           <figure>
-            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_2', get_template_directory_uri() . '/assets/img/about/step2.jpg')); ?>" alt="" />
+            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_2', get_template_directory_uri() . '/assets/img/company/company2.jpg')); ?>" alt="" />
           </figure>
           <div class="p-about__concept--info">
-            <h3>質を優先しています</h3>
+            <h3>必要な分だけ、柔軟に</h3>
             <p>
-              スピード優先で作成することも可能ですが、それが最良策とは言えません。
+              納品後の保守契約は必須ではありません。単発のご相談・修正依頼にも対応しています。
             </p>
             <p>
-              長く利用してもらうために、質を重視して満足度を追求しています。
+              継続的なサポートが必要な場合は、月額プランもご用意しています。
             </p>
           </div>
         </div>
         <div class="p-about__concept--item">
           <span class="p-about__concept--number" aria-hidden="true">03</span>
           <figure>
-            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_3', get_template_directory_uri() . '/assets/img/about/step3.jpg')); ?>" alt="" />
+            <img src="<?php echo esc_url(katsucode_page_image('company_concept_image_3', get_template_directory_uri() . '/assets/img/company/company3.jpg')); ?>" alt="" />
           </figure>
           <div class="p-about__concept--info">
-            <h3>成長させること</h3>
+            <h3>幅広い技術で、ワンストップに</h3>
             <p>
-              Webサイトは作って終わりではなく、そこから育てる必要があります。
+              Webサイト制作・LP制作・ECサイト構築からシステム開発まで、一つの窓口でご相談いただけます。
             </p>
             <p>
-              常に最新情報に耳を傾け、お客様と一緒になってアップデートしていきます。
+              案件ごとに依頼先を分ける必要がなく、まとめてお任せいただけます。
             </p>
           </div>
         </div>
@@ -86,8 +85,8 @@ get_header();
       <div class="p-company__introduction--wrapper">
         <div class="p-company__introduction--profile">
           <div class="profile-image">
-            <img src="<?php echo esc_url(katsucode_page_image('company_profile_image', get_template_directory_uri() . '/assets/img/profile/sample01.jpg')); ?>" alt="制作者プロフィール写真" class="profile-main">
-            <img src="<?php echo esc_url(katsucode_page_image('company_profile_image_hover', get_template_directory_uri() . '/assets/img/profile/sample02.jpg')); ?>" alt="制作者プロフィール写真（ホバー）" class="profile-hover">
+            <img src="<?php echo esc_url(katsucode_page_image('company_profile_image', get_template_directory_uri() . '/assets/img/profile/profile3.png')); ?>" alt="制作者プロフィール写真" class="profile-main">
+            <img src="<?php echo esc_url(katsucode_page_image('company_profile_image_hover', get_template_directory_uri() . '/assets/img/profile/profile4.png')); ?>" alt="制作者プロフィール写真（ホバー）" class="profile-hover">
           </div>
         </div>
         <div class="p-company__introduction--content">
@@ -135,8 +134,8 @@ get_header();
       <div class="p-company__reason-grid">
         <div class="p-company__reason-card">
           <span class="p-company__reason-number" aria-hidden="true">01</span>
-          <h4>一貫したサポート</h4>
-          <p>ヒアリングから制作、公開後の運用まで一貫して対応します。途中で担当が変わることなく、安心してご相談いただけます。</p>
+          <h4>独自の進捗管理システム</h4>
+          <p>契約内容や制作・開発の進捗状況を、専用システムでいつでもご確認いただけます。「今どうなっているんだろう」という不安を減らします。</p>
         </div>
         <div class="p-company__reason-card">
           <span class="p-company__reason-number" aria-hidden="true">02</span>
