@@ -18,7 +18,7 @@
                 <div class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero/hero2.png" alt="Web制作" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero/hero2.jpg" alt="Web制作" />
                     </div>
                     <div class="slide-content">
                       <h2 class="slide-catch">成果につながる<br><span>Webサイト</span>を構築</h2>
@@ -70,7 +70,7 @@
                 <div class="swiper-slide">
                   <article class="slide">
                     <div class="slide-media">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero/hero6.png" alt="アプリ開発" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero/hero6.jpg" alt="アプリ開発" />
                     </div>
                     <div class="slide-content">
                       <h2 class="slide-catch">ビジネスを加速する<br><span>アプリ</span>開発</h2>
