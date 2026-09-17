@@ -17,16 +17,16 @@
 
 ---
 
-## ① FlashMessage実装（最優先）
+## ① FlashMessage実装（最優先・完了）
 
 お問い合わせ送信結果をトースト通知で表示する。詳細仕様は [SPEC.md §4](./SPEC.md#4-お問い合わせフォーム--flashmessage仕様)。
 
-- [ ] `page-templates/page-contact.php`: 静的 `<p class="contact-form__notice">` ブロックを削除し、`?contact=` の値を `data-flash-type` / `data-flash-message` としてbody等に出力する処理に置き換える
-- [ ] `assets/js/main.js`: `initFlashMessage()` を追加し、data属性からトーストDOMを生成。5秒自動フェードアウト＋手動×ボタン、`role="status"` `aria-live="polite"` を付与
-- [ ] `assets/sass/object/project/_flash-message.scss` を新規作成し、`style.scss` からimport
-- [ ] Sassをコンパイル（Live Sass Compiler）し、`assets/css/style.css` / `style.min.css` 等の生成物を更新
-- [ ] ブラウザで `?contact=success` / `invalid` / `error` の3パターンを確認（表示・自動消滅・手動クローズ・アクセシビリティ）
-- [ ] 1コミット（「Contact送信時のFlashMessage表示」目的のみ）でコミット
+- [x] `page-templates/page-contact.php`: 静的 `<p class="contact-form__notice">` ブロックを削除し、`?contact=` の値を `data-flash-type` / `data-flash-message` としてbody等に出力する処理に置き換える
+- [x] `assets/js/main.js`: `showFlashMessage()` を追加し、data属性からトーストDOMを生成。5秒自動フェードアウト＋手動×ボタン、`role="status"` `aria-live="polite"` を付与
+- [x] `assets/sass/object/component/_flash-message.scss` を新規作成し、`style.scss` からimport
+- [x] コンパイル済みCSSへ反映
+- [x] ブラウザ（Playwright）で `?contact=success` / `invalid` / `error` の3パターンを確認（表示・自動消滅・手動クローズ・アクセシビリティ）
+- [x] 1コミット（「Contact送信時のFlashMessage表示」目的のみ）でコミット（`1010491`）
 
 ---
 
@@ -56,6 +56,23 @@
   - [x] 奈良・水泳 特設LP専用FAQ
 - [ ] ユーザーが内容をレビュー・加筆（実際の納期目安や料金レンジなど、抽象化した箇所の具体化） ※要判断
 - [ ] ユーザーがWordPress管理画面（`faq` 投稿タイプ / `faq-cat` タクソノミー）へ手動投稿 ※Claude Codeの作業範囲外
+
+---
+
+## ④ 実績カード（Project）のデザイン統一・フロント特集カード化（ソース完了・CSS未コミット）
+
+Front-pageの実績カードが縦書き・画像オーバーレイで読みにくいという指摘を受け、archive-project.phpの
+横書きカードに統一。tane-be.co.jp を参考に、フロントページ1件目のみ右側がビューポート端まで
+はみ出す「特集カード」にする案を採用。
+
+- [x] `template-parts/loop/project-card.php` を新規作成（archive・フロント共通の実績カードマークアップ）
+- [x] `template-parts/loop/project.php`（archive用ラッパー）を上記partialを呼び出す形にリファクタリング。`data-categories` によるタブ絞り込みは維持
+- [x] `template-parts/front-page/project.php` を書き換え。1件目は `.p-index__project--featured` + `c-card__project--featured` 修飾、2・3件目は通常グリッド
+- [x] `assets/sass/object/component/_card.scss` に `.c-card__project`（共通カード）を追加。`--featured` 修飾で特集レイアウト（lg以上で画像/本文2カラム）
+- [x] `assets/sass/object/project/_project.scss` から旧 `.p-index__project--item`（clip-path・縦書き）と `.p-project__card`（archiveの旧カードスタイル、`.c-card__project`と重複）を削除
+- [x] ブラウザ（Playwright）でフロント特集カード・archiveグリッド・タブ絞り込み・モバイル1カラム・横スクロール未発生を確認
+- [x] ソース（SCSS/PHP）のみ1コミット（`29a9c7a`）
+- [ ] **コンパイル済みCSS（`assets/css/style.*.css` 等）は他の作業中の変更と混在するため未コミット。別途ユーザー側でSassを再コンパイルしてコミットするか、Claude Codeに依頼してください。**
 
 ---
 
